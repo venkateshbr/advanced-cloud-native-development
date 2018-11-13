@@ -1,0 +1,3756 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.8" />
+<title></title>
+<style type="text/css">
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* ========================================================================== HTML5 display definitions ========================================================================== */
+/** Correct `block` display not defined in IE 8/9. */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+
+/** Correct `inline-block` display not defined in IE 8/9. */
+audio, canvas, video { display: inline-block; }
+
+/** Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+audio:not([controls]) { display: none; height: 0; }
+
+/** Address `[hidden]` styling not present in IE 8/9. Hide the `template` element in IE, Safari, and Firefox < 22. */
+[hidden], template { display: none; }
+
+script { display: none !important; }
+
+/* ========================================================================== Base ========================================================================== */
+/** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
+
+/** Remove default margin. */
+body { margin: 0; }
+
+/* ========================================================================== Links ========================================================================== */
+/** Remove the gray background color from active links in IE 10. */
+a { background: transparent; }
+
+/** Address `outline` inconsistency between Chrome and other browsers. */
+a:focus { outline: thin dotted; }
+
+/** Improve readability when focused and also mouse hovered in all browsers. */
+a:active, a:hover { outline: 0; }
+
+/* ========================================================================== Typography ========================================================================== */
+/** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari 5, and Chrome. */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/** Address styling not present in IE 8/9, Safari 5, and Chrome. */
+abbr[title] { border-bottom: 1px dotted; }
+
+/** Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
+b, strong { font-weight: bold; }
+
+/** Address styling not present in Safari 5 and Chrome. */
+dfn { font-style: italic; }
+
+/** Address differences between Firefox and other browsers. */
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+
+/** Address styling not present in IE 8/9. */
+mark { background: #ff0; color: #000; }
+
+/** Correct font family set oddly in Safari 5 and Chrome. */
+code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
+
+/** Improve readability of pre-formatted text in all browsers. */
+pre { white-space: pre-wrap; }
+
+/** Set consistent quote types. */
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/** Address inconsistent and variable font size in all browsers. */
+small { font-size: 80%; }
+
+/** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+/* ========================================================================== Embedded content ========================================================================== */
+/** Remove border when inside `a` element in IE 8/9. */
+img { border: 0; }
+
+/** Correct overflow displayed oddly in IE 9. */
+svg:not(:root) { overflow: hidden; }
+
+/* ========================================================================== Figures ========================================================================== */
+/** Address margin not present in IE 8/9 and Safari 5. */
+figure { margin: 0; }
+
+/* ========================================================================== Forms ========================================================================== */
+/** Define consistent border, margin, and padding. */
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+
+/** 1. Correct `color` not being inherited in IE 8/9. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
+legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
+
+/** 1. Correct font family not being inherited in all browsers. 2. Correct font size not being inherited in all browsers. 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome. */
+button, input, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 2 */ margin: 0; /* 3 */ }
+
+/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+button, input { line-height: normal; }
+
+/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+. Correct `select` style inheritance in Firefox 4+ and Opera. */
+button, select { text-transform: none; }
+
+/** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
+
+/** Re-set default cursor for disabled elements. */
+button[disabled], html input[disabled] { cursor: default; }
+
+/** 1. Address box sizing set to `content-box` in IE 8/9. 2. Remove excess padding in IE 8/9. */
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+
+/** 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome. 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof). */
+input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
+
+/** Remove inner padding and search cancel button in Safari 5 and Chrome on OS X. */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/** Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/** 1. Remove default vertical scrollbar in IE 8/9. 2. Improve readability and alignment in all browsers. */
+textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
+
+/* ========================================================================== Tables ========================================================================== */
+/** Remove most spacing between table cells. */
+table { border-collapse: collapse; border-spacing: 0; }
+
+meta.foundation-mq-small { font-family: "only screen and (min-width: 768px)"; width: 768px; }
+
+meta.foundation-mq-medium { font-family: "only screen and (min-width:1280px)"; width: 1280px; }
+
+meta.foundation-mq-large { font-family: "only screen and (min-width:1440px)"; width: 1440px; }
+
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html, body { font-size: 100%; }
+
+body { background: white; color: #222222; padding: 0; margin: 0; font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; line-height: 1; position: relative; cursor: auto; }
+
+a:hover { cursor: pointer; }
+
+img, object, embed { max-width: 100%; height: auto; }
+
+object, embed { height: 100%; }
+
+img { -ms-interpolation-mode: bicubic; }
+
+#map_canvas img, #map_canvas embed, #map_canvas object, .map_canvas img, .map_canvas embed, .map_canvas object { max-width: none !important; }
+
+.left { float: left !important; }
+
+.right { float: right !important; }
+
+.text-left { text-align: left !important; }
+
+.text-right { text-align: right !important; }
+
+.text-center { text-align: center !important; }
+
+.text-justify { text-align: justify !important; }
+
+.hide { display: none; }
+
+.antialiased, body { -webkit-font-smoothing: antialiased; }
+
+img { display: inline-block; vertical-align: middle; }
+
+textarea { height: auto; min-height: 50px; }
+
+select { width: 100%; }
+
+p.lead, .paragraph.lead > p, #preamble > .sectionbody > .paragraph:first-of-type p { font-size: 1.21875em; line-height: 1.6; }
+
+.subheader, #content #toctitle, .admonitionblock td.content > .title, .exampleblock > .title, .imageblock > .title, .listingblock > .title, .literalblock > .title, .mathblock > .title, .openblock > .title, .paragraph > .title, .quoteblock > .title, .sidebarblock > .title, .tableblock > .title, .verseblock > .title, .videoblock > .title, .dlist > .title, .olist > .title, .ulist > .title, .qlist > .title, .hdlist > .title, .tableblock > caption { line-height: 1.4; color: #003b6b; font-weight: 300; margin-top: 0.2em; margin-bottom: 0.5em; }
+
+/* Typography resets */
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6, pre, form, p, blockquote, th, td { margin: 0; padding: 0; direction: ltr; }
+
+/* Default Link Styles */
+a { color: #00579e; text-decoration: none; line-height: inherit; }
+a:hover, a:focus { color: #333333; }
+a img { border: none; }
+
+/* Default paragraph styles */
+p { font-family: Arial, sans-serif; font-weight: normal; font-size: 1em; line-height: 1.6; margin-bottom: 0.75em; text-rendering: optimizeLegibility; }
+p aside { font-size: 0.875em; line-height: 1.35; font-style: italic; }
+
+/* Default header styles */
+h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 { font-family: Arial, sans-serif; font-weight: normal; font-style: normal; color: #7b2d00; text-rendering: optimizeLegibility; margin-top: 0.5em; margin-bottom: 0.5em; line-height: 1.2125em; }
+h1 small, h2 small, h3 small, #toctitle small, .sidebarblock > .content > .title small, h4 small, h5 small, h6 small { font-size: 60%; color: #ff6b15; line-height: 0; }
+
+h1 { font-size: 2.125em; }
+
+h2 { font-size: 1.6875em; }
+
+h3, #toctitle, .sidebarblock > .content > .title { font-size: 1.375em; }
+
+h4 { font-size: 1.125em; }
+
+h5 { font-size: 1.125em; }
+
+h6 { font-size: 1em; }
+
+hr { border: solid #dddddd; border-width: 1px 0 0; clear: both; margin: 1.25em 0 1.1875em; height: 0; }
+
+/* Helpful Typography Defaults */
+em, i { font-style: italic; line-height: inherit; }
+
+strong, b { font-weight: bold; line-height: inherit; }
+
+small { font-size: 60%; line-height: inherit; }
+
+code { font-family: Consolas, "Liberation Mono", Courier, monospace; font-weight: bold; color: #003426; }
+
+/* Lists */
+ul, ol, dl { font-size: 1em; line-height: 1.6; margin-bottom: 0.75em; list-style-position: outside; font-family: Arial, sans-serif; }
+
+ul, ol { margin-left: 1.5em; }
+ul.no-bullet, ol.no-bullet { margin-left: 1.5em; }
+
+/* Unordered Lists */
+ul li ul, ul li ol { margin-left: 1.25em; margin-bottom: 0; font-size: 1em; /* Override nested font-size change */ }
+ul.square li ul, ul.circle li ul, ul.disc li ul { list-style: inherit; }
+ul.square { list-style-type: square; }
+ul.circle { list-style-type: circle; }
+ul.disc { list-style-type: disc; }
+ul.no-bullet { list-style: none; }
+
+/* Ordered Lists */
+ol li ul, ol li ol { margin-left: 1.25em; margin-bottom: 0; }
+
+/* Definition Lists */
+dl dt { margin-bottom: 0.3em; font-weight: bold; }
+dl dd { margin-bottom: 0.75em; }
+
+/* Abbreviations */
+abbr, acronym { text-transform: uppercase; font-size: 90%; color: black; border-bottom: 1px dotted #dddddd; cursor: help; }
+
+abbr { text-transform: none; }
+
+/* Blockquotes */
+blockquote { margin: 0 0 0.75em; padding: 0.5625em 1.25em 0 1.1875em; border-left: 1px solid #dddddd; }
+blockquote cite { display: block; font-size: 0.8125em; color: #e15200; }
+blockquote cite:before { content: "\2014 \0020"; }
+blockquote cite a, blockquote cite a:visited { color: #e15200; }
+
+blockquote, blockquote p { line-height: 1.6; color: #333333; }
+
+/* Microformats */
+.vcard { display: inline-block; margin: 0 0 1.25em 0; border: 1px solid #dddddd; padding: 0.625em 0.75em; }
+.vcard li { margin: 0; display: block; }
+.vcard .fn { font-weight: bold; font-size: 0.9375em; }
+
+.vevent .summary { font-weight: bold; }
+.vevent abbr { cursor: auto; text-decoration: none; font-weight: bold; border: none; padding: 0 0.0625em; }
+
+@media only screen and (min-width: 768px) { h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 { line-height: 1.4; }
+  h1 { font-size: 2.75em; }
+  h2 { font-size: 2.3125em; }
+  h3, #toctitle, .sidebarblock > .content > .title { font-size: 1.375em; }
+  h4 { font-size: 1.4375em; } }
+/* Print styles.  Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/ Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+*/
+.print-only { display: none !important; }
+
+@media print { * { background: transparent !important; color: #000 !important; /* Black prints faster: h5bp.com/s */ box-shadow: none !important; text-shadow: none !important; }
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; /* h5bp.com/t */ }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3, #toctitle, .sidebarblock > .content > .title { orphans: 3; widows: 3; }
+  h2, h3, #toctitle, .sidebarblock > .content > .title { page-break-after: avoid; }
+  .hide-on-print { display: none !important; }
+  .print-only { display: block !important; }
+  .hide-for-print { display: none !important; }
+  .show-for-print { display: inherit !important; } }
+/* Tables */
+table { background: white; margin-bottom: 1.25em; border: solid 1px #d8d8ce; }
+/* Change -webkit-linear-gradient colors to  #a70000 and remove gradient */
+table thead, table tfoot { background: -webkit-linear-gradient(top, #a70000, #a70000); font-weight: bold; }
+table thead tr th, table thead tr td, table tfoot tr th, table tfoot tr td { padding: 0.5em 0.625em 0.625em; font-size: inherit; color: white; text-align: left; }
+table tr th, table tr td { padding: 0.5625em 0.625em; font-size: inherit; color: #6d6e71; }
+table tr.even, table tr.alt, table tr:nth-of-type(even) { background: #edf2f2; }
+table thead tr th, table tfoot tr th, table tbody tr td, table tr td, table tfoot tr td { display: table-cell; line-height: 1.4; }
+
+a:hover, a:focus { text-decoration: underline; }
+
+.clearfix:before, .clearfix:after, .float-group:before, .float-group:after { content: " "; display: table; }
+.clearfix:after, .float-group:after { clear: both; }
+
+*:not(pre) > code { font-size: inherit; padding: 3px 2px 1px 2px; white-space: nowrap; background-color: #eeeeee; border: 1px solid #dddddd; -webkit-border-radius: 0; border-radius: 0; text-shadow: none; }
+
+pre, pre > code { line-height: 1.6; color: black; font-family: Consolas, "Liberation Mono", Courier, monospace; font-weight: normal; }
+
+kbd.keyseq { color: #333333; }
+
+kbd:not(.keyseq) { display: inline-block; color: black; font-size: 0.75em; line-height: 1.4; background-color: #F7F7F7; border: 1px solid #ccc; -webkit-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset; margin: -0.15em 0.15em 0 0.15em; padding: 0.2em 0.6em 0.2em 0.5em; vertical-align: middle; white-space: nowrap; }
+
+kbd kbd:first-child { margin-left: 0; }
+
+kbd kbd:last-child { margin-right: 0; }
+
+.menuseq, .menu { color: black; }
+
+b.button:before { content: '[ '; }
+
+b.button:after { content: ' ]'; }
+
+#header, #content, #footnotes, #footer { width: 100%; margin-left: auto; margin-right: auto; margin-top: 0; margin-bottom: 0; max-width: 62.5em; *zoom: 1; position: relative; padding-left: 1.5em; padding-right: 1.5em; }
+#header:before, #header:after, #content:before, #content:after, #footnotes:before, #footnotes:after, #footer:before, #footer:after { content: " "; display: table; }
+#header:after, #content:after, #footnotes:after, #footer:after { clear: both; }
+
+#header { margin-bottom: 2.5em; }
+#header > h1 { color: #7b2d00; font-weight: normal; border-bottom: 1px solid #dddddd; margin-bottom: -28px; padding-bottom: 32px; }
+#header span { color: #333333; }
+#header #revnumber { text-transform: capitalize; }
+#header br { display: none; }
+#header br + span { padding-left: 3px; }
+#header br + span:before { content: "\2013 \0020"; }
+#header br + span.author { padding-left: 0; }
+#header br + span.author:before { content: ", "; }
+
+#toc { border-bottom: 1px solid #dddddd; padding-bottom: 1.25em; }
+#toc > ul { margin-left: 0.25em; }
+#toc ul.sectlevel0 > li > a { font-style: italic; }
+#toc ul.sectlevel0 ul.sectlevel1 { margin-left: 0; margin-top: 0.5em; margin-bottom: 0.5em; }
+#toc ul { list-style-type: none; }
+
+#toctitle { color: #003b6b; }
+
+@media only screen and (min-width: 768px) { body.toc2 { padding-left: 15em; padding-right: 0; }
+  #toc.toc2 { position: fixed; width: 15em; left: 0; top: 0; border-right: 1px solid #dddddd; border-bottom: 0; z-index: 1000; padding: 1em; height: 100%; overflow: auto; }
+  #toc.toc2 #toctitle { margin-top: 0; font-size: 1.2em; }
+  #toc.toc2 > ul { font-size: .90em; }
+  #toc.toc2 ul ul { margin-left: 0; padding-left: 1em; }
+  #toc.toc2 ul.sectlevel0 ul.sectlevel1 { padding-left: 0; margin-top: 0.5em; margin-bottom: 0.5em; }
+  body.toc2.toc-right { padding-left: 0; padding-right: 15em; }
+  body.toc2.toc-right #toc.toc2 { border-right: 0; border-left: 1px solid #dddddd; left: auto; right: 0; } }
+@media only screen and (min-width: 1280px) { body.toc2 { padding-left: 20em; padding-right: 0; }
+  #toc.toc2 { width: 20em; }
+  #toc.toc2 #toctitle { font-size: 1.375em; }
+  #toc.toc2 > ul { font-size: 0.95em; }
+  #toc.toc2 ul ul { padding-left: 1.25em; }
+  body.toc2.toc-right { padding-left: 0; padding-right: 20em; } }
+#content #toc { border-style: solid; border-width: 1px; border-color: #e6e6e6; margin-bottom: 1.25em; padding: 1.25em; background: white; border-width: 0; -webkit-border-radius: 0; border-radius: 0; }
+#content #toc > :first-child { margin-top: 0; }
+#content #toc > :last-child { margin-bottom: 0; }
+#content #toc a { text-decoration: none; }
+
+#content #toctitle { font-weight: bold; font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 1em; padding-left: 0.125em; }
+
+#footer { max-width: 100%; background-color: none; padding: 1.25em; }
+
+#footer-text { color: black; line-height: 1.44; }
+
+.sect1 { padding-bottom: 1.25em; }
+
+.sect1 + .sect1 { border-top: 1px solid #dddddd; }
+
+#content h1 > a.anchor, h2 > a.anchor, h3 > a.anchor, #toctitle > a.anchor, .sidebarblock > .content > .title > a.anchor, h4 > a.anchor, h5 > a.anchor, h6 > a.anchor { position: absolute; width: 1em; margin-left: -1em; display: block; text-decoration: none; visibility: hidden; text-align: center; font-weight: normal; }
+#content h1 > a.anchor:before, h2 > a.anchor:before, h3 > a.anchor:before, #toctitle > a.anchor:before, .sidebarblock > .content > .title > a.anchor:before, h4 > a.anchor:before, h5 > a.anchor:before, h6 > a.anchor:before { content: '\00A7'; font-size: .85em; vertical-align: text-top; display: block; margin-top: 0.05em; }
+#content h1:hover > a.anchor, #content h1 > a.anchor:hover, h2:hover > a.anchor, h2 > a.anchor:hover, h3:hover > a.anchor, #toctitle:hover > a.anchor, .sidebarblock > .content > .title:hover > a.anchor, h3 > a.anchor:hover, #toctitle > a.anchor:hover, .sidebarblock > .content > .title > a.anchor:hover, h4:hover > a.anchor, h4 > a.anchor:hover, h5:hover > a.anchor, h5 > a.anchor:hover, h6:hover > a.anchor, h6 > a.anchor:hover { visibility: visible; }
+#content h1 > a.link, h2 > a.link, h3 > a.link, #toctitle > a.link, .sidebarblock > .content > .title > a.link, h4 > a.link, h5 > a.link, h6 > a.link { color: #7b2d00; text-decoration: none; }
+#content h1 > a.link:hover, h2 > a.link:hover, h3 > a.link:hover, #toctitle > a.link:hover, .sidebarblock > .content > .title > a.link:hover, h4 > a.link:hover, h5 > a.link:hover, h6 > a.link:hover { color: #622400; }
+
+.imageblock, .literalblock, .listingblock, .mathblock, .verseblock, .videoblock { margin-bottom: 1.25em; }
+
+.admonitionblock td.content > .title, .exampleblock > .title, .imageblock > .title, .listingblock > .title, .literalblock > .title, .mathblock > .title, .openblock > .title, .paragraph > .title, .quoteblock > .title, .sidebarblock > .title, .tableblock > .title, .verseblock > .title, .videoblock > .title, .dlist > .title, .olist > .title, .ulist > .title, .qlist > .title, .hdlist > .title { text-align: left; font-weight: bold; }
+
+.tableblock > caption { text-align: left; font-weight: bold; white-space: nowrap; overflow: visible; max-width: 0; }
+
+table.tableblock #preamble > .sectionbody > .paragraph:first-of-type p { font-size: inherit; }
+
+.admonitionblock > table { border: 0; background: none; width: 100%; }
+.admonitionblock > table td.icon { text-align: center; width: 80px; }
+.admonitionblock > table td.icon img { max-width: none; }
+.admonitionblock > table td.icon .title { font-weight: bold; text-transform: uppercase; }
+.admonitionblock > table td.content { padding-left: 1.125em; padding-right: 1.25em; border-left: 1px solid #dddddd; color: #333333; }
+.admonitionblock > table td.content > :last-child > :last-child { margin-bottom: 0; }
+
+.exampleblock > .content { border-style: solid; border-width: 1px; border-color: #e6e6e6; margin-bottom: 1.25em; padding: 1.25em; background: white; -webkit-border-radius: 0; border-radius: 0; }
+.exampleblock > .content > :first-child { margin-top: 0; }
+.exampleblock > .content > :last-child { margin-bottom: 0; }
+.exampleblock > .content h1, .exampleblock > .content h2, .exampleblock > .content h3, .exampleblock > .content #toctitle, .sidebarblock.exampleblock > .content > .title, .exampleblock > .content h4, .exampleblock > .content h5, .exampleblock > .content h6, .exampleblock > .content p { color: #333333; }
+.exampleblock > .content h1, .exampleblock > .content h2, .exampleblock > .content h3, .exampleblock > .content #toctitle, .sidebarblock.exampleblock > .content > .title, .exampleblock > .content h4, .exampleblock > .content h5, .exampleblock > .content h6 { line-height: 1; margin-bottom: 0.625em; }
+.exampleblock > .content h1.subheader, .exampleblock > .content h2.subheader, .exampleblock > .content h3.subheader, .exampleblock > .content .subheader#toctitle, .sidebarblock.exampleblock > .content > .subheader.title, .exampleblock > .content h4.subheader, .exampleblock > .content h5.subheader, .exampleblock > .content h6.subheader { line-height: 1.4; }
+
+.exampleblock.result > .content { -webkit-box-shadow: 0 1px 8px #aaaaaa; box-shadow: 0 1px 8px #aaaaaa; }
+
+.sidebarblock { border-style: solid; border-width: 1px; border-color: #e6e6e6; margin-bottom: 1.25em; padding: 1.25em; background: white; -webkit-border-radius: 0; border-radius: 0; }
+.sidebarblock > :first-child { margin-top: 0; }
+.sidebarblock > :last-child { margin-bottom: 0; }
+.sidebarblock h1, .sidebarblock h2, .sidebarblock h3, .sidebarblock #toctitle, .sidebarblock > .content > .title, .sidebarblock h4, .sidebarblock h5, .sidebarblock h6, .sidebarblock p { color: #333333; }
+.sidebarblock h1, .sidebarblock h2, .sidebarblock h3, .sidebarblock #toctitle, .sidebarblock > .content > .title, .sidebarblock h4, .sidebarblock h5, .sidebarblock h6 { line-height: 1; margin-bottom: 0.625em; }
+.sidebarblock h1.subheader, .sidebarblock h2.subheader, .sidebarblock h3.subheader, .sidebarblock .subheader#toctitle, .sidebarblock > .content > .subheader.title, .sidebarblock h4.subheader, .sidebarblock h5.subheader, .sidebarblock h6.subheader { line-height: 1.4; }
+.sidebarblock > .content > .title { color: #003b6b; margin-top: 0; line-height: 1.6; }
+
+.exampleblock > .content > :last-child > :last-child, .exampleblock > .content .olist > ol > li:last-child > :last-child, .exampleblock > .content .ulist > ul > li:last-child > :last-child, .exampleblock > .content .qlist > ol > li:last-child > :last-child, .sidebarblock > .content > :last-child > :last-child, .sidebarblock > .content .olist > ol > li:last-child > :last-child, .sidebarblock > .content .ulist > ul > li:last-child > :last-child, .sidebarblock > .content .qlist > ol > li:last-child > :last-child { margin-bottom: 0; }
+
+.literalblock pre:not([class]), .listingblock pre:not([class]) { background: #eeeeee; }
+.literalblock pre, .literalblock pre[class], .listingblock pre, .listingblock pre[class] { border-width: 1px; border-style: dashed; border-color: #666666; -webkit-border-radius: 0; border-radius: 0; padding: 1.25em 1.5625em 1.125em 1.5625em; word-wrap: break-word; }
+.literalblock pre.nowrap, .literalblock pre[class].nowrap, .listingblock pre.nowrap, .listingblock pre[class].nowrap { overflow-x: auto; white-space: pre; word-wrap: normal; }
+.literalblock pre > code, .literalblock pre[class] > code, .listingblock pre > code, .listingblock pre[class] > code { display: block; }
+@media only screen { .literalblock pre, .literalblock pre[class], .listingblock pre, .listingblock pre[class] { font-size: 0.72em; } }
+@media only screen and (min-width: 768px) { .literalblock pre, .literalblock pre[class], .listingblock pre, .listingblock pre[class] { font-size: 0.81em; } }
+@media only screen and (min-width: 1280px) { .literalblock pre, .literalblock pre[class], .listingblock pre, .listingblock pre[class] { font-size: 0.9em; } }
+
+.listingblock pre.highlight { padding: 0; }
+.listingblock pre.highlight > code { padding: 1.25em 1.5625em 1.125em 1.5625em; }
+
+.listingblock > .content { position: relative; }
+
+.listingblock:hover code[class*=" language-"]:before { text-transform: uppercase; font-size: 0.9em; color: #999; position: absolute; top: 0.375em; right: 0.375em; }
+
+.listingblock:hover code.asciidoc:before { content: "asciidoc"; }
+.listingblock:hover code.clojure:before { content: "clojure"; }
+.listingblock:hover code.css:before { content: "css"; }
+.listingblock:hover code.groovy:before { content: "groovy"; }
+.listingblock:hover code.html:before { content: "html"; }
+.listingblock:hover code.java:before { content: "java"; }
+.listingblock:hover code.javascript:before { content: "javascript"; }
+.listingblock:hover code.python:before { content: "python"; }
+.listingblock:hover code.ruby:before { content: "ruby"; }
+.listingblock:hover code.sass:before { content: "sass"; }
+.listingblock:hover code.scss:before { content: "scss"; }
+.listingblock:hover code.xml:before { content: "xml"; }
+.listingblock:hover code.yaml:before { content: "yaml"; }
+
+.listingblock.terminal pre .command:before { content: attr(data-prompt); padding-right: 0.5em; color: #999; }
+
+.listingblock.terminal pre .command:not([data-prompt]):before { content: '$'; }
+
+table.pyhltable { border: 0; margin-bottom: 0; }
+
+table.pyhltable td { vertical-align: top; padding-top: 0; padding-bottom: 0; }
+
+table.pyhltable td.code { padding-left: .75em; padding-right: 0; }
+
+.highlight.pygments .lineno, table.pyhltable td:not(.code) { color: #999; padding-left: 0; padding-right: .5em; border-right: 1px solid #dddddd; }
+
+.highlight.pygments .lineno { display: inline-block; margin-right: .25em; }
+
+table.pyhltable .linenodiv { background-color: transparent !important; padding-right: 0 !important; }
+
+.quoteblock { margin: 0 0 0.75em; padding: 0.5625em 1.25em 0 1.1875em; border-left: 1px solid #dddddd; }
+.quoteblock blockquote { margin: 0 0 0.75em 0; padding: 0 0 0.5625em 0; border: 0; }
+.quoteblock blockquote > .paragraph:last-child p { margin-bottom: 0; }
+.quoteblock .attribution { margin-top: -.25em; padding-bottom: 0.5625em; font-size: 0.8125em; color: #e15200; }
+.quoteblock .attribution br { display: none; }
+.quoteblock .attribution cite { display: block; margin-bottom: 0.625em; }
+
+table thead th, table tfoot th { font-weight: bold; }
+
+table.tableblock.grid-all { border-collapse: separate; border-spacing: 1px; -webkit-border-radius: 0; border-radius: 0; border-top: 1px solid #dddddd; border-bottom: 1px solid #dddddd; }
+
+table.tableblock.frame-topbot, table.tableblock.frame-none { border-left: 0; border-right: 0; }
+
+table.tableblock.frame-sides, table.tableblock.frame-none { border-top: 0; border-bottom: 0; }
+
+table.tableblock td .paragraph:last-child p > p:last-child, table.tableblock th > p:last-child, table.tableblock td > p:last-child { margin-bottom: 0; }
+
+th.tableblock.halign-left, td.tableblock.halign-left { text-align: left; }
+
+th.tableblock.halign-right, td.tableblock.halign-right { text-align: right; }
+
+th.tableblock.halign-center, td.tableblock.halign-center { text-align: center; }
+
+th.tableblock.valign-top, td.tableblock.valign-top { vertical-align: top; }
+
+th.tableblock.valign-bottom, td.tableblock.valign-bottom { vertical-align: bottom; }
+
+th.tableblock.valign-middle, td.tableblock.valign-middle { vertical-align: middle; }
+
+tbody tr th { display: table-cell; line-height: 1.4; background: -webkit-linear-gradient(top, #add386, #90b66a); }
+
+tbody tr th, tbody tr th p, tfoot tr th, tfoot tr th p { color: white; font-weight: bold; }
+
+td > div.verse { white-space: pre; }
+
+ol { margin-left: 1.75em; }
+
+ul li ol { margin-left: 1.5em; }
+
+dl dd { margin-left: 1.125em; }
+
+dl dd:last-child, dl dd:last-child > :last-child { margin-bottom: 0; }
+
+ol > li p, ul > li p, ul dd, ol dd, .olist .olist, .ulist .ulist, .ulist .olist, .olist .ulist { margin-bottom: 0.375em; }
+
+ul.unstyled, ol.unnumbered, ul.checklist, ul.none { list-style-type: none; }
+
+ul.unstyled, ol.unnumbered, ul.checklist { margin-left: 0.625em; }
+
+ul.checklist li > p:first-child > i[class^="icon-check"]:first-child, ul.checklist li > p:first-child > input[type="checkbox"]:first-child { margin-right: 0.25em; }
+
+ul.checklist li > p:first-child > input[type="checkbox"]:first-child { position: relative; top: 1px; }
+
+ul.inline { margin: 0 auto 0.375em auto; margin-left: -1.375em; margin-right: 0; padding: 0; list-style: none; overflow: hidden; }
+ul.inline > li { list-style: none; float: left; margin-left: 1.375em; display: block; }
+ul.inline > li > * { display: block; }
+
+.unstyled dl dt { font-weight: normal; font-style: normal; }
+
+ol.arabic { list-style-type: decimal; }
+
+ol.decimal { list-style-type: decimal-leading-zero; }
+
+ol.loweralpha { list-style-type: lower-alpha; }
+
+ol.upperalpha { list-style-type: upper-alpha; }
+
+ol.lowerroman { list-style-type: lower-roman; }
+
+ol.upperroman { list-style-type: upper-roman; }
+
+ol.lowergreek { list-style-type: lower-greek; }
+
+.hdlist > table, .colist > table { border: 0; background: none; }
+.hdlist > table > tbody > tr, .colist > table > tbody > tr { background: none; }
+
+td.hdlist1 { padding-right: .8em; font-weight: bold; }
+
+td.hdlist1, td.hdlist2 { vertical-align: top; }
+
+.literalblock + .colist, .listingblock + .colist { margin-top: -0.5em; }
+
+.colist > table tr > td:first-of-type { padding: 0 .8em; line-height: 1; }
+.colist > table tr > td:last-of-type { padding: 0.25em 0; }
+
+.qanda > ol > li > p > em:only-child { color: #004985; }
+
+.thumb, .th { line-height: 0; display: inline-block; border: solid 4px white; -webkit-box-shadow: 0 0 0 1px #dddddd; box-shadow: 0 0 0 1px #dddddd; }
+
+.imageblock.left, .imageblock[style*="float: left"] { margin: 0.25em 0.625em 1.25em 0; }
+.imageblock.right, .imageblock[style*="float: right"] { margin: 0.25em 0 1.25em 0.625em; }
+.imageblock > .title { margin-bottom: 0; }
+.imageblock.thumb, .imageblock.th { border-width: 6px; }
+.imageblock.thumb > .title, .imageblock.th > .title { padding: 0 0.125em; }
+
+.image.left, .image.right { margin-top: 0.25em; margin-bottom: 0.25em; display: inline-block; line-height: 0; }
+.image.left { margin-right: 0.625em; }
+.image.right { margin-left: 0.625em; }
+
+a.image { text-decoration: none; }
+
+span.footnote, span.footnoteref { vertical-align: super; font-size: 0.875em; }
+span.footnote a, span.footnoteref a { text-decoration: none; }
+
+#footnotes { padding-top: 0.75em; padding-bottom: 0.75em; margin-bottom: 0.625em; }
+#footnotes hr { width: 20%; min-width: 6.25em; margin: -.25em 0 .75em 0; border-width: 1px 0 0 0; }
+#footnotes .footnote { padding: 0 0.375em; line-height: 1.3; font-size: 0.875em; margin-left: 1.2em; text-indent: -1.2em; margin-bottom: .2em; }
+#footnotes .footnote a:first-of-type { font-weight: bold; text-decoration: none; }
+#footnotes .footnote:last-of-type { margin-bottom: 0; }
+
+#content #footnotes { margin-top: -0.625em; margin-bottom: 0; padding: 0.75em 0; }
+
+.gist .file-data > table { border: none; background: #fff; width: 100%; margin-bottom: 0; }
+.gist .file-data > table td.line-data { width: 99%; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+.big { font-size: larger; }
+
+.small { font-size: smaller; }
+
+.underline { text-decoration: underline; }
+
+.overline { text-decoration: overline; }
+
+.line-through { text-decoration: line-through; }
+
+.aqua { color: #00bfbf; }
+
+.aqua-background { background-color: #00fafa; }
+
+.black { color: black; }
+
+.black-background { background-color: black; }
+
+.blue { color: #0000bf; }
+
+.blue-background { background-color: #0000fa; }
+
+.fuchsia { color: #bf00bf; }
+
+.fuchsia-background { background-color: #fa00fa; }
+
+.gray { color: #606060; }
+
+.gray-background { background-color: #7d7d7d; }
+
+.green { color: #006000; }
+
+.green-background { background-color: #007d00; }
+
+.lime { color: #00bf00; }
+
+.lime-background { background-color: #00fa00; }
+
+.maroon { color: #600000; }
+
+.maroon-background { background-color: #7d0000; }
+
+.navy { color: #000060; }
+
+.navy-background { background-color: #00007d; }
+
+.olive { color: #606000; }
+
+.olive-background { background-color: #7d7d00; }
+
+.purple { color: #600060; }
+
+.purple-background { background-color: #7d007d; }
+
+.red { color: #bf0000; }
+
+.red-background { background-color: #fa0000; }
+
+.silver { color: #909090; }
+
+.silver-background { background-color: #bcbcbc; }
+
+.teal { color: #006060; }
+
+.teal-background { background-color: #007d7d; }
+
+.white { color: #bfbfbf; }
+
+.white-background { background-color: #fafafa; }
+
+.yellow { color: #bfbf00; }
+
+.yellow-background { background-color: #fafa00; }
+
+span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
+
+.admonitionblock td.icon [class^="icon-"]:before { font-size: 2.5em; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); cursor: default; }
+.admonitionblock td.icon .icon-note:before { content: "\f05a"; color: #00579e; color: #004176; }
+.admonitionblock td.icon .icon-tip:before { content: "\f0eb"; text-shadow: 1px 1px 2px rgba(155, 155, 0, 0.8); color: #111; }
+.admonitionblock td.icon .icon-warning:before { content: "\f071"; color: #bf6900; }
+.admonitionblock td.icon .icon-caution:before { content: "\f06d"; color: #bf3400; }
+.admonitionblock td.icon .icon-important:before { content: "\f06a"; color: #bf0000; }
+
+.conum { display: inline-block; color: white !important; background-color: black; -webkit-border-radius: 100px; border-radius: 100px; text-align: center; width: 20px; height: 20px; font-size: 12px; font-weight: bold; line-height: 20px; font-family: Arial, sans-serif; font-style: normal; position: relative; top: -2px; letter-spacing: -1px; }
+.conum * { color: white !important; }
+.conum + b { display: none; }
+.conum:after { content: attr(data-value); }
+.conum:not([data-value]):empty { display: none; }
+
+h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 { border-bottom: 1px solid #dddddd; }
+
+#toctitle { color: #00406F; font-weight: normal; margin-top: 1.5em; }
+
+.sidebarblock { border-color: #aaa; }
+
+code { -webkit-border-radius: 4px; border-radius: 4px; }
+
+p.tableblock.header { color: #6d6e71; }
+
+
+@media screen {
+  body {
+    max-width: 80em; /* 50em is approximately 80 characters wide */
+    margin-left: 20em; /* this is 3em beyound the width of the toc */
+  }
+
+  #toc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 20em;
+    padding: 0.5em;
+    padding-bottom: 1.5em;
+    margin: 0;
+    overflow: auto;
+    border-right: 3px solid #f8f8f8;
+    background-color: white;
+    font-size: 0.9em;
+  }
+
+  #toc .toclevel1 {
+    margin-top: 0.5em;
+  }
+
+  #toc .toclevel2 {
+    margin-top: 0.25em;
+    display: list-item;
+    padding-left: 1.25em;
+    color: #aaaaaa;
+  }
+
+  #toctitle {
+    margin-top: 0.5em;
+  }
+}
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install(2);
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+<div id="toc">
+  <div id="toctitle">Table of Contents</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_microservices_security_lab">Microservices Security Lab</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>In this lab, you secure some of the microservices that make up the Coolstore application with token-based authentication and authorization, using Red Hat Single Sign-On (Red Hat SSO) as the authentication server.</p></div>
+<div class="ulist"><div class="title">Goal</div><ul>
+<li>
+<p>
+Enhance the code and configuration of the applications to provide token-based authentication and authorization
+</p>
+</li>
+</ul></div>
+<div class="ulist"><div class="title">Prerequisites</div><ul>
+<li>
+<p>
+Completion of all of the previous labs
+</p>
+</li>
+<li>
+<p>
+Successful deployment of the catalog, inventory, and cart services, and gateway microservice applications
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configure_deploy_and_test_red_hat_sso_on_openshift">1. Configure, Deploy, and Test Red Hat SSO on OpenShift</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Red Hat provides a supported Docker image for Red Hat Single Sign-On version 7.2. The <code>ocp/rhsso</code> folder of the lab source code includes a template for Red Hat Single Sign-On 7.2 using PostgreSQL as the database.</p></div>
+<div class="sect2">
+<h3 id="_configure_red_hat_sso_on_openshift">1.1. Configure Red Hat SSO on OpenShift</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+If you are using the course VM, open a terminal shell and change your working directory to the <code>~/lab/projects</code> lab home folder.
+</p>
+</li>
+<li>
+<p>
+Export the name of the <code>coolstore-infra</code> OpenShift project as an environment variable:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ oc get projects
+
+$ export INFRA_PRJ=&lt;name of your OpenShift coolstore infra project&gt;</code></pre>
+</div></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">Make sure your infra project is created. If not, create it now.</td>
+</tr></table>
+</div>
+</li>
+<li>
+<p>
+Create a secret for the Red Hat SSO deployment using the <code>rhsso-app-secret.json</code> template in the <code>ocp/rhsso</code> folder:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ cd ~/lab
+
+$ oc create -f ocp/rhsso/rhsso-app-secret.json -n $INFRA_PRJ</code></pre>
+</div></div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code>serviceaccount "sso-service-account" created
+secret "sso-app-secret" created</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The template defines a secret that contains the keystore for Red Hat SSO (to provide access over SSL, using the key alias of <code>jboss</code> and <code>mykeystorepassword</code> as the password) and JGroups (required for clustering, but not used in the lab). The template also defines a <code>sso-service-account</code> service account that has access to the secret.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Give cluster view rights to the <code>sso-service-account</code> service account:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ oc policy add-role-to-user view system:serviceaccount:$INFRA_PRJ:sso-service-account -n $INFRA_PRJ</code></pre>
+</div></div>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_deploy_red_hat_sso_on_openshift">1.2. Deploy Red Hat SSO on OpenShift</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Create a deployment from the <code>rhsso72-postgresql-persistent.yaml</code> template:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ oc process -f ocp/rhsso/rhsso72-postgresql-persistent.yaml \
+-p HTTPS_NAME=jboss -p HTTPS_PASSWORD=mykeystorepass \
+-p SSO_ADMIN_USERNAME=admin -p SSO_ADMIN_PASSWORD=admin \
+-p SSO_REALM=coolstore | oc create -n $INFRA_PRJ -f -</code></pre>
+</div></div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code>service "sso" created
+service "secure-sso" created
+service "sso-postgresql" created
+route "sso" created
+route "secure-sso" created
+deploymentconfig "sso" created
+deploymentconfig "sso-postgresql" created
+persistentvolumeclaim "sso-postgresql-claim" created</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The <code>rhsso72-postgresql-persistent.yaml</code> template in the <code>ocp/rhsso</code> folder defines the OpenShift objects for the deployment of the Red Hat SSO server (<code>BuildConfig</code>, <code>DeploymentConfig</code>, <code>Service</code>, and <code>Route</code>) and PostgreSQL (<code>BuildConfig</code>, <code>DeploymentConfig</code>, <code>Service</code>, <code>Persistent Volume Claim</code>).
+</p>
+</li>
+<li>
+<p>
+This creates a Red Hat SSO instance, using the <code>admin:admin</code> password and <code>coolstore</code> realm.
+</p>
+</li>
+<li>
+<p>
+Note that two services and routes are created for the Red Hat SSO&#8212;an unsecured one that exposes the Red Hat SSO endpoints over HTTP, and a secure one that uses HTTPS.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Follow the deployment on the OpenShift web console.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+When fully deployed, expect the <code>infra</code> project to look like this:
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/rhsso-deployed.png" alt="images/rhsso-deployed.png" />
+</div>
+</div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In a browser, navigate to the URL of the Red Hat SSO server.
+</p>
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+Select <strong>Applications &gt; Services &gt; Secure SSO</strong>
+</p>
+</li>
+<li>
+<p>
+Select the <strong>Hostname</strong> link for the Route
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+If you chose the SSL-enabled URL, ignore the safety warning and proceed to the URL.
+</p>
+</li>
+</ul></div>
+</li>
+</ol></div>
+</li>
+<li>
+<p>
+Click the <strong>Administration Console</strong> link and log in with <code>admin/admin</code> credentials.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect to see the <strong>Realm Settings</strong> screen of the <code>Coolstore</code> realm:
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/rhsso-coolstore-realm.png" alt="images/rhsso-coolstore-realm.png" />
+</div>
+</div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+On the left side of the page, open the <strong>Clients</strong> tab and click <strong>Create</strong> to create a client.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+You create a client in the realm so that you are able to test the secured microservices&#8212;you want to be able to obtain a token based on user credentials directly from the Red Hat SSO server using a Direct Access Grant.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Enter <code>curl</code> as the <strong>Client ID</strong> and click <strong>Save</strong>:
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/rhsso-curl-client.png" alt="images/rhsso-curl-client.png" />
+</div>
+</div>
+</li>
+<li>
+<p>
+In the <strong>Settings</strong> tab, disable <strong>Standard Flow</strong> and enable <strong>Direct Access Grants</strong>, then click <strong>Save</strong>:
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/rhsso-curl-client-grant.png" alt="images/rhsso-curl-client-grant.png" />
+</div>
+</div>
+</li>
+<li>
+<p>
+Define the realm roles:
+</p>
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+On the left side of the page, open the <strong>Roles</strong> tab and click <strong>Add Role</strong> to create a realm role.
+</p>
+</li>
+<li>
+<p>
+Enter <code>coolstore</code> as the <strong>Role Name</strong> and and click <strong>Save</strong>:
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/rhsso-coolstore-realm-role.png" alt="images/rhsso-coolstore-realm-role.png" />
+</div>
+</div>
+</li>
+</ol></div>
+</li>
+<li>
+<p>
+Create a user:
+</p>
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+On the left side of the page, select the <strong>Users</strong> tab and click <strong>Add User</strong>.
+</p>
+</li>
+<li>
+<p>
+Enter <code>user1</code> as the username and click <strong>Save</strong>.
+</p>
+</li>
+</ol></div>
+</li>
+<li>
+<p>
+Click the <strong>Credentials</strong> tab to set the password for the user, enter <code>user</code> as the password, set <strong>Temporary</strong> to off, and click <strong>Reset Password</strong>:
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/rhsso-user-credentials.png" alt="images/rhsso-user-credentials.png" />
+</div>
+</div>
+</li>
+<li>
+<p>
+Select the <strong>Role Mappings</strong> tab to map the <code>coolstore</code> role to <code>user1</code> and select the <code>coolstore</code> role in the <strong>Available Roles</strong> list, then click <strong>Add selected</strong>:
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/rhsso-user-roles.png" alt="images/rhsso-user-roles.png" />
+</div>
+</div>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_test_red_hat_sso_configuration_on_openshift">1.3. Test Red Hat SSO Configuration on OpenShift</h3>
+<div class="paragraph"><p>In this section, you obtain a token for the user using <code>curl</code> and you test the Red Hat SSO configuration using the token.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Open a terminal shell and export the HTTPS URL of the Red Hat SSO server as a environment variable:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ export RHSSO_URL=&lt;https url of the RHSSO server&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Use <code>curl</code> to obtain a token from the Red Hat SSO server:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ curl -X POST "$RHSSO_URL/auth/realms/coolstore/protocol/openid-connect/token" \
+ -H "Content-Type: application/x-www-form-urlencoded" \
+ -d "username=user1" \
+ -d "password=user" \
+ -d "grant_type=password" \
+ -d "client_id=curl" \
+ --insecure</code></pre>
+</div></div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code>{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuNFJ3cll1MnY5OVBnYU1vX1VLWFM2STE5aFBqVmVPYXVKb3dSX2hCNnFvIn0.eyJqdGkiOiJmMGQ2ZTkyMC01N2E4LTQ0YzItYTk5My04NzYyZGZiZWZhOWEiLCJleHAiOjE1MDMwNjA0MTAsIm5iZiI6MCwiaWF0IjoxNTAzMDYwMTEwLCJpc3MiOiJodHRwczovL3NlY3VyZS1zc28tY29vbHN0b3JlLWluZnJhLmFwcHMub2NwLmxvY2FsLmNsdXN0ZXIvYXV0aC9yZWFsbXMvY29vbHN0b3JlIiwiYXVkIjoiY3VybCIsInN1YiI6ImE3ODJiZDNjLTZjNWYtNGJlMC04NTQyLTQwYTU2MTJiMDgyMCIsInR5cCI6IkJlYXJlciIsImF6cCI6ImN1cmwiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiIyNGNkOTc4Mi1mYzgxLTRmZjgtYWQyMC0wMGQxN2YxZWUwODkiLCJhY3IiOiIxIiwiY2xpZW50X3Nlc3Npb24iOiI0MzBkOWY0Yi0wYTczLTRmNWMtOGZmNy0zNmVmMTQ1MWViNTMiLCJhbGxvd2VkLW9yaWdpbnMiOltdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsidW1hX2F1dGhvcml6YXRpb24iLCJjb29sc3RvcmUiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50Iiwidmlldy1wcm9maWxlIl19fSwibmFtZSI6IiIsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIxIn0.HZgB_dW2QP6syFUtxswY3fddb_fXDV8zzoGufi9UFfnFZkog8GqhQNRHqsLAO6wp_blUbMgz3tD68baF9OswXC7RJ8jRBxxVO8v0b8qCihDZe0Aov_UU1MbmZq4MZddbV6PZFeA2cr65sVSEuBFReWh-A9-63BXPkHq1fN7qf91jTldPBMO8iLV1uiXtVHFFRbHJ7D0uXY9pJh-rlvKuMk6OeMcLLXAbi9dfMLuuWAxvp0TtN6SB0GJ5Dq2MCgZiJDnr8t8daiYUffRLpvXHeQSupUVUWOzos_hbGwYCeuVJE0xra2wORIP3ty5WOqFZEXMb2oYxbkcK4msFWxB4Lg","expires_in":300,"refresh_expires_in":1800,"refresh_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuNFJ3cll1MnY5OVBnYU1vX1VLWFM2STE5aFBqVmVPYXVKb3dSX2hCNnFvIn0.eyJqdGkiOiJkMjZkMzY4NS1mMjA5LTQxYWEtYTU5Mi1jMjJlMzkwNzkyNTciLCJleHAiOjE1MDMwNjE5MTAsIm5iZiI6MCwiaWF0IjoxNTAzMDYwMTEwLCJpc3MiOiJodHRwczovL3NlY3VyZS1zc28tY29vbHN0b3JlLWluZnJhLmFwcHMub2NwLmxvY2FsLmNsdXN0ZXIvYXV0aC9yZWFsbXMvY29vbHN0b3JlIiwiYXVkIjoiY3VybCIsInN1YiI6ImE3ODJiZDNjLTZjNWYtNGJlMC04NTQyLTQwYTU2MTJiMDgyMCIsInR5cCI6IlJlZnJlc2giLCJhenAiOiJjdXJsIiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiMjRjZDk3ODItZmM4MS00ZmY4LWFkMjAtMDBkMTdmMWVlMDg5IiwiY2xpZW50X3Nlc3Npb24iOiI0MzBkOWY0Yi0wYTczLTRmNWMtOGZmNy0zNmVmMTQ1MWViNTMiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsidW1hX2F1dGhvcml6YXRpb24iLCJjb29sc3RvcmUiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50Iiwidmlldy1wcm9maWxlIl19fX0.jJTawJ0IPJX1JHVlkpsaE3spzJcQNgxBcnZX-GEBj1dNSuvah1oKjNDq9VF4cTzBGpRhvTZy2FvYVCqVILZv8pmYLGa95iE3g7zRTINGotxrXWoB3mBz3YyXoheLIN_SaVJZpDQlQWiJy4SmXUQdkyshqGwl6F4236-jzJQEbGPkC15BVS-HprttFHVzFxGfNTOqjb5YjgCY8KFYszuMsQaNaAsGa8zAqFuMXQc1sDUb2n2kKc5B19Gpy8zS7WwF76nZFo3y9nBZd4zI8g88I20xoIaccsC1ME6hrPN9k1tmHDGirVVr6haSDlwwEillf7vSMBJBfXc7aQI7PtKkOg","token_type":"bearer","id_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuNFJ3cll1MnY5OVBnYU1vX1VLWFM2STE5aFBqVmVPYXVKb3dSX2hCNnFvIn0.eyJqdGkiOiI1MGM1YmE3Yy00MzE1LTQ5ZDgtYjc4Mi0xY2M4YjNiZTdjOTIiLCJleHAiOjE1MDMwNjA0MTAsIm5iZiI6MCwiaWF0IjoxNTAzMDYwMTEwLCJpc3MiOiJodHRwczovL3NlY3VyZS1zc28tY29vbHN0b3JlLWluZnJhLmFwcHMub2NwLmxvY2FsLmNsdXN0ZXIvYXV0aC9yZWFsbXMvY29vbHN0b3JlIiwiYXVkIjoiY3VybCIsInN1YiI6ImE3ODJiZDNjLTZjNWYtNGJlMC04NTQyLTQwYTU2MTJiMDgyMCIsInR5cCI6IklEIiwiYXpwIjoiY3VybCIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6IjI0Y2Q5NzgyLWZjODEtNGZmOC1hZDIwLTAwZDE3ZjFlZTA4OSIsImFjciI6IjEiLCJuYW1lIjoiIiwicHJlZmVycmVkX3VzZXJuYW1lIjoidXNlcjEifQ.gUfdCBLT7kRInNo8W7EjII9jw5BZaasnMAWjtK1pVZYXgEjgy4H8Y8Y_wvpG9Z0Wg6wAa-O1V7MwzlGzWRiG-FJhTFyjinCwnH_hdvMGQr4EebP2Kwnv272VQ13E3nM0-vra_VksrFwBGhb8OHUBI1dI8PCFhzgCWze9GQ6MZMA0ikmi5X_pNHwqzafYXQKjEDLAuT1aaYdfEJ6-5HOLMouVABBQ2-0bCAyRz8znqMowFnUYC5lxaqG59Hi-CXOmHUAmuLIpP6ZXotXwJ27_PaPQ8-O7d8P8YDFdH2qL5jDOFuLeae4mFJQqcNwWHcAiI2E2WiZrhlAqxKCO2HNRqQ","not-before-policy":0,"session_state":"24cd9782-fc81-4ff8-ad20-00d17f1ee089"}</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The Red Hat SSO server response contains a set of three tokens&#8212;an access token, a refresh token, and an ID token. For the secured services, you require the access token.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Extract the access token in an environment variable:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>TKN=$(curl -X POST "$RHSSO_URL/auth/realms/coolstore/protocol/openid-connect/token" \
+ -H "Content-Type: application/x-www-form-urlencoded" \
+ -d "username=user1" \
+ -d "password=user" \
+ -d "grant_type=password" \
+ -d "client_id=curl" \
+  --insecure \
+ | sed 's/.*access_token":"//g' | sed 's/".*//g')</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Open a web browser and navigate to <a href="https://jwt.io">https://jwt.io</a> and paste the contents of the <code>$TKN</code> environment variable into the left debugger window to view the actual contents of the JSON Web Token (JWT):
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/jwt-token-contents.png" alt="images/jwt-token-contents.png" />
+</div>
+</div>
+</li>
+</ol></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_secure_catalog_service_vert_x_application">2. Secure Catalog Service Vert.x Application</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>At this time, there is no Red Hat SSO/Keycloak adapter for Vert.x. However, Vert.x comes with its own JWT authentication provider that is compatible with Red Hat SSO. The Vert.x Auth-JWT module is a provider for the Vert.x Auth component, which provides interfaces for authentication and authorization. Vert.x Auth is used by Vert.x Web to handle authentication and authorization for web applications.</p></div>
+<div class="sect2">
+<h3 id="_update_project_and_source_code">2.1. Update Project and Source Code</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+If needed, clone the catalog service project git repository and import the project in JBDS.
+</p>
+</li>
+<li>
+<p>
+In the POM file of the catalog service project, add the <code>io.vertx:vertx-auth-jwt</code> dependency.
+</p>
+</li>
+<li>
+<p>
+Add a private field with type <code>io.vertx.ext.auth.jwt.JWTAuth</code> in the <code>com.redhat.coolstore.catalog.api.ApiVerticle</code> class and modify the constructor of <code>ApiVerticle</code> to take a <code>JWTAuth</code> instance as parameter.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>JWTAuth</code> is a factory method to create JWT-based <code>io.vertx.ext.auth.AuthProvider</code> instances, which have methods to generate and authenticate bearer JSON Web Tokens.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In the <code>start</code> method of <code>ApiVerticle</code>, create a <code>JWTAuthHandler</code> instance using the static <code>JWTAuthHandler.create()</code> method, adding the <code>"coolstore"</code> role as a required authority (or role) for this handler:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>AuthHandler authHandler = JWTAuthHandler.create(jwtAuth).addAuthority("coolstore");</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Add the code to the beginning of the method.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Associate this handler with the product-related REST endpoints.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+The health check endpoints do not require authentication.
+</p>
+</li>
+<li>
+<p>
+You can use regex-based path matching, adding the route configuration immediately after the router creation and before the other route definitions:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>router.route().pathRegex("/product.*").handler(authHandler);</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In the <code>deployVerticles</code> method of <code>com.redhat.coolstore.catalog.verticle.MainVerticle</code>, add code to instantiate a <code>JWTAuth</code> instance using the <code>JWTAuth.create</code> method.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+The <code>JWTAuth.create</code> method takes as arguments the <code>vertx</code> instance, as well as a <code>JSONObject</code> with properties to configure the JWT authentication procedure.
+</p>
+</li>
+<li>
+<p>
+The following properties are required:
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>public-key</code> is the public key used to verify the signature of the JWT token.
+</p>
+</li>
+<li>
+<p>
+<code>permissionsClaimKey</code> is the key under which roles are stored in the JWT token. The value for this is dependent on the JWT implementation. Red Hat SSO stores roles under the <code>realm_access/roles</code> key.
+</p>
+</li>
+<li>
+<p>
+<code>issuer</code> is the issuer of the token. For Red Hat SSO, this matches the URL of the realm&#8212;for example, <code>https://secure-sso-coolstore-infra.apps.ocp.local.cluster/auth/realms/coolstore</code>.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Rather than hard-coding the values for the properties, retrieve them from the application configuration (which itself is obtained from an OpenShift ConfigMap). The values are stored in the ConfigMap under the <code>rhsso-public-key</code>, <code>rhsso-permissions-claim-key</code>, and <code>rhsso-issuer</code> names.
+</p>
+</li>
+<li>
+<p>
+Pass the <code>JWTAuth</code> in the constructor for the <code>APIVerticle</code> instance.
+</p>
+</li>
+<li>
+<p>
+Because the constructor of <code>ApiVerticle</code> expects a <code>JWTAuth</code> instance, expect to have compilation problems in your unit test code.
+</p>
+</li>
+<li>
+<p>
+In the <code>ApiVerticleTest</code> class, add a method that returns a <code>JWTAuth</code> instance, adding the <code>JWTAuth</code> instance as a parameter to the <code>APIVerticle</code> constructor:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>private JWTAuth getJWTAuthProviderForAuthentication() {
+    JsonObject authConfig = new JsonObject()
+            .put("public-key", "DUMMYKEY")
+            .put("permissionsClaimKey", "realm_access/roles")
+            .put("issuer", "token-issuer");
+    return JWTAuth.create(vertx, authConfig);
+}</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+With this addition, expect your code to compile. However, when you execute the tests, note that all of the tests that exercise the product-related endpoints fail with a 401 HTTP status code. This is expected because you did not add an <code>Authorization</code> header with a token to the requests.
+</p>
+</li>
+<li>
+<p>
+Note that the test log contains stack traces caused by <code>java.security.InvalidKeyException</code>. This is expected because the <code>"DUMMYKEY"</code> value that you used for the public key is not a valid public key.
+</p>
+</li>
+</ul></div>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_fix_tests_to_pass_valid_token_to_rest_endpoint">2.2. Fix Tests to Pass Valid Token to REST Endpoint</h3>
+<div class="paragraph"><p>To fix the tests, you must be able to create a valid JWT token in the tests and pass this token in an <code>Authorization</code> header in the requests to the REST endpoint. For this you can use the Vert.x JWT implementation. To generate and sign JWT tokens, this implementation requires a keystore with a private key to sign the token and a corresponding public key to verify the signature. The keystore must be in Java Cryptography Extension KeyStore (JCEKS) format.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Open a command-line shell, and generate a JCEKS keystore and extract the public key:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ keytool -genkey -keystore keystore.jceks -storetype jceks -storepass secret -keyalg RSA -keysize 2048 -alias RS256 -keypass secret -sigalg SHA256withRSA -dname "CN=,OU=,O=,L=,ST=,C=" -validity 365000
+$ keytool -export -alias rs256 -storepass secret -keystore keystore.jceks -rfc -file pubkey.pem -storetype jceks
+$ openssl x509 -pubkey -noout -in pubkey.pem</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The last command outputs the public key in the terminal shell:
+</p>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code>-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmyNiLhU8XJBABRTawMQ6
+kl1Tc/MfkHvBxXsdQQUT3xA0M4YsfMZltC/e9ewXWARASh+Sgm8GhImpXjv+1KqF
+NOieyHtvIlcvQWt/Fz/jIHnBRdLSUIgh0FppmX3rQpC0xe0iVPZj5DGDImwnMm4/
+7c6FQkNG1cQL4mQbX6MFY16byxT5UfR0mdK2miIAF70HOAaClvkXFa+mg/Zyl4o6
+1CZqn7O8GOXgokplgTsKBpUBHmabCGSJlsxuFQxJ912n8bSxjhYplQj0t+0av/fo
+boWNkDv501Ar5/iZScTiU3vbi8oYzt3wIeHYqyAXeWEtrrsL18EA9T6BLLfzI/d5
+rQIDAQAB
+-----END PUBLIC KEY-----</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Copy the contents of the public key (the string between the <code>-----BEGIN PUBLIC KEY-----</code> and <code>-----END PUBLIC KEY-----</code>), and in <code>ApiVerticleTest</code> replace <code>DUMMYKEY</code> with the copied string.
+</p>
+</li>
+<li>
+<p>
+Copy the <code>keystore.jceks</code> file into the <code>src/test/resources</code> folder of the project.
+</p>
+</li>
+<li>
+<p>
+In the <code>ApiVerticleTest</code> class, add a method that returns a <code>JWTAuth</code> instance initialized with the keystore:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>private JWTAuth getJWTAuthProviderForTokenGeneration() {
+    JsonObject authConfig = new JsonObject()
+            .put("keyStore", new JsonObject()
+                .put("path", "keystore.jceks")
+                .put("type", "jceks")
+                .put("password", "secret"))
+            .put("permissionsClaimKey", "realm_access/roles")
+            .put("issuer", "token-issuer");
+    return JWTAuth.create(vertx, authConfig);
+}</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+In the <code>ApiVerticleTest</code> class, add a method that generates a JWT token created with the <code>JWTAuth</code> instance:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>private String generateTokenWithRole(String role, boolean valid) {
+    JWTAuth auth = getJWTAuthProviderForTokenGeneration();
+    long now = System.currentTimeMillis()/1000;
+    JsonObject payload = new JsonObject()
+        .put("sub", "user")
+        .put("exp", valid ? now + (10*60) : now - 60)
+        .put("iat", valid ? now - 60 : now - (3*60))
+        .put("iss", "token-issuer")
+        .put("realm_access", new JsonObject()
+            .put("roles", new JsonArray().add(role)));
+    return auth.generateToken(payload, new JWTOptions().setAlgorithm("RS256"));
+}</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+This creates a token with a lifespan of 10 minutes (if <code>valid</code> is <code>true</code>), issued by <code>token-issuer</code> and having a role defined in <code>realm_access/roles</code>. The token is signed with the <code>RS256</code> algorithm that you used to generate the private key.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In the test methods for the product endpoints, insert a HTTP header with name <code>Authorization</code> and value of <code>Bearer &lt;token&gt;</code>.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+For example, in the <code>testAddProduct</code> method:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>vertx.createHttpClient().post(port, "localhost", "/product")
+    .exceptionHandler(context.exceptionHandler())
+    .putHeader("Content-type", "application/json")
+    .putHeader("Content-length", length)
+    .putHeader(HttpHeaders.AUTHORIZATION, "Bearer " + generateTokenWithRole("coolstore", true))
+    .handler(response -&gt; {
+        assertThat(response.statusCode(), equalTo(201));
+        ArgumentCaptor&lt;Product&gt; argument = ArgumentCaptor.forClass(Product.class);
+        verify(catalogService).addProduct(argument.capture(), any());
+        assertThat(argument.getValue().getItemId(), equalTo(itemId));
+        async.complete();
+    })
+    .write(body)
+    .end();</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Repeat this for the other test methods that require authentication.
+</p>
+</li>
+<li>
+<p>
+Run the tests again and expect them to pass.
+</p>
+</li>
+<li>
+<p>
+Optionally, write tests that call the endpoints with an expired token or a token that has the wrong role.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect these tests to return a 401 HTTP status code ("Unauthorized", indicating an expired token) or 403 ("Forbidden", indicating an incorrect role in the token).
+</p>
+</li>
+</ul></div>
+</li>
+</ol></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deploy_and_test_secured_catalog_service_vert_x_application">3. Deploy and Test Secured Catalog Service Vert.x Application</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>You deployed the catalog service on OpenShift in previous labs. Before you can deploy the secured catalog service to OpenShift, you must add the Red Hat SSO configuration to the application configuration ConfigMap.</p></div>
+<div class="sect2">
+<h3 id="_retrieve_realm_public_key">3.1. Retrieve Realm Public Key</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Open the Red Hat Single Sign-On Admin Console and navigate to the <strong>Keys</strong> tab of the <code>Coolstore</code> realm, then click <strong>Public Key</strong> for the RSA key:
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/rhsso-realm-key.png" alt="images/rhsso-realm-key.png" />
+</div>
+</div>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect a window to open with the realm public key.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Copy the value of the key to the clipboard, as you need it later.
+</p>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_add_red_hat_sso_properties_to_configmap">3.2. Add Red Hat SSO Properties to ConfigMap</h3>
+<div class="paragraph"><p>In this section, you add the Red Hat SSO configuration properties to the ConfigMap. You have two options. You can use the command line and <code>vi</code> or the OpenShift web console.</p></div>
+<div class="sect3">
+<h4 id="_option_1_add_red_hat_sso_properties_to_configmap_with_cli">3.2.1. Option 1: Add Red Hat SSO Properties to ConfigMap with CLI</h4>
+<div class="paragraph"><p>In this section, you add the Red Hat SSO configuration properties to the ConfigMap using the command line. Skip to the next section if you prefer to use the OpenShift web console.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Open a terminal shell and export the name of the catalog service OpenShift project as a environment variable:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ export CATALOG_PRJ=&lt;OpenShift catalog service project name&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Open the <code>catalog-service</code> ConfigMap for editing:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ oc edit configmap catalog-service -n $CATALOG_PRJ</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The ConfigMap opens in <code>vi</code>.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Under the existing properties, add the following entries:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>rhsso-permissions-claim-key: realm_access/roles
+rhsso-issuer:
+rhsso-public-key:</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Remember that indentation is important.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Enter the HTTPS URL of the Red Hat SSO server suffixed with <code>/auth</code> as the value for <code>rhsso-issuer</code>.
+</p>
+</li>
+<li>
+<p>
+Paste the Red Hat SSO Coolstore realm public key you copied to the clipboard in the previous section as the value for <code>rhsso-public-key</code>.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect the ConfigMap to look similar to this:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code># Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+data:
+  app-config.yml: |-
+    catalog.http.port: 8080
+    connection_string: mongodb://catalog-mongodb:27017
+    db_name: catalogdb
+    username: mongo
+    password: mongo
+    rhsso-permissions-claim-key: realm_access/roles
+    rhsso-issuer: https://secure-sso-infra.apps.ocp.local.cluster/auth
+    rhsso-public-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnPmRZFx7I2hYBdcEDZtiCqpqVK+6NhRICaL7ZxvI4YthGji7oodUuPC+z9ioQ67DT47josx2m8pD+fPGnSwU8Ogcdx/7U7msI6rQi7Lwuj/ITPwKqxqElcAWdK37L3wr7bTscV8/5q7uhtQPY1t6/0Uu0xMZG8f1Loup3i0tnD8j2u930pPnLdwaWbeFEt613dMzTYDZB2gAQEKwz6v4TC8Wn3InlkIm3Q6cAE1D3xAwCRwzLUYEENEQ59Bwt9HKhaERJuIZahJmpG2Y7C1IlHuCO5z4WduXYDUa9tUSNOXZ3g02eyVZ/8IuAjr2weFCHWcPrTsJq671hrxmId9kawIDAQAB
+kind: ConfigMap
+metadata:
+  creationTimestamp: 2017-08-14T18:20:10Z
+  name: app-config
+  namespace: coolstore-catalog
+  resourceVersion: "12630"
+  selfLink: /api/v1/namespaces/coolstore-catalog/configmaps/app-config
+  uid: 3565078c-811d-11e7-9e8a-507b9d27afbf</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Note that the value of the URL and the public key are likely to be different from this example.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Save the ConfigMap.
+</p>
+</li>
+</ol></div>
+</div>
+<div class="sect3">
+<h4 id="_option_2_edit_configmap_in_openshift_web_console">3.2.2. Option 2: Edit ConfigMap in OpenShift Web Console</h4>
+<div class="paragraph"><p>This section provides instructions to edit the ConfigMap using the OpenShift web console.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Navigate to the OpenShift web console and open the catalog service project.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+In the menu on the left, select <strong>Resources</strong> and then <strong>Config Maps</strong>.
+</p>
+</li>
+<li>
+<p>
+Open the <code>catalog-service</code> ConfigMap.
+</p>
+</li>
+<li>
+<p>
+Click <strong>Actions</strong> and select <strong>Edit YAML</strong>.
+</p>
+</li>
+<li>
+<p>
+Under the existing properties, enter the following contents, remembering to preserve the indentation:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>rhsso-permissions-claim-key: realm_access/roles
+rhsso-issuer:
+rhsso-public-key:</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Enter the HTTPS URL of the Red Hat SSO server suffixed with <code>/auth</code> as the value for the <code>rhsso-issuer</code>.
+</p>
+</li>
+<li>
+<p>
+Paste the Red Hat SSO Coolstore realm public key you copied to the clipboard in the previous section as the value for <code>rhsso-public-key</code>:
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/ocp-configmap-catalog.png" alt="images/ocp-configmap-catalog.png" />
+</div>
+</div>
+</li>
+<li>
+<p>
+Click <strong>Save</strong>.
+</p>
+</li>
+</ol></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_deploy_and_test">3.3. Deploy and Test</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Deploy the catalog service to OpenShift with the Fabric8 Maven plug-in:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ export CATALOG_PRJ=&lt;OpenShift Coolstore project name&gt;
+$ mvn clean fabric8:deploy -Popenshift -DskipTests=true -Dfabric8.namespace=$CATALOG_PRJ</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Test the catalog service without an authentication token:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ export CATALOG_URL=http://$(oc get route catalog-service -n $CATALOG_PRJ -o template --template='{{.spec.host}}')
+$ curl -X GET "$CATALOG_URL/product/444435"</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect to receive the following response:
+</p>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code>Unauthorized</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Obtain a token from the Red Hat SSO server using steps below:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>TKN=$(curl -X POST "$RHSSO_URL/auth/realms/coolstore/protocol/openid-connect/token" \
+ -H "Content-Type: application/x-www-form-urlencoded" \
+ -d "username=user1" \
+ -d "password=user" \
+ -d "grant_type=password" \
+ -d "client_id=curl" \
+  --insecure \
+ | sed 's/.*access_token":"//g' | sed 's/".*//g')</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Test the catalog service with a valid authentication token in the variable <code>$TKN</code>:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ curl -X GET -H "Authorization: Bearer $TKN" "$CATALOG_URL/product/444435"</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect to receive the correct product data in the response:
+</p>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code>{
+  "itemId" : "444435",
+  "name" : "Oculus Rift",
+  "desc" : "The world of gaming has also undergone some very unique and compelling tech advances in recent years. Virtual reality, the concept of complete immersion into a digital universe through a special headset, has been the white whale of gaming and digital technology ever since Nintendo marketed its Virtual Boy gaming system in 1995.",
+  "price" : 106.0
+}</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+</ol></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_secure_inventory_service_wildfly_swarm_application">4. Secure Inventory Service WildFly Swarm Application</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>WildFly Swarm comes with a Red Hat SSO/Keycloak fraction that enables the application for SSO using token-based authentication by integrating the Keycloak adapter for WildFly into the Swarm application.</p></div>
+<div class="sect2">
+<h3 id="_configure_application_to_use_keycloak">4.1. Configure Application to Use Keycloak</h3>
+<div class="paragraph"><p>There are essentially two ways to configure secure endpoints&#8212;through a <code>web.xml</code> descriptor or by configuring the secure endpoints in the Swarm configuration file. In this section, you configure the secure endpoints using the second method and then produce a Keycloak configuration file.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+In the POM file of the inventory service project, add the <code>org.wildfly.swarm:keycloak</code> dependency.
+</p>
+</li>
+<li>
+<p>
+In the POM file of the project, add the following line to the <code>&lt;build&gt;</code> section:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;finalName&gt;${project.artifactId}&lt;/finalName&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+In the <code>src/main/resources/project-local.yml</code> configuration file, add the following contents under the <code>swarm</code> tag:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>  deployment:
+    inventory-service.war:
+      web:
+        login-config:
+          auth-method: KEYCLOAK
+        security-constraints:
+          - url-pattern: /inventory/*
+            methods: [GET]
+            roles: [coolstore]</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+This marks the <code>GET /inventory/*</code> URL pattern as a secured resource requiring the <code>coolstore</code> role.
+</p>
+</li>
+<li>
+<p>
+Also note that you use <code>KEYCLOAK</code> as the login configuration method, which delegates the security handling to the Keycloak adapter that itself is installed by the Keycloak fraction.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In the <code>src/test/resources</code> folder of the project, create a file called <code>keycloak.json</code>.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Keycloak requires a configuration file called <code>keycloak.json</code> on the classpath. When deployed on OpenShift, you provide this configuration file with a ConfigMap. For testing, however, you can add this file to the test resources.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Paste the following contents into the file:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>{
+  "realm": "coolstore-test",
+  "bearer-only": true,
+  "auth-server-url": "https://rhsso:8443/auth",
+  "realm-public-key": "",
+  "resource": "coolstore-test"
+}</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>realm</code> is the name of the realm.
+</p>
+</li>
+<li>
+<p>
+<code>resource</code> is the client ID of the application. Each application has a client ID that is used to identify the application.
+</p>
+</li>
+<li>
+<p>
+<code>bearer-only</code> verifies only bearer tokens if enabled and and does not attempt to authenticate users.
+</p>
+</li>
+<li>
+<p>
+<code>auth-server-url</code> is the base URL of the Keycloak server. This must match the issuer field in the token.
+</p>
+</li>
+<li>
+<p>
+<code>realm-public-key</code> is the realm public key, which is used to verify the signature of the token. It is not to be used in a production setting. If not set, the Keycloak adapter downloads the public key from the Red Hat SSO server.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In the <code>RestApiTest</code> test class, add <code>keycloak.json</code> to the web archive in the <code>createDeployment</code> method, making sure that the web archive is called <code>inventory-service.war</code>.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect the method to look like this:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    @Deployment
+    public static Archive&lt;?&gt; createDeployment() {
+        return ShrinkWrap.create(WebArchive.class, "inventory-service.war")
+                .addPackages(true, RestApplication.class.getPackage())
+                .addAsResource("project-local.yml", "project-local.yml")
+                .addAsResource("META-INF/test-persistence.xml",  "META-INF/persistence.xml")
+                .addAsResource("META-INF/test-load.sql",  "META-INF/test-load.sql")
+                .addAsWebInfResource("test-beans.xml", "beans.xml")
+                .addAsWebInfResource("keycloak.json","keycloak.json");
+    }</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_generate_private_and_public_keypair">4.2. Generate Private and Public Keypair</h3>
+<div class="paragraph"><p>In this section, you generate a private and public keypair using <code>openssl</code>.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Open a terminal shell.
+</p>
+</li>
+<li>
+<p>
+Generate an RSA private and public keypair:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ cd ~/lab/inventory-service
+
+$ openssl genrsa -out keycloak.pem 2048</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Extract the public key:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ openssl rsa -in keycloak.pem -outform PEM -pubout -out public.pem</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Extract the private key:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ openssl rsa -in keycloak.pem -outform PEM -out private.pem</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Copy the <code>private.pem</code> file into the <code>src/test/resources</code> folder of the project.
+</p>
+</li>
+<li>
+<p>
+Open the <code>public.pem</code> file in a text editor, concatenate the public key string (the part between <code>-----BEGIN PUBLIC KEY-----</code> and <code>-----END PUBLIC KEY-----</code>), and paste the concatenated string in the <code>keycloak.json</code> file as the value for <code>realm-public-key</code>.
+</p>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_run_test_and_verify_token_based_authentication">4.3. Run Test and Verify Token-Based Authentication</h3>
+<div class="paragraph"><p>In this section, you run the <code>RestApiTest</code> to verify that token-based authentication works correctly. This initially fails and you fix the test by updating it to generate a valid access token and to pass this token in the requests to the REST endpoint in the tests. For this you can use the Keycloak core libraries.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Execute the <code>RestApiTest</code> test class, using the Maven command line (<code>mvn clean test</code>) or in the IDE (<strong>Run As &#8594; JUnit test</strong>).
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Because the REST request in the test does not have an <code>Authorization</code> header with a valid access token, expect the <code>testGetInventory</code> test method to fail with a 401 HTTP status code.
+</p>
+</li>
+<li>
+<p>
+Because the health endpoint is an unprotected resource, the <code>testHealthCheck</code> test method passes.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In the project&#8217;s POM file, add the <code>org.bouncycastle:bcprov-jdk15on:1.56.0.redhat-2</code> dependency with scope <code>test</code>.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    &lt;dependency&gt;
+      &lt;groupId&gt;org.bouncycastle&lt;/groupId&gt;
+      &lt;artifactId&gt;bcprov-jdk15on&lt;/artifactId&gt;
+      &lt;version&gt;1.56.0.redhat-2&lt;/version&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+BouncyCastle is a set of open source libraries for Java cryptography. Keycloak uses this library for generating keys and signing tokens.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In the <code>RestApiTest</code> class, add a <code>readPrivateKey</code> method to read out the <code>private.pem</code> private key and return a <code>java.security.PrivateKey</code> instance:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    private PrivateKey readPrivateKey() throws Exception {
+        Security.addProvider(new BouncyCastleProvider());
+        KeyFactory factory = KeyFactory.getInstance("RSA", "BC");
+        InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("private.pem");
+        PemReader privateKeyReader = new PemReader(new InputStreamReader(is));
+        try {
+            PemObject privObject = privateKeyReader.readPemObject();
+            PKCS8EncodedKeySpec privKeySpec = new PKCS8EncodedKeySpec(privObject.getContent());
+            PrivateKey privateKey = factory.generatePrivate(privKeySpec);
+            return privateKey;
+        } finally {
+            privateKeyReader.close();
+        }
+    }</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Be sure to import the following classes:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>import java.io.InputStream;
+import java.io.InputStreamReader;
+
+import java.security.KeyFactory;
+import java.security.PrivateKey;
+import java.security.Security;
+import java.security.spec.PKCS8EncodedKeySpec;
+
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
+import org.bouncycastle.util.io.pem.PemObject;
+import org.bouncycastle.util.io.pem.PemReader;</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In the <code>RestApiTest</code> class, add a <code>createAccessToken</code> method to create a <code>org.keycloak.representations.AccessToken</code> access token and sign it with the private key:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    private String createAccessToken(String role, int issuedAt) throws Exception {
+        AccessToken token = new AccessToken();
+        token.type(TokenUtil.TOKEN_TYPE_BEARER);
+        token.subject("testuser");
+        token.issuedAt(issuedAt);
+        token.issuer("https://rhsso:8443/auth/realms/coolstore-test");
+        token.expiration(issuedAt + 300);
+        token.setAllowedOrigins(new HashSet&lt;&gt;());
+
+        AccessToken.Access access = new AccessToken.Access();
+        token.setRealmAccess(access);
+        access.addRole(role);
+
+        Algorithm jwsAlgorithm = Algorithm.RS256;
+        PrivateKey privateKey = readPrivateKey();
+        String encodedToken = new JWSBuilder().type("JWT").jsonContent(token).sign(jwsAlgorithm, privateKey);
+        return encodedToken;
+    }</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Be sure to import the following classes:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>import org.keycloak.jose.jws.Algorithm;
+import org.keycloak.jose.jws.JWSBuilder;
+import org.keycloak.representations.AccessToken;
+import org.keycloak.util.TokenUtil;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Note that the issuer is set to the realm URL. The name of the realm&#8201;&#8212;&#8201;<code>coolstore-test</code>&#8201;&#8212;&#8201;corresponds to the realm name in <code>keycloak.json</code>. If they do not match, the token verification fails.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In the <code>RestApiTest</code> class, add methods to generate valid and invalid (expired) tokens:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    private String getValidAccessToken(String role) throws Exception {
+        return createAccessToken(role, (int) (System.currentTimeMillis() / 1000));
+    }
+
+    private String getExpiredAccessToken(String role) throws Exception {
+        return createAccessToken(role, (int) ((System.currentTimeMillis() / 1000)-600));
+    }</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+In the <code>testGetInventory</code> method, add an <code>Authorization</code> header to the REST requests in the test by replacing this snippet:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>Response response = target.request(MediaType.APPLICATION_JSON).get();</code></pre>
+</div></div>
+<div class="paragraph"><p>with this:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>Response response = target.request(MediaType.APPLICATION_JSON)
+    .header("Authorization", "Bearer " + getValidAccessToken("coolstore")).get();</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+To add a header to the request, you must call the <code>header()</code> method on the <code>ResponseBuilder</code>.
+</p>
+</li>
+<li>
+<p>
+In the test, you are using a JAX-RS client to call the REST endpoint.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Run the tests in the <code>RestApiTest</code> test class again.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+This time expect the tests to pass.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Optionally, create additional test methods that call the endpoints with an expired token or a token that has the wrong role.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect these tests to return a 401 HTTP status code (indicating an expired token) or 403 (indicating the wrong role in the token).
+</p>
+</li>
+</ul></div>
+</li>
+</ol></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deploy_and_test_secured_wildfly_swarm_application">5. Deploy and Test Secured WildFly Swarm Application</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>You deployed the inventory service on OpenShift in previous labs. In this section, you deploy and test the secured version of the inventory service.</p></div>
+<div class="sect2">
+<h3 id="_configure_application_to_use_keycloak_2">5.1. Configure Application to Use Keycloak</h3>
+<div class="paragraph"><p>In this section, you edit the ConfigMap in the OpenShift web console. You will add the secure endpoint configuration to the <code>inventory-service</code> ConfigMap in the OpenShift inventory service project.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Navigate to the OpenShift Console and open the inventory-service project.
+</p>
+</li>
+<li>
+<p>
+In the menu on the left, select <strong>Resources</strong> and <strong>Config Maps</strong>.
+</p>
+</li>
+<li>
+<p>
+Open the <code>inventory-service</code> ConfigMap.
+</p>
+</li>
+<li>
+<p>
+Click <strong>Actions</strong> and select <strong>Edit YAML</strong>.
+</p>
+</li>
+<li>
+<p>
+Under the existing properties, paste the following contents, remembering to preserve the identation:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>      deployment:
+        inventory-service.war:
+          web:
+            login-config:
+              auth-method: KEYCLOAK
+            security-constraints:
+              - url-pattern: /inventory/*
+                methods: [GET]
+                roles: [coolstore]</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Click <strong>Save</strong>.
+</p>
+</li>
+<li>
+<p>
+Move back to your local file system.
+</p>
+</li>
+<li>
+<p>
+In the <code>inventory-service/etc</code> folder of the project, create a file called <code>keycloak.json</code> with the following contents:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>{
+  "realm": "coolstore",
+  "bearer-only": true,
+  "auth-server-url": "",
+  "ssl-required": "external",
+  "realm-public-key": "",
+  "resource": "coolstore"
+}</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Set the value of <code>auth-server-url</code> to the HTTPS URL of the Red Hat SSO server suffixed with <code>/auth</code>.
+</p>
+</li>
+<li>
+<p>
+Paste the Red Hat SSO Coolstore realm public key as the value for <code>rhsso-public-key</code>.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+You can find this value in the OpenShift web console by examining the catalog-service config map.
+</p>
+</li>
+</ul></div>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_mount_configmap">5.2. Mount ConfigMap</h3>
+<div class="paragraph"><p>In this section, you create a ConfigMap from the <code>keycloak.json</code> file. You then mount it as a volume and point WildFly Swarm to the mounted <code>keycloak.json</code>.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Create a ConfigMap called <code>inventory-service-rhsso</code> in the inventory service project on OpenShift from the <code>keycloak.json</code> file:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ export INVENTORY_PRJ=&lt;OpenShift Coolstore project name&gt;
+$ oc create configmap inventory-service-rhsso --from-file=etc/keycloak.json -n $INVENTORY_PRJ</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Toward the end of the <code>deployment.yml</code> file in the <code>src/main/fabric8</code> directory of the source project, add the ConfigMap:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>      volumes:
+        - configMap:
+            name: inventory-service
+          name: config
+        - configMap:
+            name: inventory-service-rhsso
+          name: rhsso-config</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Remember to maintain the indentation of the file.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In the same file, add a volume mount for the ConfigMap under the existing volume mount:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>          volumeMounts:
+            - name: config
+              mountPath: /app/config
+            - name: rhsso-config
+              mountPath: /app/rhsso-config</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+In the same file, add the system property <code>swarm.keycloak.json.path</code> pointing to the mounted <code>keycloak.json</code> file to the <code>JAVA_OPTIONS</code> environment variable:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>            - name: JAVA_OPTIONS
+              value: "-Dswarm.project.stage.file=file:///app/config/project-defaults.yml -Dswarm.keycloak.json.path=/app/rhsso-config/keycloak.json"</code></pre>
+</div></div>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_deploy_and_test_secured_inventory_service">5.3. Deploy and Test Secured Inventory Service</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Deploy the inventory service with the Fabric8 Maven plug-in:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ mvn clean fabric8:deploy -Popenshift -DskipTests=true -Dfabric8.namespace=$INVENTORY_PRJ</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Test the inventory service without an authentication token:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ export INVENTORY_URL=http://$(oc get route inventory-service -n $INVENTORY_PRJ -o template --template='{{.spec.host}}')
+$ curl -X GET "$INVENTORY_URL/inventory/165613"</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect to receive <code>Unauthorized</code> in the response:
+</p>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code>&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;/head&gt;&lt;body&gt;Unauthorized&lt;/body&gt;&lt;/html&gt;</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Obtain a token from the Red Hat SSO server.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>TKN=$(curl -X POST "$RHSSO_URL/auth/realms/coolstore/protocol/openid-connect/token" \
+ -H "Content-Type: application/x-www-form-urlencoded" \
+ -d "username=user1" \
+ -d "password=user" \
+ -d "grant_type=password" \
+ -d "client_id=curl" \
+  --insecure \
+ | sed 's/.*access_token":"//g' | sed 's/".*//g')</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Test the inventory service with a valid authentication token:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ curl -X GET -H "Authorization: Bearer $TKN" "$INVENTORY_URL/inventory/165613"</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect to receive the correct inventory data in the response:
+</p>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code>{
+  "itemId": "165613",
+  "location": "Raleigh",
+  "quantity": 256,
+  "link": "http://maps.google.com/?q=Raleigh"
+}</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+</ol></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_secure_cart_service_spring_boot_application">6. Secure Cart Service Spring Boot Application</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Red Hat SSO comes with an adapter for Spring applications and provides a starter for Spring Boot. This starter also includes the Keycloak Spring Security adapter to integrate Keycloak with Spring Security. Spring Security brings security to Spring applications by leveraging the Spring programming model.</p></div>
+<div class="sect2">
+<h3 id="_configure_application_to_use_keycloak_3">6.1. Configure Application to Use Keycloak</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+In the POM file of the inventory service project, add the <code>org.keycloak:keycloak-spring-boot-starter:3.1.0.Final</code> dependency.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+This artifact is a community version, as the Keycloak Spring Boot starter with Spring Security integration was added only recently and is not part of the current Red Hat SSO product. It is backward-compatible with the current version of the Red Hat SSO server.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In the POM file of the inventory service project, add the <code>org.springframework.boot:spring-boot-starter-security</code> dependency.
+</p>
+</li>
+<li>
+<p>
+For testing purposes, add the following properties to <code>application-test.properties</code> in the <code>src/test/resources</code> folder of the project:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>keycloak.auth-server-url=https://rhsso:8443/auth
+keycloak.realm=coolstore-test
+keycloak.bearer-only=true
+keycloak.realmKey=
+keycloak.resource=coolstore-test</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+When using the Keycloak Spring adapter, the Keycloak configuration parameters can be added to the application configuration files, prefixed with <code>keycloak</code>. When deploying to OpenShift, you supply the configuration data in a ConfigMap.
+</p>
+</li>
+<li>
+<p>
+Refer to the previous section for the meaning of these configuration parameters.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Copy the public key from <code>keycloak.json</code> in the inventory service project and paste it as the value of <code>keycloak.realmKey</code> in <code>application-test.properties</code>.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+You reuse the private and public keys generated for the inventory service tests.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Copy the <code>private.pem</code> private key from the <code>src/test/resources</code> folder of the inventory service project to the <code>src/test/resources</code> folder.
+</p>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_update_cart_service_implementation_for_keycloak">6.2. Update Cart Service Implementation for Keycloak</h3>
+<div class="paragraph"><p>To integrate with Spring Security, a configuration class extending <code>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</code> is required. Keycloak provides a subclass of <code>WebSecurityConfigurerAdapter</code> that you can override to use Keycloak as the Spring Security authentication and authorization handler.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+In the <code>com.redhat.coolstore.cart</code> package, create a <code>CartServiceSecurityConfig</code> class that extends <code>KeycloakWebSecurityConfigurerAdapter</code> and annotate the class as follows:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>@EnableWebSecurity
+@Configuration
+@ComponentScan(basePackageClasses = KeycloakSecurityComponents.class)
+public class CartServiceSecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
+
+}</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Add a method to enable support for Keycloak configuration with Spring Boot properties files:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    @Bean
+    public KeycloakConfigResolver KeycloakConfigResolver() {
+        return new KeycloakSpringBootConfigResolver();
+    }</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Add a method to configure Spring Security with a role mapper implementation that does not require the <code>ROLE_</code> prefix:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+        KeycloakAuthenticationProvider keycloakAuthenticationProvider = keycloakAuthenticationProvider();
+        keycloakAuthenticationProvider.setGrantedAuthoritiesMapper(new SimpleAuthorityMapper());
+        auth.authenticationProvider(keycloakAuthenticationProvider);
+    }</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+By default in Spring Security, roles are prefixed with <code>ROLE_</code>. Rather than enforce this convention in the Red Hat SSO server&#8212;which would force all other application in the same realm to follow the convention&#8212;you configure Spring Security with a role mapper implementation that does not require the prefix.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Add the required <code>sessionAuthenticationStrategy</code> method to the class:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    @Override
+    protected SessionAuthenticationStrategy sessionAuthenticationStrategy() {
+        return new NullAuthenticatedSessionStrategy();
+    }</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>KeycloakWebSecurityConfigurerAdapter</code> subclasses must implement the <code>sessionAuthenticationStrategy()</code> method to set how the HTTP session is to be handled when authentication occurs. The cart service is a stateless application that does not use HTTP sessions, so you can use the <code>NullAuthenticatedSessionStrategy</code>.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Add two methods to the class to create required <code>FilterRegistrationBean</code> beans:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    @Bean
+    public FilterRegistrationBean keycloakAuthenticationProcessingFilterRegistrationBean(KeycloakAuthenticationProcessingFilter filter) {
+        FilterRegistrationBean registrationBean = new FilterRegistrationBean(filter);
+        registrationBean.setEnabled(false);
+        return registrationBean;
+    }
+
+    @Bean
+    public FilterRegistrationBean keycloakPreAuthActionsFilterRegistrationBean(KeycloakPreAuthActionsFilter filter) {
+        FilterRegistrationBean registrationBean = new FilterRegistrationBean(filter);
+        registrationBean.setEnabled(false);
+        return registrationBean;
+    }</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Spring Boot attempts to eagerly register filter beans with the web application context. So when running the Keycloak Spring Security adapter in a Spring Boot environment, it is necessary to add two <code>FilterRegistrationBean</code> beans to your security configuration to prevent the Keycloak filters from being registered twice.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Override the <code>configure</code> method to define which endpoints to secure by adding the following method to the class:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        super.configure(http);
+        http.csrf().disable()
+            .authorizeRequests().antMatchers("/cart/**").hasRole("coolstore")
+            .anyRequest().permitAll();
+    }</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+This configuration secures the endpoint with the <code>/cart/**</code> URL pattern, while keeping all of the other endpoints&#8212;specifically in this lab, the health check endpoints&#8212;unsecured.
+</p>
+</li>
+<li>
+<p>
+The cart endpoints require the <code>coolstore</code> role.
+</p>
+</li>
+<li>
+<p>
+CSRF (Cross-Site Request Forgery) is enabled by default when using Spring Security <code>WebSecurityConfigurerAdapter</code>. It must be disabled for bearer token authentication to work.
+</p>
+</li>
+</ul></div>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_run_and_fix_tests">6.3. Run and Fix Tests</h3>
+<div class="paragraph"><p>In this section, you first run the existing tests, which fail because you do not pass a bearer token in the REST requests. Then you fix the tests and verify that token-based authentication works correctly. You update the tests to generate a valid access token and to pass this token in the requests to the REST endpoint. You can reuse the code you introduced in the tests for the inventory service.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Run the tests in the <code>com.redhat.coolstore.cart.rest</code> package.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect the tests in the <code>CartEndpointTest</code> class to fail with a 401 HTTP status code, while the tests in the <code>HealthCheckEndpointTests</code> pass. The <code>CartEndpointTest</code> test fails because the <code>CartEndpoint</code> URL is secured and the test does not pass a bearer token with the REST requests.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Copy the <code>createAccessToken</code>, <code>readPrivateKey</code>, <code>getValidAccessToken</code>, and <code>getExpiredAccessToken</code> methods from the <code>RestApiRest</code> class in the inventory service project,  and paste them in the <code>CartEndpointTest</code> class.
+</p>
+</li>
+<li>
+<p>
+Update the <code>retrieveCartById</code> method of the <code>CartEndpointTest</code> class to add an <code>Authorization</code> header with a token when invoking the REST requests to the secured endpoints using the <code>auth</code> and <code>oauth2</code> directives of RestAssured:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    @Test
+    public void retrieveCartById() throws Exception {
+        RestAssured.given()
+            .auth().oauth2(getValidAccessToken("coolstore"))
+            .get("/{cartId}", "123456")
+            .then()
+            .assertThat()
+            .statusCode(200)
+            .contentType(ContentType.JSON)
+            .body("id", equalTo("123456"));
+    }</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Run the tests again.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect the <code>retrieveCartById</code> test to pass now. All of the other test methods for the cart service endpoints still fail.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Fix the other tests.
+</p>
+</li>
+<li>
+<p>
+Optionally, create some additional test methods that call the cart service endpoints with an expired token or a token that has the wrong role.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect these tests to return a 401 HTTP status code (indicating an expired token) or 403 (indicating the wrong role in the token).
+</p>
+</li>
+</ul></div>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_update_cart_service_to_use_access_token">6.4. Update Cart Service to Use Access Token</h3>
+<div class="paragraph"><p>The cart service calls the catalog service to obtain product data. Now that the catalog service is secured with Red Hat SSO and requires an access token, the cart service must pass the access token whenever it calls the catalog service. The Keycloak Spring Security adapter has a <code>KeycloakRestTemplate</code> class that extends the Spring <code>RestTemplate</code> and handles this transparently.</p></div>
+<div class="paragraph"><p>After successful token verification, Spring Security keeps the authentication information, including the access token in the <code>SecurityContextHolder</code> context as a thread-local variable. The <code>KeycloakRestTemplate</code> implementation extracts the access token from the security context and adds it to an <code>Authorization</code> header on the outgoing REST call.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+In the <code>CatalogServiceImpl</code> class in the <code>com.redhat.coolstore.cart service</code> package, inject a <code>KeycloakClientRequestFactory</code> bean:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    @Autowired
+    private KeycloakClientRequestFactory keycloakClientRequestFactory;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+In the <code>getProduct</code> method, replace the <code>RestTemplate</code> instance with <code>KeyCloakRestTemplate</code>:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>RestTemplate restTemplate = new KeycloakRestTemplate(keycloakClientRequestFactory);</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+In the <code>CatalogServiceImplTest</code> test methods, inject the <code>KeycloakClientRequestFactory</code> with <code>ReflectionTestUtils</code>:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>CatalogServiceImpl catalogService = new CatalogServiceImpl();
+ReflectionTestUtils.setField(catalogService, "catalogServiceUrl", "http://localhost:" + wireMockRule.port(), null);
+ReflectionTestUtils.setField(catalogService, null, new KeycloakClientRequestFactory(), KeycloakClientRequestFactory.class);</code></pre>
+</div></div>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_run_catalog_service_tests">6.5. Run Catalog Service Tests</h3>
+<div class="paragraph"><p>In this section, you run the <code>CatalogServiceImplTest</code> tests, which all initially fail. To fix this, you set a Keycloak principal containing an access token on the Spring Security context.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Run the <code>CatalogServiceImplTest</code> tests.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Note that all of the tests fail with a <code>java.lang.IllegalStateException: Cannot set authorization header because there is no authenticated principal</code>.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Add the following code to the <code>CatalogServiceImpTest</code>:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    private String bearerTokenString;
+
+    @Before
+    public void before() {
+        bearerTokenString = UUID.randomUUID().toString();
+        KeycloakAuthenticationToken keycloakAuthenticationToken = Mockito.mock(KeycloakAuthenticationToken.class);
+        OidcKeycloakAccount account = Mockito.mock(OidcKeycloakAccount.class);
+        KeycloakSecurityContext keycloakSecurityContext = Mockito.mock(KeycloakSecurityContext.class);
+        SecurityContextHolder.getContext().setAuthentication(keycloakAuthenticationToken);
+        when(keycloakAuthenticationToken.getAccount()).thenReturn(account);
+        when(account.getKeycloakSecurityContext()).thenReturn(keycloakSecurityContext);
+        when(keycloakSecurityContext.getTokenString()).thenReturn(bearerTokenString);
+    }</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Run the tests again.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect the tests to pass.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Add the expected authorization header to the WireMock stub to verify that the access token is being passed to the mocked catalog service:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>WireMock.stubFor(
+    WireMock.get(WireMock.urlEqualTo("/product/111111"))
+    .withHeader("Authorization", WireMock.equalTo("Bearer " + bearerTokenString))
+    .willReturn(aResponse()
+        .withStatus(200)
+        .withHeader("Content-type", "application/json")
+        .withBody(IOUtils.toString(is, Charset.defaultCharset()))));</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The WireMock stub is matched only if the <code>Authorization</code> header with the expected value is present on the REST request.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Run the tests again.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect the tests to pass.
+</p>
+</li>
+</ul></div>
+</li>
+</ol></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deploy_and_test_secured_cart_service_spring_boot_application">7. Deploy and Test Secured Cart Service Spring Boot Application</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>You deployed the cart and catalog services on OpenShift in previous labs. In this section, you deploy and test the secured version of the cart service. Before you can deploy the secured cart service to OpenShift, you must add the Red Hat SSO configuration to the application configuration properties in the ConfigMap.</p></div>
+<div class="sect2">
+<h3 id="_add_red_hat_sso_properties_to_configmap_2">7.1. Add Red Hat SSO Properties to ConfigMap</h3>
+<div class="paragraph"><p>In this section, you add the Red Hat SSO configuration properties to the ConfigMap. You have two options&#8212;you can use the command line and <code>vi</code> or the OpenShift web console.</p></div>
+<div class="sect3">
+<h4 id="_option_1_add_red_hat_sso_properties_to_configmap_with_cli_2">7.1.1. Option 1: Add Red Hat SSO Properties to ConfigMap with CLI</h4>
+<div class="paragraph"><p>In this section, you add the Red Hat SSO configuration properties to the ConfigMap using the command line. If you are not comfortable with the command line and <code>vi</code>, use the instructions in the next section that use the OpenShift web console.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Open a terminal shell and export the name of the cart service OpenShift project as a environment variable:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ export CART_PRJ=&lt;OpenShift Coolstore project name&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Open the <code>cart-service</code> ConfigMap for editing:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ oc edit configmap cart-service -n $CART_PRJ</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The ConfigMap opens in <code>vi</code>.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Under the existing properties, add the following entries:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>keycloak.realm: 'coolstore'
+keycloak.bearer-only: 'true'
+keycloak.resource: 'coolstore'
+keycloak.auth-server-url: ''
+keycloak.realmKey: ''</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Remember that indentation is important.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Between the single quotes, enter the HTTPS URL of the Red Hat SSO server suffixed with <code>/auth</code> as the value for <code>keycloak.auth-server-url</code>.
+</p>
+</li>
+<li>
+<p>
+Between the single quotes, paste the Red Hat SSO Coolstore realm public key as the value for <code>keycloak.realmKey</code>.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect the ConfigMap to look like this, but the value of your URL and the public key to be different from the example:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code># Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+data:
+  catalog.service.url: http://catalog-service.coolstore-catalog.svc:8080
+  keycloak.realm: 'coolstore'
+  keycloak.bearer-only: 'true'
+  keycloak.resource: 'coolstore'
+  keycloak.auth-server-url: 'https://secure-sso-infra.apps.ocp.local.cluster/auth'
+  keycloak.realmKey: 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnPmRZFx7I2hYBdcEDZtiCqpqVK+6NhRICaL7ZxvI4YthGji7oodUuPC+z9ioQ67DT47josx2m8pD+fPGnSwU8Ogcdx/7U7msI6rQi7Lwuj/ITPwKqxqElcAWdK37L3wr7bTscV8/5q7uhtQPY1t6/0Uu0xMZG8f1Loup3i0tnD8j2u930pPnLdwaWbeFEt613dMzTYDZB2gAQEKwz6v4TC8Wn3InlkIm3Q6cAE1D3xAwCRwzLUYEENEQ59Bwt9HKhaERJuIZahJmpG2Y7C1IlHuCO5z4WduXYDUa9tUSNOXZ3g02eyVZ/8IuAjr2weFCHWcPrTsJq671hrxmId9kawIDAQAB'
+kind: ConfigMap
+metadata:
+  creationTimestamp: 2017-08-14T20:08:42Z
+  name: cart-service
+  namespace: coolstore-cart
+  resourceVersion: "14067"
+  selfLink: /api/v1/namespaces/coolstore-cart/configmaps/cart-service
+  uid: 5e7c459e-812c-11e7-9e8a-507b9d27afbf</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Save the ConfigMap.
+</p>
+</li>
+</ol></div>
+</div>
+<div class="sect3">
+<h4 id="_option_2_add_red_hat_sso_properties_to_configmap_with_openshift_web_console">7.1.2. Option 2: Add Red Hat SSO Properties to ConfigMap with OpenShift Web Console</h4>
+<div class="paragraph"><p>In this section, you edit the ConfigMap in the OpenShift web console.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Navigate to the OpenShift Console and open the cart service project.
+</p>
+</li>
+<li>
+<p>
+In the menu on the left, select <strong>Resources</strong> and <strong>Config Maps</strong>.
+</p>
+</li>
+<li>
+<p>
+Open the <code>cart-service</code> ConfigMap.
+</p>
+</li>
+<li>
+<p>
+Click <strong>Actions</strong> and select <strong>Edit YAML</strong>.
+</p>
+</li>
+<li>
+<p>
+Under the existing properties, paste the following contents, remembering to preserve the identation:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>keycloak.realm: 'coolstore'
+keycloak.bearer-only: 'true'
+keycloak.resource: 'coolstore'
+keycloak.auth-server-url: ''
+keycloak.realmKey: ''</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Add the HTTPS URL of the Red Hat SSO server suffixed with <code>/auth</code> as the value for <code>keycloak.auth-server-url</code> and surround it with single quotes.
+</p>
+</li>
+<li>
+<p>
+Paste the Red Hat SSO Coolstore realm public key as the value for <code>keycloak.realmKey</code> and surround it with single quotes:
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/ocp-configmap-cart.png" alt="images/ocp-configmap-cart.png" />
+</div>
+</div>
+</li>
+<li>
+<p>
+Click <strong>Save</strong>.
+</p>
+</li>
+</ol></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_deploy_and_test_2">7.2. Deploy and Test</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Deploy the cart service to OpenShift with the Fabric8 Maven plug-in:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ export CART_PRJ=&lt;OpenShift Coolstore project name&gt;
+$ mvn clean fabric8:deploy -Popenshift -DskipTests=true -Dfabric8.namespace=$CART_PRJ</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Test the cart service without an authentication token:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ export CART_URL=http://$(oc get route cart-service -n $CART_PRJ -o template --template='{{.spec.host}}')
+$ curl -X GET "$CART_URL/cart/mycart"</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect to receive <code>Unauthorized</code> in the response:
+</p>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;Apache Tomcat/8.5.5 - Error report&lt;/title&gt;&lt;style type="text/css"&gt;H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}.line {height: 1px; background-color: #525D76; border: none;}&lt;/style&gt; &lt;/head&gt;&lt;body&gt;&lt;h1&gt;HTTP Status 401 - Unauthorized&lt;/h1&gt;&lt;div class="line"&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt; Status report&lt;/p&gt;&lt;p&gt;&lt;b&gt;message&lt;/b&gt; &lt;u&gt;Unauthorized&lt;/u&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt; &lt;u&gt;This request requires HTTP authentication.&lt;/u&gt;&lt;/p&gt;&lt;hr class="line"&gt;&lt;h3&gt;Apache Tomcat/8.5.5&lt;/h3&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Obtain a token from the Red Hat SSO server as explained in the paragraph on installing the Red Hat SSO server.
+</p>
+</li>
+<li>
+<p>
+Test the cart service with a valid authentication token:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ curl -X GET -H "Authorization: Bearer $TKN" "$CART_URL/cart/mycart"</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Look for the expected data in the response:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>{
+  "id": "mycart",
+  "cartItemTotal": 0,
+  "shippingTotal": 0,
+  "cartTotal": 0,
+  "shoppingCartItemList": []
+}</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Verify that the access token is passed successfully to the catalog service:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ curl -X POST -H "Authorization: Bearer $TKN" "$CART_URL/cart/mycart/165614/2"</code></pre>
+</div></div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code>{
+  "id": "mycart",
+  "cartItemTotal": 57.5,
+  "shippingTotal": 6.99,
+  "cartTotal": 64.49,
+  "shoppingCartItemList": [
+    {
+      "price": 28.75,
+      "quantity": 2,
+      "product": {
+        "itemId": "165614",
+        "name": "Ogio Caliber Polo",
+        "desc": "Moisture-wicking 100% polyester. Rib-knit collar and cuffs; Ogio jacquard tape inside neck; bar-tacked three-button placket with Ogio dyed-to-match buttons; side vents; tagless; Ogio badge on left sleeve. Import. Embroidery. Black.",
+        "price": 28.75
+      }
+    }
+  ]
+}</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Check out the cart to further verify access to the secured service:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ curl -X POST -H "Authorization: Bearer $TKN" "$CART_URL/cart/checkout/mycart"</code></pre>
+</div></div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code>{
+  "id": "mycart",
+  "cartItemTotal": 0,
+  "shippingTotal": 0,
+  "cartTotal": 0,
+  "shoppingCartItemList": []
+}</code></pre>
+</div></div>
+</li>
+</ol></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_secure_gateway_spring_boot_camel_application">8. Secure Gateway Spring Boot/Camel Application</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The Coolstore gateway application is a Spring Boot application, so securing the application is equivalent to what you did previously for the cart service.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+In the POM file of the gateway project, add the <code>org.keycloak:keycloak-spring-boot-starter:3.1.0.Final</code> and <code>org.springframework.boot:spring-boot-starter-security</code> dependencies.
+</p>
+</li>
+<li>
+<p>
+Create a <code>GatewaySecurityConfig</code> class in the <code>com.coolstore.api.gateway</code> package.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+The class is identical to the <code>CartServiceSecurityConfig</code> class in the cart service project except for the <code>configure</code> method.
+</p>
+</li>
+<li>
+<p>
+Expect the <code>configure</code> method to look like this:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        super.configure(http);
+        http.csrf().disable().authorizeRequests()
+            .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+            .antMatchers("/api/**").hasRole("coolstore");
+    }</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Copy the <code>private.pem</code> private key from the <code>src/test/resources</code> folder of the cart service project to the <code>src/test/resources</code> folder.
+</p>
+</li>
+<li>
+<p>
+Copy the properties prefixed with <code>keycloak</code> from the <code>application-test.properties</code> in the cart service project to the <code>application-test.properties</code> file in the gateway project.
+</p>
+</li>
+<li>
+<p>
+Run the tests in the <code>CartGatewayTest</code> and <code>ProductGatewayTest</code> classes.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect the tests to fail with a 401 HTTP status code.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Copy the methods <code>createAccessToken</code>, <code>readPrivateKey</code>, <code>getValidAccessToken</code> and <code>getExpiredAccessToken</code> from the <code>CartEndpointTest</code> class in the cart service project, and paste them in the <code>ProductGatewayTest</code> and <code>CartGatewayTest</code> classes.
+</p>
+</li>
+<li>
+<p>
+Add an <code>Authorization</code> header with a valid token to the REST requests in the <code>ProductGatewayTest</code> and <code>CartGatewayTest</code> classes.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+For example, in the <code>getProductCatalogEnrichedWithInventory</code> of <code>ProductGatewayTest</code>, replace this snippet:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>ResponseEntity&lt;String&gt; orderResponse = restTemplate.getForEntity("/api/products", String.class);</code></pre>
+</div></div>
+<div class="paragraph"><p>with this:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>HttpHeaders headers = new HttpHeaders();
+String authHeader = "Bearer " + getValidAccessToken("coolstore");
+headers.add(HttpHeaders.AUTHORIZATION, authHeader);
+ResponseEntity&lt;String&gt; orderResponse = restTemplate.exchange("/api/products", HttpMethod.GET, new HttpEntity&lt;&gt;(headers), String.class);</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Rerun the tests.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect all of the tests to pass.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Optionally, create some additional test methods that call the gateway endpoints with an expired token or a token that has the wrong role.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect these tests to return a 401 HTTP status code (expired token) or a 403 HTTP status code (wrong role in the token).
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Add the expected authorization header to the WireMock stub in the <code>CartGatewayTest</code> and <code>ProductGatewayTest</code> test methods:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>catalogServiceMock.stubFor(get(urlMatching("/products"))
+                .withHeader("Authorization", WireMock.equalTo(authHeader))
+                .willReturn(aResponse()
+                .withStatus(200).withHeader("Content-Type", "application/json")
+                .withBody(productResponseStr)));</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The Coolstore gateway calls the cart, catalog, and inventory service. All these services are secured with Red Hat SSO, so with every call the access token must be passed in a authorization header.
+</p>
+</li>
+<li>
+<p>
+With Camel REST you do not have to do anything special to achieve this. The HTTP headers from the incoming REST call are copied to the Camel Exchange and set on the outgoing HTTP calls.
+</p>
+</li>
+</ul></div>
+</li>
+</ol></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deploy_and_test_secured_spring_boot_camel_application">9. Deploy and Test Secured Spring Boot/Camel Application</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>You now have the secured versions of the cart, catalog, and inventories deployed on OpenShift. In this section, you deploy and test the secured Spring Boot/Camel application.</p></div>
+<div class="sect2">
+<h3 id="_add_red_hat_sso_configuration_to_coolstore_gateway_configmap">9.1. Add Red Hat SSO Configuration to Coolstore Gateway ConfigMap</h3>
+<div class="paragraph"><p>In this section, you add the Red Hat SSO configuration to the <code>gateway-service</code> ConfigMap in the OpenShift gateway project.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Add the following properties to the <code>application.properties</code> file in the <code>etc</code> folder of the project:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>keycloak.realm=coolstore
+keycloak.resource=coolstore
+keycloak.bearer-only=true
+keycloak.auth-server-url=
+keycloak.realmKey=</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Enter the HTTPS URL of the Red Hat SSO server suffixed with <code>/auth</code> as the value for <code>keycloak.auth-server-url</code>.
+</p>
+</li>
+<li>
+<p>
+Paste the Red Hat SSO Coolstore realm public key as the value for <code>keycloak.realmKey</code>.
+</p>
+</li>
+<li>
+<p>
+Delete the current ConfigMap:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ export GATEWAY_PRJ=&lt;OpenShift Coolstore project name&gt;
+$ oc delete configmap gateway-service -n $GATEWAY_PRJ</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Recreate the ConfigMap from the <code>application.properties</code> file:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ oc create configmap gateway-service --from-file=etc/application.properties -n $GATEWAY_PRJ</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Deploy the gateway application to OpenShift with the Fabric8 Maven plug-in:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ mvn clean fabric8:deploy -Popenshift -DskipTests=true -Dfabric8.namespace=$GATEWAY_PRJ</code></pre>
+</div></div>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_test_gateway_service">9.2. Test Gateway Service</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Test the gateway service without an authentication token:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ export GATEWAY_URL=http://$(oc get route coolstore-gateway -n $GATEWAY_PRJ -o template --template='{{.spec.host}}')
+$ curl -X GET "$GATEWAY_URL/api/products"</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect to receive <code>Unauthorized</code> in the response:
+</p>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code>{"timestamp":1503135898952,"status":401,"error":"Unauthorized","message":"Unauthorized","path":"/api/products"}</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Obtain a token from the Red Hat SSO server as explained in the paragraph on installing the Red Hat SSO server.
+</p>
+</li>
+<li>
+<p>
+Test the cart service with a valid authentication token by retrieving the product list:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ curl -X GET -H "Authorization: Bearer $TKN" "$GATEWAY_URL/api/products"</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect to see the retrieved data in the response:
+</p>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code>[
+  {
+    "itemId": "329299",
+    "name": "Red Fedora",
+    "desc": "Official Red Hat Fedora",
+    "price": 34.99,
+    "availability": {
+      "itemId": "329299",
+      "quantity": 736,
+      "location": "Raleigh",
+      "link": "http://maps.google.com/?q=Raleigh"
+    }
+  },
+  {
+    "itemId": "329199",
+    "name": "Forge Laptop Sticker",
+    "desc": "JBoss Community Forge Project Sticker",
+    "price": 8.5,
+    "availability": {
+      "itemId": "329199",
+      "quantity": 512,
+      "location": "Raleigh",
+      "link": "http://maps.google.com/?q=Raleigh"
+    }
+  },
+...
+]</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Retrieve the current cart:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ curl -X GET -H "Authorization: Bearer $TKN" "$GATEWAY_URL/api/cart/mycart"</code></pre>
+</div></div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code>{
+  "id": "mycart",
+  "cartItemTotal": 0,
+  "cartItemPromoSavings": 0,
+  "shippingTotal": 0,
+  "shippingPromoSavings": 0,
+  "cartTotal": 0,
+  "shoppingCartItemList": []
+}</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Add an item to the cart:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ curl -X POST -H "Authorization: Bearer $TKN" "$GATEWAY_URL/api/cart/mycart/165614/4"</code></pre>
+</div></div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code>{
+  "id": "mycart",
+  "cartItemTotal": 115,
+  "cartItemPromoSavings": 0,
+  "shippingTotal": 0,
+  "shippingPromoSavings": 0,
+  "cartTotal": 115,
+  "shoppingCartItemList": [
+    {
+      "price": 28.75,
+      "quantity": 4,
+      "promoSavings": 0,
+      "product": {
+        "itemId": "165614",
+        "name": "Ogio Caliber Polo",
+        "desc": "Moisture-wicking 100% polyester. Rib-knit collar and cuffs; Ogio jacquard tape inside neck; bar-tacked three-button placket with Ogio dyed-to-match buttons; side vents; tagless; Ogio badge on left sleeve. Import. Embroidery. Black.",
+        "price": 28.75,
+        "availability": null
+      }
+    }
+  ]
+}</code></pre>
+</div></div>
+</li>
+</ol></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_optional_lab_propagating_the_jwt_token">10. Optional lab: Propagating the JWT token</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>When a service calls another secured service, the JWT Token must be propagated to the service being called. There are different ways to achieve this, depending on the runtime used. In the previous labs you learned how this works in Camel and Spring Boot. In this lab you focus on Wildfly Swarm.</p></div>
+<div class="sect2">
+<h3 id="_secure_the_coolstore_store_service">10.1. Secure the Coolstore Store Service</h3>
+<div class="paragraph"><p>The Coolstore Store service is implemented as a Wildfly Swarm web application. There are essentially two ways to secure a Wildfly Swarm web application. In the previous lab you configured the application as a secure deployment in the YAML configuration file of the application. The alternative is to configure security in the <code>web.xml</code> descriptor.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+In the POM file of the store service project, add the <code>org.wildfly.swarm:keycloak</code> dependency.
+</p>
+</li>
+<li>
+<p>
+In the store service project, create a folder <code>src/main/webapp/WEB-INF</code>. In the folder create a file <code>web.xml</code>. Set the contents of the <code>web.xml</code> file to:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5"&gt;
+  &lt;security-constraint&gt;
+    &lt;web-resource-collection&gt;
+      &lt;url-pattern&gt;/store/status/*&lt;/url-pattern&gt;
+    &lt;/web-resource-collection&gt;
+    &lt;auth-constraint&gt;
+      &lt;role-name&gt;coolstore&lt;/role-name&gt;
+    &lt;/auth-constraint&gt;
+  &lt;/security-constraint&gt;
+
+  &lt;login-config&gt;
+    &lt;auth-method&gt;KEYCLOAK&lt;/auth-method&gt;
+  &lt;/login-config&gt;
+
+  &lt;security-role&gt;
+    &lt;role-name&gt;coolstore&lt;/role-name&gt;
+  &lt;/security-role&gt;
+&lt;/web-app&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+In the <code>etc</code> folder of the project, create a file called <code>keycloak.json</code> with the following contents:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>{
+  "realm": "coolstore",
+  "bearer-only": true,
+  "auth-server-url": "",
+  "ssl-required": "external",
+  "realm-public-key": "",
+  "resource": "coolstore"
+}</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Set the value of <code>auth-server-url</code> to the HTTPS URL of the Red Hat SSO server suffixed with <code>/auth</code>.
+</p>
+</li>
+<li>
+<p>
+Paste the Red Hat SSO Coolstore realm public key as the value for <code>rhsso-public-key</code>.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Create a ConfigMap called <code>store-service-rhsso</code> in the store service project on OpenShift from the <code>keycloak.json</code> file:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ export STORE_PRJ=&lt;OpenShift store service project name&gt;
+$ oc create configmap store-service-rhsso --from-file=etc/keycloak.json -n $STORE_PRJ</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Towards the end of the <code>deployment.yml</code> file in the <code>src/main/fabric8</code> directory of the source project, add the ConfigMap:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>      volumes:
+        - configMap:
+            name: store-service-rhsso
+          name: rhsso-config</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Remember to maintain the indentation of the file.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In the same file, add a volume mount for the ConfigMap::
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>          volumeMounts:
+            - name: rhsso-config
+              mountPath: /app/rhsso-config</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+In the same file, add the system property <code>swarm.keycloak.json.path</code> pointing to the mounted <code>keycloak.json</code> file to the JAVA_OPTIONS environment variable:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>            - name: JAVA_OPTIONS
+              value: "-Dswarm.keycloak.json.path=/app/rhsso-config/keycloak.json"</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Deploy the store service with the Fabric8 Maven plug-in.
+</p>
+</li>
+<li>
+<p>
+Test the store service without an authentication token:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ export STORE_URL=http://$(oc get route store-service -n $STORE_PRJ -o template --template='{{.spec.host}}')
+$ curl -X GET "$STORE_URL/store/status/Raleigh"</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect to receive <code>Unauthorized</code> in the response:
+</p>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code>&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;/head&gt;&lt;body&gt;Unauthorized&lt;/body&gt;&lt;/html&gt;</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Obtain a token from the Red Hat SSO server as explained in the paragraph on installing the Red Hat SSO server.
+</p>
+</li>
+<li>
+<p>
+Test the store service with a valid authentication token:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ curl -X GET -H "Authorization: Bearer $TKN" "$STORE_URL/store/status/Raleigh"</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect to receive the correct store status data in the response:
+</p>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code>{
+   "location": "Raleigh",
+   "status": "CLOSED"
+}</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Test the outgoing call from the inventory service to the store service:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ export INVENTORY_URL=http://$(oc get route inventory-service -n $INVENTORY_PRJ -o template --template='{{.spec.host}}')
+$ curl -v -H "Authorization: Bearer $TKN" -X GET "$INVENTORY_URL/inventory/165613?storeStatus=true"</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect to get a 503 HTTP code back.
+</p>
+</li>
+</ul></div>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_propagate_the_jwt_token_from_the_inventory_service">10.2. Propagate the JWT token from the Inventory Service</h3>
+<div class="paragraph"><p>Following successful login, the Wildfly Swarm Keycloak fraction stores the JWT token as a thread local variable in an object called <code>KeycloakSecurityContextAssociation</code>. Within the application code, this class could be used to retrieve the JWT token and propagate it with outgoing service calls.</p></div>
+<div class="paragraph"><p>However, in the current productized version of Wildfly Swarm, the <code>KeycloakSecurityAssociation</code> class is not visible on the classpath of the application - it is not exported by the Keycloak fraction classpath module. There is a JIRA to track this feature request, and it should be available in the next release of the product. So for the moment an alternative is needed.</p></div>
+<div class="paragraph"><p>Following successful login, a security Principal is created and associated with the current thread. When using Keycloak, the Principal contains the JWT token. When calling another secured service, the JWT token can be extracted from the Principal and added as a header to the outgoing HTTP call.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+In the POM file of the inventory service project, add a dependency to <code>org.picketbox:picketbox</code>. Set the scope of the dependency to <code>provided</code>&#8201;&#8212;&#8201;the <code>PicketBox</code> library is part of the Swarm runtime, and should be not be added as a dependency to the application war archive.
+</p>
+</li>
+<li>
+<p>
+In the <code>StoreStatusService</code> class in the <code>com.redhat.coolstore.inventory.service</code> pacjkage, add the following method:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    private String token() {
+        String token = "";
+        Optional&lt;Principal&gt; principal = Optional.ofNullable(SecurityContextAssociation.getSecurityContext())
+                .map(SecurityContext::getUtil)
+                .map(SecurityContextUtil::getUserPrincipal);
+        if (principal.isPresent() &amp;&amp; principal.get() instanceof KeycloakPrincipal) {
+            token = ((KeycloakPrincipal)principal.get()).getKeycloakSecurityContext().getTokenString();
+        }
+        return token;
+    }</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+This method returns the JWT token if present.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Add the token as header with name <code>Authorization</code> to the request to the store service in the <code>storeStatus</code> method:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    public String storeStatus(String store) {
+        Response response = storeService.resolveTemplate("store", store)
+                .request(MediaType.APPLICATION_JSON)
+                .header("Authorization", "Bearer " + token())
+                .get();
+        if (response.getStatus() == 200) {
+            JsonObject jsonResponse = Json.createReader(new StringReader(response.readEntity(String.class))).readObject();
+            return jsonResponse.getString("status");
+        } else if (response.getStatus() == 404) {
+            return null;
+        } else {
+            throw new ServiceUnavailableException();
+        }
+    }</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Deploy the inventory service to OpenShift with the Fabric8 Maven plugin.
+</p>
+</li>
+<li>
+<p>
+Test the outgoing call from the inventory service to the store service:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ export INVENTORY_URL=http://$(oc get route inventory-service -n $INVENTORY_PRJ -o template --template='{{.spec.host}}')
+$ curl -H "Authorization: Bearer $TKN" -X GET "$INVENTORY_URL/inventory/165613?storeStatus=true"</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Expect to get a valid response back:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>{
+   "itemId": "165613",
+   "location": "Raleigh [CLOSED]",
+   "quantity": 256,
+   "link": "http://maps.google.com/?q=Raleigh"
+}</code></pre>
+</div></div>
+</li>
+</ul></div>
+</li>
+</ol></div>
+<div class="paragraph"><p>Congratulations, you reached the end of the lab.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2018-10-26 04:51:08 EDT
+</div>
+</div>
+</body>
+</html>
