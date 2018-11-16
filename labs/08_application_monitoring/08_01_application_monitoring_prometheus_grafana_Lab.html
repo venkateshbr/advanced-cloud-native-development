@@ -1,0 +1,2547 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.8" />
+<title></title>
+<style type="text/css">
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* ========================================================================== HTML5 display definitions ========================================================================== */
+/** Correct `block` display not defined in IE 8/9. */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+
+/** Correct `inline-block` display not defined in IE 8/9. */
+audio, canvas, video { display: inline-block; }
+
+/** Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+audio:not([controls]) { display: none; height: 0; }
+
+/** Address `[hidden]` styling not present in IE 8/9. Hide the `template` element in IE, Safari, and Firefox < 22. */
+[hidden], template { display: none; }
+
+script { display: none !important; }
+
+/* ========================================================================== Base ========================================================================== */
+/** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
+
+/** Remove default margin. */
+body { margin: 0; }
+
+/* ========================================================================== Links ========================================================================== */
+/** Remove the gray background color from active links in IE 10. */
+a { background: transparent; }
+
+/** Address `outline` inconsistency between Chrome and other browsers. */
+a:focus { outline: thin dotted; }
+
+/** Improve readability when focused and also mouse hovered in all browsers. */
+a:active, a:hover { outline: 0; }
+
+/* ========================================================================== Typography ========================================================================== */
+/** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari 5, and Chrome. */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/** Address styling not present in IE 8/9, Safari 5, and Chrome. */
+abbr[title] { border-bottom: 1px dotted; }
+
+/** Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
+b, strong { font-weight: bold; }
+
+/** Address styling not present in Safari 5 and Chrome. */
+dfn { font-style: italic; }
+
+/** Address differences between Firefox and other browsers. */
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+
+/** Address styling not present in IE 8/9. */
+mark { background: #ff0; color: #000; }
+
+/** Correct font family set oddly in Safari 5 and Chrome. */
+code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
+
+/** Improve readability of pre-formatted text in all browsers. */
+pre { white-space: pre-wrap; }
+
+/** Set consistent quote types. */
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/** Address inconsistent and variable font size in all browsers. */
+small { font-size: 80%; }
+
+/** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+/* ========================================================================== Embedded content ========================================================================== */
+/** Remove border when inside `a` element in IE 8/9. */
+img { border: 0; }
+
+/** Correct overflow displayed oddly in IE 9. */
+svg:not(:root) { overflow: hidden; }
+
+/* ========================================================================== Figures ========================================================================== */
+/** Address margin not present in IE 8/9 and Safari 5. */
+figure { margin: 0; }
+
+/* ========================================================================== Forms ========================================================================== */
+/** Define consistent border, margin, and padding. */
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+
+/** 1. Correct `color` not being inherited in IE 8/9. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
+legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
+
+/** 1. Correct font family not being inherited in all browsers. 2. Correct font size not being inherited in all browsers. 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome. */
+button, input, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 2 */ margin: 0; /* 3 */ }
+
+/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+button, input { line-height: normal; }
+
+/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+. Correct `select` style inheritance in Firefox 4+ and Opera. */
+button, select { text-transform: none; }
+
+/** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
+
+/** Re-set default cursor for disabled elements. */
+button[disabled], html input[disabled] { cursor: default; }
+
+/** 1. Address box sizing set to `content-box` in IE 8/9. 2. Remove excess padding in IE 8/9. */
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+
+/** 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome. 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof). */
+input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
+
+/** Remove inner padding and search cancel button in Safari 5 and Chrome on OS X. */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/** Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/** 1. Remove default vertical scrollbar in IE 8/9. 2. Improve readability and alignment in all browsers. */
+textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
+
+/* ========================================================================== Tables ========================================================================== */
+/** Remove most spacing between table cells. */
+table { border-collapse: collapse; border-spacing: 0; }
+
+meta.foundation-mq-small { font-family: "only screen and (min-width: 768px)"; width: 768px; }
+
+meta.foundation-mq-medium { font-family: "only screen and (min-width:1280px)"; width: 1280px; }
+
+meta.foundation-mq-large { font-family: "only screen and (min-width:1440px)"; width: 1440px; }
+
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html, body { font-size: 100%; }
+
+body { background: white; color: #222222; padding: 0; margin: 0; font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; line-height: 1; position: relative; cursor: auto; }
+
+a:hover { cursor: pointer; }
+
+img, object, embed { max-width: 100%; height: auto; }
+
+object, embed { height: 100%; }
+
+img { -ms-interpolation-mode: bicubic; }
+
+#map_canvas img, #map_canvas embed, #map_canvas object, .map_canvas img, .map_canvas embed, .map_canvas object { max-width: none !important; }
+
+.left { float: left !important; }
+
+.right { float: right !important; }
+
+.text-left { text-align: left !important; }
+
+.text-right { text-align: right !important; }
+
+.text-center { text-align: center !important; }
+
+.text-justify { text-align: justify !important; }
+
+.hide { display: none; }
+
+.antialiased, body { -webkit-font-smoothing: antialiased; }
+
+img { display: inline-block; vertical-align: middle; }
+
+textarea { height: auto; min-height: 50px; }
+
+select { width: 100%; }
+
+p.lead, .paragraph.lead > p, #preamble > .sectionbody > .paragraph:first-of-type p { font-size: 1.21875em; line-height: 1.6; }
+
+.subheader, #content #toctitle, .admonitionblock td.content > .title, .exampleblock > .title, .imageblock > .title, .listingblock > .title, .literalblock > .title, .mathblock > .title, .openblock > .title, .paragraph > .title, .quoteblock > .title, .sidebarblock > .title, .tableblock > .title, .verseblock > .title, .videoblock > .title, .dlist > .title, .olist > .title, .ulist > .title, .qlist > .title, .hdlist > .title, .tableblock > caption { line-height: 1.4; color: #003b6b; font-weight: 300; margin-top: 0.2em; margin-bottom: 0.5em; }
+
+/* Typography resets */
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6, pre, form, p, blockquote, th, td { margin: 0; padding: 0; direction: ltr; }
+
+/* Default Link Styles */
+a { color: #00579e; text-decoration: none; line-height: inherit; }
+a:hover, a:focus { color: #333333; }
+a img { border: none; }
+
+/* Default paragraph styles */
+p { font-family: Arial, sans-serif; font-weight: normal; font-size: 1em; line-height: 1.6; margin-bottom: 0.75em; text-rendering: optimizeLegibility; }
+p aside { font-size: 0.875em; line-height: 1.35; font-style: italic; }
+
+/* Default header styles */
+h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 { font-family: Arial, sans-serif; font-weight: normal; font-style: normal; color: #7b2d00; text-rendering: optimizeLegibility; margin-top: 0.5em; margin-bottom: 0.5em; line-height: 1.2125em; }
+h1 small, h2 small, h3 small, #toctitle small, .sidebarblock > .content > .title small, h4 small, h5 small, h6 small { font-size: 60%; color: #ff6b15; line-height: 0; }
+
+h1 { font-size: 2.125em; }
+
+h2 { font-size: 1.6875em; }
+
+h3, #toctitle, .sidebarblock > .content > .title { font-size: 1.375em; }
+
+h4 { font-size: 1.125em; }
+
+h5 { font-size: 1.125em; }
+
+h6 { font-size: 1em; }
+
+hr { border: solid #dddddd; border-width: 1px 0 0; clear: both; margin: 1.25em 0 1.1875em; height: 0; }
+
+/* Helpful Typography Defaults */
+em, i { font-style: italic; line-height: inherit; }
+
+strong, b { font-weight: bold; line-height: inherit; }
+
+small { font-size: 60%; line-height: inherit; }
+
+code { font-family: Consolas, "Liberation Mono", Courier, monospace; font-weight: bold; color: #003426; }
+
+/* Lists */
+ul, ol, dl { font-size: 1em; line-height: 1.6; margin-bottom: 0.75em; list-style-position: outside; font-family: Arial, sans-serif; }
+
+ul, ol { margin-left: 1.5em; }
+ul.no-bullet, ol.no-bullet { margin-left: 1.5em; }
+
+/* Unordered Lists */
+ul li ul, ul li ol { margin-left: 1.25em; margin-bottom: 0; font-size: 1em; /* Override nested font-size change */ }
+ul.square li ul, ul.circle li ul, ul.disc li ul { list-style: inherit; }
+ul.square { list-style-type: square; }
+ul.circle { list-style-type: circle; }
+ul.disc { list-style-type: disc; }
+ul.no-bullet { list-style: none; }
+
+/* Ordered Lists */
+ol li ul, ol li ol { margin-left: 1.25em; margin-bottom: 0; }
+
+/* Definition Lists */
+dl dt { margin-bottom: 0.3em; font-weight: bold; }
+dl dd { margin-bottom: 0.75em; }
+
+/* Abbreviations */
+abbr, acronym { text-transform: uppercase; font-size: 90%; color: black; border-bottom: 1px dotted #dddddd; cursor: help; }
+
+abbr { text-transform: none; }
+
+/* Blockquotes */
+blockquote { margin: 0 0 0.75em; padding: 0.5625em 1.25em 0 1.1875em; border-left: 1px solid #dddddd; }
+blockquote cite { display: block; font-size: 0.8125em; color: #e15200; }
+blockquote cite:before { content: "\2014 \0020"; }
+blockquote cite a, blockquote cite a:visited { color: #e15200; }
+
+blockquote, blockquote p { line-height: 1.6; color: #333333; }
+
+/* Microformats */
+.vcard { display: inline-block; margin: 0 0 1.25em 0; border: 1px solid #dddddd; padding: 0.625em 0.75em; }
+.vcard li { margin: 0; display: block; }
+.vcard .fn { font-weight: bold; font-size: 0.9375em; }
+
+.vevent .summary { font-weight: bold; }
+.vevent abbr { cursor: auto; text-decoration: none; font-weight: bold; border: none; padding: 0 0.0625em; }
+
+@media only screen and (min-width: 768px) { h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 { line-height: 1.4; }
+  h1 { font-size: 2.75em; }
+  h2 { font-size: 2.3125em; }
+  h3, #toctitle, .sidebarblock > .content > .title { font-size: 1.375em; }
+  h4 { font-size: 1.4375em; } }
+/* Print styles.  Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/ Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+*/
+.print-only { display: none !important; }
+
+@media print { * { background: transparent !important; color: #000 !important; /* Black prints faster: h5bp.com/s */ box-shadow: none !important; text-shadow: none !important; }
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; /* h5bp.com/t */ }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3, #toctitle, .sidebarblock > .content > .title { orphans: 3; widows: 3; }
+  h2, h3, #toctitle, .sidebarblock > .content > .title { page-break-after: avoid; }
+  .hide-on-print { display: none !important; }
+  .print-only { display: block !important; }
+  .hide-for-print { display: none !important; }
+  .show-for-print { display: inherit !important; } }
+/* Tables */
+table { background: white; margin-bottom: 1.25em; border: solid 1px #d8d8ce; }
+/* Change -webkit-linear-gradient colors to  #a70000 and remove gradient */
+table thead, table tfoot { background: -webkit-linear-gradient(top, #a70000, #a70000); font-weight: bold; }
+table thead tr th, table thead tr td, table tfoot tr th, table tfoot tr td { padding: 0.5em 0.625em 0.625em; font-size: inherit; color: white; text-align: left; }
+table tr th, table tr td { padding: 0.5625em 0.625em; font-size: inherit; color: #6d6e71; }
+table tr.even, table tr.alt, table tr:nth-of-type(even) { background: #edf2f2; }
+table thead tr th, table tfoot tr th, table tbody tr td, table tr td, table tfoot tr td { display: table-cell; line-height: 1.4; }
+
+a:hover, a:focus { text-decoration: underline; }
+
+.clearfix:before, .clearfix:after, .float-group:before, .float-group:after { content: " "; display: table; }
+.clearfix:after, .float-group:after { clear: both; }
+
+*:not(pre) > code { font-size: inherit; padding: 3px 2px 1px 2px; white-space: nowrap; background-color: #eeeeee; border: 1px solid #dddddd; -webkit-border-radius: 0; border-radius: 0; text-shadow: none; }
+
+pre, pre > code { line-height: 1.6; color: black; font-family: Consolas, "Liberation Mono", Courier, monospace; font-weight: normal; }
+
+kbd.keyseq { color: #333333; }
+
+kbd:not(.keyseq) { display: inline-block; color: black; font-size: 0.75em; line-height: 1.4; background-color: #F7F7F7; border: 1px solid #ccc; -webkit-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset; margin: -0.15em 0.15em 0 0.15em; padding: 0.2em 0.6em 0.2em 0.5em; vertical-align: middle; white-space: nowrap; }
+
+kbd kbd:first-child { margin-left: 0; }
+
+kbd kbd:last-child { margin-right: 0; }
+
+.menuseq, .menu { color: black; }
+
+b.button:before { content: '[ '; }
+
+b.button:after { content: ' ]'; }
+
+#header, #content, #footnotes, #footer { width: 100%; margin-left: auto; margin-right: auto; margin-top: 0; margin-bottom: 0; max-width: 62.5em; *zoom: 1; position: relative; padding-left: 1.5em; padding-right: 1.5em; }
+#header:before, #header:after, #content:before, #content:after, #footnotes:before, #footnotes:after, #footer:before, #footer:after { content: " "; display: table; }
+#header:after, #content:after, #footnotes:after, #footer:after { clear: both; }
+
+#header { margin-bottom: 2.5em; }
+#header > h1 { color: #7b2d00; font-weight: normal; border-bottom: 1px solid #dddddd; margin-bottom: -28px; padding-bottom: 32px; }
+#header span { color: #333333; }
+#header #revnumber { text-transform: capitalize; }
+#header br { display: none; }
+#header br + span { padding-left: 3px; }
+#header br + span:before { content: "\2013 \0020"; }
+#header br + span.author { padding-left: 0; }
+#header br + span.author:before { content: ", "; }
+
+#toc { border-bottom: 1px solid #dddddd; padding-bottom: 1.25em; }
+#toc > ul { margin-left: 0.25em; }
+#toc ul.sectlevel0 > li > a { font-style: italic; }
+#toc ul.sectlevel0 ul.sectlevel1 { margin-left: 0; margin-top: 0.5em; margin-bottom: 0.5em; }
+#toc ul { list-style-type: none; }
+
+#toctitle { color: #003b6b; }
+
+@media only screen and (min-width: 768px) { body.toc2 { padding-left: 15em; padding-right: 0; }
+  #toc.toc2 { position: fixed; width: 15em; left: 0; top: 0; border-right: 1px solid #dddddd; border-bottom: 0; z-index: 1000; padding: 1em; height: 100%; overflow: auto; }
+  #toc.toc2 #toctitle { margin-top: 0; font-size: 1.2em; }
+  #toc.toc2 > ul { font-size: .90em; }
+  #toc.toc2 ul ul { margin-left: 0; padding-left: 1em; }
+  #toc.toc2 ul.sectlevel0 ul.sectlevel1 { padding-left: 0; margin-top: 0.5em; margin-bottom: 0.5em; }
+  body.toc2.toc-right { padding-left: 0; padding-right: 15em; }
+  body.toc2.toc-right #toc.toc2 { border-right: 0; border-left: 1px solid #dddddd; left: auto; right: 0; } }
+@media only screen and (min-width: 1280px) { body.toc2 { padding-left: 20em; padding-right: 0; }
+  #toc.toc2 { width: 20em; }
+  #toc.toc2 #toctitle { font-size: 1.375em; }
+  #toc.toc2 > ul { font-size: 0.95em; }
+  #toc.toc2 ul ul { padding-left: 1.25em; }
+  body.toc2.toc-right { padding-left: 0; padding-right: 20em; } }
+#content #toc { border-style: solid; border-width: 1px; border-color: #e6e6e6; margin-bottom: 1.25em; padding: 1.25em; background: white; border-width: 0; -webkit-border-radius: 0; border-radius: 0; }
+#content #toc > :first-child { margin-top: 0; }
+#content #toc > :last-child { margin-bottom: 0; }
+#content #toc a { text-decoration: none; }
+
+#content #toctitle { font-weight: bold; font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 1em; padding-left: 0.125em; }
+
+#footer { max-width: 100%; background-color: none; padding: 1.25em; }
+
+#footer-text { color: black; line-height: 1.44; }
+
+.sect1 { padding-bottom: 1.25em; }
+
+.sect1 + .sect1 { border-top: 1px solid #dddddd; }
+
+#content h1 > a.anchor, h2 > a.anchor, h3 > a.anchor, #toctitle > a.anchor, .sidebarblock > .content > .title > a.anchor, h4 > a.anchor, h5 > a.anchor, h6 > a.anchor { position: absolute; width: 1em; margin-left: -1em; display: block; text-decoration: none; visibility: hidden; text-align: center; font-weight: normal; }
+#content h1 > a.anchor:before, h2 > a.anchor:before, h3 > a.anchor:before, #toctitle > a.anchor:before, .sidebarblock > .content > .title > a.anchor:before, h4 > a.anchor:before, h5 > a.anchor:before, h6 > a.anchor:before { content: '\00A7'; font-size: .85em; vertical-align: text-top; display: block; margin-top: 0.05em; }
+#content h1:hover > a.anchor, #content h1 > a.anchor:hover, h2:hover > a.anchor, h2 > a.anchor:hover, h3:hover > a.anchor, #toctitle:hover > a.anchor, .sidebarblock > .content > .title:hover > a.anchor, h3 > a.anchor:hover, #toctitle > a.anchor:hover, .sidebarblock > .content > .title > a.anchor:hover, h4:hover > a.anchor, h4 > a.anchor:hover, h5:hover > a.anchor, h5 > a.anchor:hover, h6:hover > a.anchor, h6 > a.anchor:hover { visibility: visible; }
+#content h1 > a.link, h2 > a.link, h3 > a.link, #toctitle > a.link, .sidebarblock > .content > .title > a.link, h4 > a.link, h5 > a.link, h6 > a.link { color: #7b2d00; text-decoration: none; }
+#content h1 > a.link:hover, h2 > a.link:hover, h3 > a.link:hover, #toctitle > a.link:hover, .sidebarblock > .content > .title > a.link:hover, h4 > a.link:hover, h5 > a.link:hover, h6 > a.link:hover { color: #622400; }
+
+.imageblock, .literalblock, .listingblock, .mathblock, .verseblock, .videoblock { margin-bottom: 1.25em; }
+
+.admonitionblock td.content > .title, .exampleblock > .title, .imageblock > .title, .listingblock > .title, .literalblock > .title, .mathblock > .title, .openblock > .title, .paragraph > .title, .quoteblock > .title, .sidebarblock > .title, .tableblock > .title, .verseblock > .title, .videoblock > .title, .dlist > .title, .olist > .title, .ulist > .title, .qlist > .title, .hdlist > .title { text-align: left; font-weight: bold; }
+
+.tableblock > caption { text-align: left; font-weight: bold; white-space: nowrap; overflow: visible; max-width: 0; }
+
+table.tableblock #preamble > .sectionbody > .paragraph:first-of-type p { font-size: inherit; }
+
+.admonitionblock > table { border: 0; background: none; width: 100%; }
+.admonitionblock > table td.icon { text-align: center; width: 80px; }
+.admonitionblock > table td.icon img { max-width: none; }
+.admonitionblock > table td.icon .title { font-weight: bold; text-transform: uppercase; }
+.admonitionblock > table td.content { padding-left: 1.125em; padding-right: 1.25em; border-left: 1px solid #dddddd; color: #333333; }
+.admonitionblock > table td.content > :last-child > :last-child { margin-bottom: 0; }
+
+.exampleblock > .content { border-style: solid; border-width: 1px; border-color: #e6e6e6; margin-bottom: 1.25em; padding: 1.25em; background: white; -webkit-border-radius: 0; border-radius: 0; }
+.exampleblock > .content > :first-child { margin-top: 0; }
+.exampleblock > .content > :last-child { margin-bottom: 0; }
+.exampleblock > .content h1, .exampleblock > .content h2, .exampleblock > .content h3, .exampleblock > .content #toctitle, .sidebarblock.exampleblock > .content > .title, .exampleblock > .content h4, .exampleblock > .content h5, .exampleblock > .content h6, .exampleblock > .content p { color: #333333; }
+.exampleblock > .content h1, .exampleblock > .content h2, .exampleblock > .content h3, .exampleblock > .content #toctitle, .sidebarblock.exampleblock > .content > .title, .exampleblock > .content h4, .exampleblock > .content h5, .exampleblock > .content h6 { line-height: 1; margin-bottom: 0.625em; }
+.exampleblock > .content h1.subheader, .exampleblock > .content h2.subheader, .exampleblock > .content h3.subheader, .exampleblock > .content .subheader#toctitle, .sidebarblock.exampleblock > .content > .subheader.title, .exampleblock > .content h4.subheader, .exampleblock > .content h5.subheader, .exampleblock > .content h6.subheader { line-height: 1.4; }
+
+.exampleblock.result > .content { -webkit-box-shadow: 0 1px 8px #aaaaaa; box-shadow: 0 1px 8px #aaaaaa; }
+
+.sidebarblock { border-style: solid; border-width: 1px; border-color: #e6e6e6; margin-bottom: 1.25em; padding: 1.25em; background: white; -webkit-border-radius: 0; border-radius: 0; }
+.sidebarblock > :first-child { margin-top: 0; }
+.sidebarblock > :last-child { margin-bottom: 0; }
+.sidebarblock h1, .sidebarblock h2, .sidebarblock h3, .sidebarblock #toctitle, .sidebarblock > .content > .title, .sidebarblock h4, .sidebarblock h5, .sidebarblock h6, .sidebarblock p { color: #333333; }
+.sidebarblock h1, .sidebarblock h2, .sidebarblock h3, .sidebarblock #toctitle, .sidebarblock > .content > .title, .sidebarblock h4, .sidebarblock h5, .sidebarblock h6 { line-height: 1; margin-bottom: 0.625em; }
+.sidebarblock h1.subheader, .sidebarblock h2.subheader, .sidebarblock h3.subheader, .sidebarblock .subheader#toctitle, .sidebarblock > .content > .subheader.title, .sidebarblock h4.subheader, .sidebarblock h5.subheader, .sidebarblock h6.subheader { line-height: 1.4; }
+.sidebarblock > .content > .title { color: #003b6b; margin-top: 0; line-height: 1.6; }
+
+.exampleblock > .content > :last-child > :last-child, .exampleblock > .content .olist > ol > li:last-child > :last-child, .exampleblock > .content .ulist > ul > li:last-child > :last-child, .exampleblock > .content .qlist > ol > li:last-child > :last-child, .sidebarblock > .content > :last-child > :last-child, .sidebarblock > .content .olist > ol > li:last-child > :last-child, .sidebarblock > .content .ulist > ul > li:last-child > :last-child, .sidebarblock > .content .qlist > ol > li:last-child > :last-child { margin-bottom: 0; }
+
+.literalblock pre:not([class]), .listingblock pre:not([class]) { background: #eeeeee; }
+.literalblock pre, .literalblock pre[class], .listingblock pre, .listingblock pre[class] { border-width: 1px; border-style: dashed; border-color: #666666; -webkit-border-radius: 0; border-radius: 0; padding: 1.25em 1.5625em 1.125em 1.5625em; word-wrap: break-word; }
+.literalblock pre.nowrap, .literalblock pre[class].nowrap, .listingblock pre.nowrap, .listingblock pre[class].nowrap { overflow-x: auto; white-space: pre; word-wrap: normal; }
+.literalblock pre > code, .literalblock pre[class] > code, .listingblock pre > code, .listingblock pre[class] > code { display: block; }
+@media only screen { .literalblock pre, .literalblock pre[class], .listingblock pre, .listingblock pre[class] { font-size: 0.72em; } }
+@media only screen and (min-width: 768px) { .literalblock pre, .literalblock pre[class], .listingblock pre, .listingblock pre[class] { font-size: 0.81em; } }
+@media only screen and (min-width: 1280px) { .literalblock pre, .literalblock pre[class], .listingblock pre, .listingblock pre[class] { font-size: 0.9em; } }
+
+.listingblock pre.highlight { padding: 0; }
+.listingblock pre.highlight > code { padding: 1.25em 1.5625em 1.125em 1.5625em; }
+
+.listingblock > .content { position: relative; }
+
+.listingblock:hover code[class*=" language-"]:before { text-transform: uppercase; font-size: 0.9em; color: #999; position: absolute; top: 0.375em; right: 0.375em; }
+
+.listingblock:hover code.asciidoc:before { content: "asciidoc"; }
+.listingblock:hover code.clojure:before { content: "clojure"; }
+.listingblock:hover code.css:before { content: "css"; }
+.listingblock:hover code.groovy:before { content: "groovy"; }
+.listingblock:hover code.html:before { content: "html"; }
+.listingblock:hover code.java:before { content: "java"; }
+.listingblock:hover code.javascript:before { content: "javascript"; }
+.listingblock:hover code.python:before { content: "python"; }
+.listingblock:hover code.ruby:before { content: "ruby"; }
+.listingblock:hover code.sass:before { content: "sass"; }
+.listingblock:hover code.scss:before { content: "scss"; }
+.listingblock:hover code.xml:before { content: "xml"; }
+.listingblock:hover code.yaml:before { content: "yaml"; }
+
+.listingblock.terminal pre .command:before { content: attr(data-prompt); padding-right: 0.5em; color: #999; }
+
+.listingblock.terminal pre .command:not([data-prompt]):before { content: '$'; }
+
+table.pyhltable { border: 0; margin-bottom: 0; }
+
+table.pyhltable td { vertical-align: top; padding-top: 0; padding-bottom: 0; }
+
+table.pyhltable td.code { padding-left: .75em; padding-right: 0; }
+
+.highlight.pygments .lineno, table.pyhltable td:not(.code) { color: #999; padding-left: 0; padding-right: .5em; border-right: 1px solid #dddddd; }
+
+.highlight.pygments .lineno { display: inline-block; margin-right: .25em; }
+
+table.pyhltable .linenodiv { background-color: transparent !important; padding-right: 0 !important; }
+
+.quoteblock { margin: 0 0 0.75em; padding: 0.5625em 1.25em 0 1.1875em; border-left: 1px solid #dddddd; }
+.quoteblock blockquote { margin: 0 0 0.75em 0; padding: 0 0 0.5625em 0; border: 0; }
+.quoteblock blockquote > .paragraph:last-child p { margin-bottom: 0; }
+.quoteblock .attribution { margin-top: -.25em; padding-bottom: 0.5625em; font-size: 0.8125em; color: #e15200; }
+.quoteblock .attribution br { display: none; }
+.quoteblock .attribution cite { display: block; margin-bottom: 0.625em; }
+
+table thead th, table tfoot th { font-weight: bold; }
+
+table.tableblock.grid-all { border-collapse: separate; border-spacing: 1px; -webkit-border-radius: 0; border-radius: 0; border-top: 1px solid #dddddd; border-bottom: 1px solid #dddddd; }
+
+table.tableblock.frame-topbot, table.tableblock.frame-none { border-left: 0; border-right: 0; }
+
+table.tableblock.frame-sides, table.tableblock.frame-none { border-top: 0; border-bottom: 0; }
+
+table.tableblock td .paragraph:last-child p > p:last-child, table.tableblock th > p:last-child, table.tableblock td > p:last-child { margin-bottom: 0; }
+
+th.tableblock.halign-left, td.tableblock.halign-left { text-align: left; }
+
+th.tableblock.halign-right, td.tableblock.halign-right { text-align: right; }
+
+th.tableblock.halign-center, td.tableblock.halign-center { text-align: center; }
+
+th.tableblock.valign-top, td.tableblock.valign-top { vertical-align: top; }
+
+th.tableblock.valign-bottom, td.tableblock.valign-bottom { vertical-align: bottom; }
+
+th.tableblock.valign-middle, td.tableblock.valign-middle { vertical-align: middle; }
+
+tbody tr th { display: table-cell; line-height: 1.4; background: -webkit-linear-gradient(top, #add386, #90b66a); }
+
+tbody tr th, tbody tr th p, tfoot tr th, tfoot tr th p { color: white; font-weight: bold; }
+
+td > div.verse { white-space: pre; }
+
+ol { margin-left: 1.75em; }
+
+ul li ol { margin-left: 1.5em; }
+
+dl dd { margin-left: 1.125em; }
+
+dl dd:last-child, dl dd:last-child > :last-child { margin-bottom: 0; }
+
+ol > li p, ul > li p, ul dd, ol dd, .olist .olist, .ulist .ulist, .ulist .olist, .olist .ulist { margin-bottom: 0.375em; }
+
+ul.unstyled, ol.unnumbered, ul.checklist, ul.none { list-style-type: none; }
+
+ul.unstyled, ol.unnumbered, ul.checklist { margin-left: 0.625em; }
+
+ul.checklist li > p:first-child > i[class^="icon-check"]:first-child, ul.checklist li > p:first-child > input[type="checkbox"]:first-child { margin-right: 0.25em; }
+
+ul.checklist li > p:first-child > input[type="checkbox"]:first-child { position: relative; top: 1px; }
+
+ul.inline { margin: 0 auto 0.375em auto; margin-left: -1.375em; margin-right: 0; padding: 0; list-style: none; overflow: hidden; }
+ul.inline > li { list-style: none; float: left; margin-left: 1.375em; display: block; }
+ul.inline > li > * { display: block; }
+
+.unstyled dl dt { font-weight: normal; font-style: normal; }
+
+ol.arabic { list-style-type: decimal; }
+
+ol.decimal { list-style-type: decimal-leading-zero; }
+
+ol.loweralpha { list-style-type: lower-alpha; }
+
+ol.upperalpha { list-style-type: upper-alpha; }
+
+ol.lowerroman { list-style-type: lower-roman; }
+
+ol.upperroman { list-style-type: upper-roman; }
+
+ol.lowergreek { list-style-type: lower-greek; }
+
+.hdlist > table, .colist > table { border: 0; background: none; }
+.hdlist > table > tbody > tr, .colist > table > tbody > tr { background: none; }
+
+td.hdlist1 { padding-right: .8em; font-weight: bold; }
+
+td.hdlist1, td.hdlist2 { vertical-align: top; }
+
+.literalblock + .colist, .listingblock + .colist { margin-top: -0.5em; }
+
+.colist > table tr > td:first-of-type { padding: 0 .8em; line-height: 1; }
+.colist > table tr > td:last-of-type { padding: 0.25em 0; }
+
+.qanda > ol > li > p > em:only-child { color: #004985; }
+
+.thumb, .th { line-height: 0; display: inline-block; border: solid 4px white; -webkit-box-shadow: 0 0 0 1px #dddddd; box-shadow: 0 0 0 1px #dddddd; }
+
+.imageblock.left, .imageblock[style*="float: left"] { margin: 0.25em 0.625em 1.25em 0; }
+.imageblock.right, .imageblock[style*="float: right"] { margin: 0.25em 0 1.25em 0.625em; }
+.imageblock > .title { margin-bottom: 0; }
+.imageblock.thumb, .imageblock.th { border-width: 6px; }
+.imageblock.thumb > .title, .imageblock.th > .title { padding: 0 0.125em; }
+
+.image.left, .image.right { margin-top: 0.25em; margin-bottom: 0.25em; display: inline-block; line-height: 0; }
+.image.left { margin-right: 0.625em; }
+.image.right { margin-left: 0.625em; }
+
+a.image { text-decoration: none; }
+
+span.footnote, span.footnoteref { vertical-align: super; font-size: 0.875em; }
+span.footnote a, span.footnoteref a { text-decoration: none; }
+
+#footnotes { padding-top: 0.75em; padding-bottom: 0.75em; margin-bottom: 0.625em; }
+#footnotes hr { width: 20%; min-width: 6.25em; margin: -.25em 0 .75em 0; border-width: 1px 0 0 0; }
+#footnotes .footnote { padding: 0 0.375em; line-height: 1.3; font-size: 0.875em; margin-left: 1.2em; text-indent: -1.2em; margin-bottom: .2em; }
+#footnotes .footnote a:first-of-type { font-weight: bold; text-decoration: none; }
+#footnotes .footnote:last-of-type { margin-bottom: 0; }
+
+#content #footnotes { margin-top: -0.625em; margin-bottom: 0; padding: 0.75em 0; }
+
+.gist .file-data > table { border: none; background: #fff; width: 100%; margin-bottom: 0; }
+.gist .file-data > table td.line-data { width: 99%; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+.big { font-size: larger; }
+
+.small { font-size: smaller; }
+
+.underline { text-decoration: underline; }
+
+.overline { text-decoration: overline; }
+
+.line-through { text-decoration: line-through; }
+
+.aqua { color: #00bfbf; }
+
+.aqua-background { background-color: #00fafa; }
+
+.black { color: black; }
+
+.black-background { background-color: black; }
+
+.blue { color: #0000bf; }
+
+.blue-background { background-color: #0000fa; }
+
+.fuchsia { color: #bf00bf; }
+
+.fuchsia-background { background-color: #fa00fa; }
+
+.gray { color: #606060; }
+
+.gray-background { background-color: #7d7d7d; }
+
+.green { color: #006000; }
+
+.green-background { background-color: #007d00; }
+
+.lime { color: #00bf00; }
+
+.lime-background { background-color: #00fa00; }
+
+.maroon { color: #600000; }
+
+.maroon-background { background-color: #7d0000; }
+
+.navy { color: #000060; }
+
+.navy-background { background-color: #00007d; }
+
+.olive { color: #606000; }
+
+.olive-background { background-color: #7d7d00; }
+
+.purple { color: #600060; }
+
+.purple-background { background-color: #7d007d; }
+
+.red { color: #bf0000; }
+
+.red-background { background-color: #fa0000; }
+
+.silver { color: #909090; }
+
+.silver-background { background-color: #bcbcbc; }
+
+.teal { color: #006060; }
+
+.teal-background { background-color: #007d7d; }
+
+.white { color: #bfbfbf; }
+
+.white-background { background-color: #fafafa; }
+
+.yellow { color: #bfbf00; }
+
+.yellow-background { background-color: #fafa00; }
+
+span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
+
+.admonitionblock td.icon [class^="icon-"]:before { font-size: 2.5em; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); cursor: default; }
+.admonitionblock td.icon .icon-note:before { content: "\f05a"; color: #00579e; color: #004176; }
+.admonitionblock td.icon .icon-tip:before { content: "\f0eb"; text-shadow: 1px 1px 2px rgba(155, 155, 0, 0.8); color: #111; }
+.admonitionblock td.icon .icon-warning:before { content: "\f071"; color: #bf6900; }
+.admonitionblock td.icon .icon-caution:before { content: "\f06d"; color: #bf3400; }
+.admonitionblock td.icon .icon-important:before { content: "\f06a"; color: #bf0000; }
+
+.conum { display: inline-block; color: white !important; background-color: black; -webkit-border-radius: 100px; border-radius: 100px; text-align: center; width: 20px; height: 20px; font-size: 12px; font-weight: bold; line-height: 20px; font-family: Arial, sans-serif; font-style: normal; position: relative; top: -2px; letter-spacing: -1px; }
+.conum * { color: white !important; }
+.conum + b { display: none; }
+.conum:after { content: attr(data-value); }
+.conum:not([data-value]):empty { display: none; }
+
+h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 { border-bottom: 1px solid #dddddd; }
+
+#toctitle { color: #00406F; font-weight: normal; margin-top: 1.5em; }
+
+.sidebarblock { border-color: #aaa; }
+
+code { -webkit-border-radius: 4px; border-radius: 4px; }
+
+p.tableblock.header { color: #6d6e71; }
+
+
+@media screen {
+  body {
+    max-width: 80em; /* 50em is approximately 80 characters wide */
+    margin-left: 20em; /* this is 3em beyound the width of the toc */
+  }
+
+  #toc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 20em;
+    padding: 0.5em;
+    padding-bottom: 1.5em;
+    margin: 0;
+    overflow: auto;
+    border-right: 3px solid #f8f8f8;
+    background-color: white;
+    font-size: 0.9em;
+  }
+
+  #toc .toclevel1 {
+    margin-top: 0.5em;
+  }
+
+  #toc .toclevel2 {
+    margin-top: 0.25em;
+    display: list-item;
+    padding-left: 1.25em;
+    color: #aaaaaa;
+  }
+
+  #toctitle {
+    margin-top: 0.5em;
+  }
+}
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install(2);
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+<div id="toc">
+  <div id="toctitle">Table of Contents</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_monitoring_lab">Monitoring Lab</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Application performance monitoring is essential to be able to assert that your applications work and perform as expected and deliver the expected business value.</p></div>
+<div class="paragraph"><p>There are numerous tools and products on the market that provide monitoring capabilities at infrastructure and application level, both open-source and proprietary.</p></div>
+<div class="paragraph"><p>Prometheus (<a href="https://prometheus.io">https://prometheus.io</a>) is rapidly gaining traction as the open-source monitoring tool for cloud-native applications. Prometheus will be integrated into OpenShift to provide cluster-wide monitoring capabilities at the infrastructure level, but it is equally well suited for application-level monitoring.</p></div>
+<div class="paragraph"><p>The central component of Prometheus is the <em>Prometheus server</em>. The Prometheus server scrapes targets at a configurable interval to collect metrics from specific targets and store them in a time-series database. Targets&#8212;the systems or applications that need to be monitored-- typically expose an HTTP endpoint providing metrics. Prometheus has a wide range of service discovery options to find the target services and start retrieving metrics from them, including integration with OpenShift/Kubernetes.</p></div>
+<div class="paragraph"><p>The data gathered and stored by the Prometheus server can be queried using the <em>PromQL</em> language. The Prometheus UI has some limited capacities to show graphs from the collected metrics. Prometheus is often used together with <em>Grafana</em> (<a href="https://grafana.com">https://grafana.com</a>) to provide dashboards on top of the metrics collected by Prometheus.</p></div>
+<div class="paragraph"><p>This diagram illustrates the architecture of Prometheus and some of its ecosystem components:</p></div>
+<div class="imageblock">
+<div class="content">
+<img src="images/prometheus-architecture.svg" alt="images/prometheus-architecture.svg" />
+</div>
+</div>
+<div class="paragraph"><p>In many cases, application needs to be instrumented to provide business relevant metrics. <em>Dropwizard Metrics</em> (<a href="http://metrics.dropwizard.io">http://metrics.dropwizard.io</a>) is a widely used Java library used to generate metrics inside an application.</p></div>
+<div class="paragraph"><p>In this lab, you use Dropwizard Metrics to instrument the microservices that make up the Coolstore application, and export the metrics as Prometheus endpoints. You use Prometheus Server to collect the data, and Grafana to build dashboards from the collected metrics.</p></div>
+<div class="ulist"><div class="title">Goal</div><ul>
+<li>
+<p>
+Enhance the code and configuration of the applications to expose metrics
+</p>
+</li>
+<li>
+<p>
+Install Prometheus and Grafana on OpenShift
+</p>
+</li>
+<li>
+<p>
+Collect metric data from the applications and build dashboards on Grafana
+</p>
+</li>
+</ul></div>
+<div class="ulist"><div class="title">Prerequisites</div><ul>
+<li>
+<p>
+Successful implementation and deployment of the catalog, inventory, cart and gateway service microservice applications
+</p>
+</li>
+</ul></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">The labs in this module use the original application code as starting point, without the modifications added by the previous labs.<br />
+Before starting the lab, make fresh clones of the lab source code material and redeploy the different microservice applications using the Fabric8 Maven plugin. Alternatively, create separate branches in the lab source code for the different labs.</td>
+</tr></table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_instrument_cart_service_spring_boot_application">1. Instrument Cart Service Spring Boot Application</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_instrument_application_code_with_dropwizard_metrics">1.1. Instrument Application Code with Dropwizard Metrics</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+If not done yet, make a fresh clone of the cart service application code.
+</p>
+</li>
+<li>
+<p>
+In the <code>pom.xml</code> file of the project, add a dependency to the Dropwizard Metrics core library:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;dependency&gt;
+  &lt;groupId&gt;io.dropwizard.metrics&lt;/groupId&gt;
+  &lt;artifactId&gt;metrics-core&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+You do not have to specify the version as it is managed by the <code>spring-boot-dependencies</code> BOM.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In the <code>CartEndpoint</code> class in the <code>com.redhat.coolstore.cart.rest</code> package, inject the DropWizard <code>MetricRegistry</code> instance.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    @Autowired
+    private MetricRegistry metricRegistry;</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The <code>MetricRegistry</code> class is the collection of all the metrics for the application.
+</p>
+</li>
+<li>
+<p>
+The Spring Boot auto-configuration mechanism automatically configures a <code>MetricRegistry</code> instance if the Dropwizard&#8217;s metrics and Spring Boot Actuator libraries are on the classpath.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Create timers for the different REST endpoints defined in the <code>CartEndpoint</code> class.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    private Timer getCartTimer;
+
+    private Timer addToCartTimer;
+
+    private Timer checkoutCartTimer;
+
+    @PostConstruct
+    public void init() {
+        getCartTimer = metricRegistry.timer("CartService_getCart");
+        addToCartTimer = metricRegistry.timer("CartService_addToCart");
+        checkoutCartTimer = metricRegistry.timer("CartService_checkoutCart");
+    }</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+a Dropwizard <code>Timer</code> is a compound metrics type, consisting of a <em>histogram</em> of the duration of an event and a <em>meter</em> of the rate of its occurrence. A Histogram measures the distribution of values in a stream of data. Histogram metrics allow you to measure not just easy things like the min, mean, max, and standard deviation of values, but also quantiles like the median or 95th percentile. A meter measures the rate at which a set of events occur. See the <a href="http://metrics.dropwizard.io/4.0.0/manual/core.html">Dropwizard Metrics documentation</a> for more information.
+</p>
+</li>
+<li>
+<p>
+Methods in Spring components annotated with <code>@PostConstruct</code> are executed after injection of autowired dependencies.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Instrument the <code>getCart</code> method to record execution time metrics in the <code>getCartTimer</code> Timer.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    @GET
+    @Path("/{cartId}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public ShoppingCart getCart(@PathParam("cartId") String cartId) {
+        Timer.Context timer = getCartTimer.time();
+        try {
+            return shoppingCartService.getShoppingCart(cartId);
+        } finally {
+            timer.stop();
+        }
+    }</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Repeat with the <code>checkout</code>, <code>add</code> and <code>delete</code> methods. Use the <code>addToCartTimer</code> timer for both the <code>add</code> and <code>delete</code> methods.
+</p>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_export_metrics_for_prometheus">1.2. Export Metrics For Prometheus</h3>
+<div class="paragraph"><p>The next step is to expose the metrics collected by the DropWizard Metrics library as an HTTP endoint for scraping by Prometheus. Prometheus expects the data in its own format. Prometheus comes with an <em>exporter</em> for Dropwizard, which allows to export metrics generated by Dropwizard as Prometheus compatible data streams.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+In the <code>pom.xml</code> file of the project, add dependencies to the Prometheus libraries:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    &lt;dependency&gt;
+      &lt;groupId&gt;io.prometheus&lt;/groupId&gt;
+      &lt;artifactId&gt;simpleclient_spring_boot&lt;/artifactId&gt;
+      &lt;version&gt;0.2.0&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;io.prometheus&lt;/groupId&gt;
+      &lt;artifactId&gt;simpleclient_dropwizard&lt;/artifactId&gt;
+      &lt;version&gt;0.2.0&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;io.prometheus&lt;/groupId&gt;
+      &lt;artifactId&gt;simpleclient_hotspot&lt;/artifactId&gt;
+      &lt;version&gt;0.2.0&lt;/version&gt;
+    &lt;/dependency&gt;</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The <code>simpleclient_spring_boot</code> library provides integration between Spring Boot and Prometheus. Public metrics generated by Spring Boot Actuator are transformed into Prometheus format. When using Spring MVC&#8212;which is not the case in the cart service application&#8212;a Prometheus HTTP endpoint is automatically configured.
+</p>
+</li>
+<li>
+<p>
+The <em>simpleclient_dropwizard</em> library provides integration between Prometheus and Dropwizard metrics.
+</p>
+</li>
+<li>
+<p>
+The <em>simpleclient_hotspot</em> library allows to collect and export metrics about the JVM&#8212;memory pools, threads, garbage collection etc&#8230;
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In the <code>com.redhat.coolstore.cart</code> package, create a class <code>PrometheusConfiguration</code>. Annotate the class with the Spring <code>@Component</code> annotation.
+</p>
+</li>
+<li>
+<p>
+Inject the Dropwizard <code>MetricRegistry</code> instance with the Spring <code>@Autowired</code> annotation.
+</p>
+</li>
+<li>
+<p>
+Add an initialization method annotated with <code>@PostConstruct</code> to configure the Prometheus exporters.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>@Configuration
+public class PrometheusConfiguration {
+
+    @Autowired
+    private MetricRegistry dropwizardMetricRegistry;
+
+    @PostConstruct
+    public void registerPrometheusExporters() {
+        CollectorRegistry.defaultRegistry.clear();
+        new StandardExports().register();
+        new MemoryPoolsExports().register();
+        new DropwizardExports(dropwizardMetricRegistry).register();
+    }
+}</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>StandardExports</code> collects and exports common data about the OS, CPU, memory.
+</p>
+</li>
+<li>
+<p>
+<code>MemoryPoolExports</code> collects and exports metrics about the JVM memory pools.
+</p>
+</li>
+<li>
+<p>
+<code>DropwizardExports</code> exports metrics collected through a DropWizard <code>MetricRegistry</code>.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Add a REST endpoint to expose the Prometheus data stream. In the <code>com.redhat.coolstore.rest</code> package create a class <code>PrometheusEndpoint</code>.
+Annotate the class with <code>@Component</code> and <code>@Path</code> annotations. Set the path to <code>"/metrics"</code>.
+</p>
+</li>
+<li>
+<p>
+In the <code>PrometheusEndpoint</code> class, add a <code>export</code> method. Expose the endpoint over GET and path "/".
+</p>
+</li>
+<li>
+<p>
+Implement the method as follows:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    @GET
+    @Path("/")
+    public Response export() {
+
+        String result = writeRegistry();
+        return Response.ok(result, TextFormat.CONTENT_TYPE_004).build();
+
+    }
+
+    private String writeRegistry() {
+        try {
+            Writer writer = new StringWriter();
+            TextFormat.write004(writer, CollectorRegistry.defaultRegistry.metricFamilySamples());
+            return writer.toString();
+        } catch (IOException e) {
+            // This actually never happens since StringWriter::write() doesn't throw any IOException
+            throw new RuntimeException("Writing metrics failed", e);
+        }
+    }</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Prometheus HTTP endpoints expect data as plain text. The MIME type is <code>text/plain; version=0.0.4; charset=utf-8</code>. <code>version=0.0.4</code> is the version of the Prometheus data format.
+</p>
+</li>
+<li>
+<p>
+<code>CollectorRegistry.defaultRegistry.metricFamilySamples()</code> collects the data of all configured exporters.
+</p>
+</li>
+</ul></div>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_deploy_and_test">1.3. Deploy And Test</h3>
+<div class="paragraph"><p>Next step is to deploy the application to OpenShift to test the Prometheus endpoint.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Deploy the cart service application to OpenShift with the Fabric8 Maven plugin. Note that the cart service requires the catalog service, so make sure the catalog service is deployed and running in your OpenShift environment.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ export CART_PRJ=&lt;OpenShift cart service project name&gt;
+$ mvn clean fabric8:deploy -Popenshift -DskipTests=true -Dfabric8.namespace=$CART_PRJ</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+In the OpenShift Web Console, navigate to the pod running the cart service application. Click on the <code>Terminal</code> tab to open a terminal to the pod. In the terminal, execute the following command:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ curl localhost:8080/metrics</code></pre>
+</div></div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code># HELP jvm_memory_bytes_used Used bytes of a given JVM memory area.
+# TYPE jvm_memory_bytes_used gauge
+jvm_memory_bytes_used{area="heap",} 9.2088688E7
+jvm_memory_bytes_used{area="nonheap",} 6.6234328E7
+# HELP jvm_memory_bytes_committed Committed (bytes) of a given JVM memory area.
+# TYPE jvm_memory_bytes_committed gauge
+jvm_memory_bytes_committed{area="heap",} 5.23763712E8
+jvm_memory_bytes_committed{area="nonheap",} 6.815744E7
+# HELP jvm_memory_bytes_max Max (bytes) of a given JVM memory area.
+# TYPE jvm_memory_bytes_max gauge
+jvm_memory_bytes_max{area="heap",} 5.23763712E8
+jvm_memory_bytes_max{area="nonheap",} 1.430257664E9
+# HELP jvm_memory_bytes_init Initial bytes of a given JVM memory area.
+# TYPE jvm_memory_bytes_init gauge
+jvm_memory_bytes_init{area="heap",} 5.36870912E8
+jvm_memory_bytes_init{area="nonheap",} 2555904.0
+# HELP jvm_memory_pool_bytes_used Used bytes of a given JVM memory pool.
+# TYPE jvm_memory_pool_bytes_used gauge
+jvm_memory_pool_bytes_used{pool="Code Cache",} 1.3878336E7
+jvm_memory_pool_bytes_used{pool="Metaspace",} 4.7001408E7
+jvm_memory_pool_bytes_used{pool="Compressed Class Space",} 5354584.0
+jvm_memory_pool_bytes_used{pool="PS Eden Space",} 6.3539184E7
+jvm_memory_pool_bytes_used{pool="PS Survivor Space",} 3630648.0
+jvm_memory_pool_bytes_used{pool="PS Old Gen",} 2.4918856E7
+# HELP jvm_memory_pool_bytes_committed Committed bytes of a given JVM memory pool.
+# TYPE jvm_memory_pool_bytes_committed gauge
+jvm_memory_pool_bytes_committed{pool="Code Cache",} 1.4680064E7
+jvm_memory_pool_bytes_committed{pool="Metaspace",} 4.784128E7
+jvm_memory_pool_bytes_committed{pool="Compressed Class Space",} 5636096.0
+jvm_memory_pool_bytes_committed{pool="PS Eden Space",} 1.52567808E8
+jvm_memory_pool_bytes_committed{pool="PS Survivor Space",} 1.31072E7
+jvm_memory_pool_bytes_committed{pool="PS Old Gen",} 3.58088704E8
+# HELP jvm_memory_pool_bytes_max Max bytes of a given JVM memory pool.
+# TYPE jvm_memory_pool_bytes_max gauge
+jvm_memory_pool_bytes_max{pool="Code Cache",} 2.5165824E8
+jvm_memory_pool_bytes_max{pool="Metaspace",} 1.048576E8
+jvm_memory_pool_bytes_max{pool="Compressed Class Space",} 1.073741824E9
+jvm_memory_pool_bytes_max{pool="PS Eden Space",} 1.58334976E8
+jvm_memory_pool_bytes_max{pool="PS Survivor Space",} 1.31072E7
+jvm_memory_pool_bytes_max{pool="PS Old Gen",} 3.58088704E8
+# HELP jvm_memory_pool_bytes_init Initial bytes of a given JVM memory pool.
+# TYPE jvm_memory_pool_bytes_init gauge
+jvm_memory_pool_bytes_init{pool="Code Cache",} 2555904.0
+jvm_memory_pool_bytes_init{pool="Metaspace",} 0.0
+jvm_memory_pool_bytes_init{pool="Compressed Class Space",} 0.0
+jvm_memory_pool_bytes_init{pool="PS Eden Space",} 1.34742016E8
+jvm_memory_pool_bytes_init{pool="PS Survivor Space",} 2.2020096E7
+jvm_memory_pool_bytes_init{pool="PS Old Gen",} 3.58088704E8
+# HELP CartService_addToCart Generated from Dropwizard metric import (metric=CartService_addToCart, type=com.cod
+ahale.metrics.Timer)
+# TYPE CartService_addToCart summary
+CartService_addToCart{quantile="0.5",} 0.0
+CartService_addToCart{quantile="0.75",} 0.0
+CartService_addToCart{quantile="0.95",} 0.0
+CartService_addToCart{quantile="0.98",} 0.0
+CartService_addToCart{quantile="0.99",} 0.0
+CartService_addToCart{quantile="0.999",} 0.0
+CartService_addToCart_count 0.0
+# HELP CartService_checkoutCart Generated from Dropwizard metric import (metric=CartService_checkoutCart, type=c
+om.codahale.metrics.Timer)
+# TYPE CartService_checkoutCart summary
+CartService_checkoutCart{quantile="0.5",} 0.0
+CartService_checkoutCart{quantile="0.75",} 0.0
+CartService_checkoutCart{quantile="0.95",} 0.0
+CartService_checkoutCart{quantile="0.98",} 0.0
+CartService_checkoutCart{quantile="0.99",} 0.0
+CartService_checkoutCart{quantile="0.999",} 0.0
+CartService_checkoutCart_count 0.0
+# HELP CartService_getCart Generated from Dropwizard metric import (metric=CartService_getCart, type=com.codahale.metrics.Timer)
+# TYPE CartService_getCart summary
+CartService_getCart{quantile="0.5",} 0.0
+CartService_getCart{quantile="0.75",} 0.0
+CartService_getCart{quantile="0.95",} 0.0
+CartService_getCart{quantile="0.98",} 0.0
+CartService_getCart{quantile="0.99",} 0.0
+CartService_getCart{quantile="0.999",} 0.0
+CartService_getCart_count 0.0
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 12.08
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1.520144560046E9
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds 38.0
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds 1048576.0
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 4.595470336E9
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 3.71888128E8</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Note that the metrics include metrics pertaining to the JVM (prefix <code>jvm_</code>) and the JVM process (prefix <code>process_</code>), as well as the custom metrics generated with Dropwizard (prefix <code>CartService_</code>)
+</p>
+</li>
+<li>
+<p>
+The metrics generated for each cart service operation include the total number of requests (suffix <code>count</code>) and a histogram of quantiles of the request duration.
+</p>
+</li>
+</ul></div>
+</li>
+</ol></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deploy_prometheus_on_openshift">2. Deploy Prometheus On OpenShift</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>In this section of the lab you deploy a Prometheus image on OpenShift, and configure it to scrape metrics from the coolstore microservice applications.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Create an OpenShift project for Prometheus. If your OpenShift environment does not allow network communication across projects and you are using a single OpenShift project for the coolstore microservice applications, you can skip this step.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ export PROMETHEUS_PRJ=&lt;OpenShift Prometheus project name&gt;
+$ oc new-project $PROMETHEUS_PRJ</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Create the service account for the Prometheus image
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ oc create sa prometheus -n $PROMETHEUS_PRJ</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+The Prometheus service account requires view access rights to be able to use the Kubernetes/OpenShift API.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ oc adm policy add-role-to-user view system:serviceaccount:$PROMETHEUS_PRJ:prometheus -n $PROMETHEUS_PRJ</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+In order to discover services to monitor, the Prometheus service account also requires view access rights for the namespaces where the microservice applications are deployed. If you are using a single OpenShift project for the coolstore microservice applications and you deploy Prometheus in the same project, you can skip this step.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ export CART_PRJ=&lt;OpenShift cart service project name&gt;
+$ oc adm policy add-role-to-user view system:serviceaccount:$PROMETHEUS_PRJ:prometheus -n $CART_PRJ</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Prometheus uses YAML configuration. On your local file system, create a file called <code>prometheus.yml</code>. Paste the following contents in the file&#8212;replace <code>{{ project_cart_service }}</code> with the name of the Openshift project for the cart service application.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>rule_files:
+  - '*.rules'
+
+# global config
+global:
+  scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
+
+scrape_configs:
+- job_name: 'coolstore'
+  kubernetes_sd_configs:
+  - role: endpoints
+    namespaces:
+      names:
+      - {{ project_cart_service }}
+
+  relabel_configs:
+  - source_labels: [__meta_kubernetes_service_annotation_prometheus_io_scrape]
+    action: keep
+    regex: true
+  - source_labels: [__meta_kubernetes_service_annotation_prometheus_io_path]
+    action: replace
+    target_label: __metrics_path__
+    regex: (.+)
+  - source_labels: [__address__, __meta_kubernetes_service_annotation_prometheus_io_port]
+    action: replace
+    target_label: __address__
+    regex: ([^:]+)(?::\d+)?;(\d+)
+    replacement: $1:$2
+  - source_labels: [__meta_kubernetes_namespace]
+    action: replace
+    target_label: kubernetes_namespace
+  - source_labels: [__meta_kubernetes_service_name]
+    action: replace
+    target_label: kubernetes_name</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+For a detailed overview of the Prometheus configuration settings, refer to the <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/">Prometheus configuration documentation</a>
+</p>
+</li>
+<li>
+<p>
+<code>global</code> contains the global configuration settings, like scrape and data evaluation intervals.
+</p>
+</li>
+<li>
+<p>
+<code>scrape_configs</code> contains the configuration settings for the scraping jobs.
+</p>
+</li>
+<li>
+<p>
+In the configuration file, there is one scraping job named <code>coolstore</code> with type <code>kubernetes_sd_configs</code>.
+</p>
+</li>
+<li>
+<p>
+Kubernetes SD configurations allow retrieving scrape targets from Kubernetes' REST API and always staying synchronized with the cluster state.
+</p>
+</li>
+<li>
+<p>
+A Kubernetes SD configuration has a role type to discover targets. Supported role types include node, pod, service, endpoint, ingress. The role type for the coolstore job is <code>endpoints</code>. The endpoints role discovers targets from listed endpoints of a Kubernetes service. For each endpoint address one target is discovered per port. If the endpoint is backed by a pod, all additional container ports of the pod, not bound to an endpoint port, are discovered as targets as well.
+</p>
+</li>
+<li>
+<p>
+The <code>namespaces</code> configuration allows to restrict the discovery of targets to a specified set of namespaces. In the configuration file, the discovery is limited to the namespace of the cart service application.
+</p>
+</li>
+<li>
+<p>
+<code>relabel_configs</code>: Relabeling is a powerful tool to dynamically rewrite the label set of a target before it gets scraped. Multiple relabeling steps can be configured per scrape configuration. They are applied to the label set of each target in order of their appearance in the configuration file. Please refer to the Prometheus documentation for full details.<br />
+In short, the settings in the configuration file configure the scraping jobs as follows:
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+A discovered endpoint requires an annotation <code>prometheus.io/scrape</code> set to <code>true</code> in order to be scraped.
+</p>
+</li>
+<li>
+<p>
+The <code>prometheus.io/path</code> annotation defines the path of the prometheus HTTP endpoint.
+</p>
+</li>
+<li>
+<p>
+The <code>prometheus.io/port</code> annotation defines the port of the prometheus HTTP endpoint.
+</p>
+</li>
+<li>
+<p>
+The scraping target address is set to the combination of the IP address of the discovered endpoint and the port set in the <code>prometheus.io/port</code> annotation.
+</p>
+</li>
+<li>
+<p>
+The <code>kubernetes_namespace</code> label is set to the value of the Kubernetes namespace of the discovered target.
+</p>
+</li>
+<li>
+<p>
+The <code>kubernetes_name</code> label is set to the value of the Kubernetes service name of the discovered target.
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Prometheus uses rule files to configure recording rules. Recording rules allow to precompute frequently needed or computationally expensive expressions and save their result as a new set of time series. Querying the precomputed result will then often be much faster than executing the original expression every time it is needed.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+As an example, let&#8217;s say you want to monitor the per-second rate for all requests to the cart service REST API, as measured over the last 5 minutes. Using the Prometheus PromQL syntax, this can be expressed as:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>sum(rate(CartService_addToCart_count[5m]) + rate(CartService_checkoutCart_count[5m]) + rate(CartService_getCart_count[5m]))</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+On your local file system, create a file called <code>cart-service.rules</code> in the same directory as the <code>prometheus.yml</code> configuration file. Set the contents of the file to:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>groups:
+- name: cart_service
+  rules:
+  - record: cartServiceRequestCount:total_rate5m
+    expr: sum(rate(CartService_addToCart_count[5m]) + rate(CartService_checkoutCart_count[5m]) + rate(CartService_getCart_count[5m]))</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Recording exist in a rule group. Rules within a group are run sequentially at a regular interval.
+</p>
+</li>
+<li>
+<p>
+The aggregated per-second rate for cart service REST API requests will be exposed as a new metric called <code>cartServiceRequestCount:total_rate5m</code>.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Create a configmap in the Prometheus project on OpenShift from the Prometheus configuration and rule files.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ oc create configmap prometheus --from-file=prometheus.yml --from-file=cart-service.rules -n $PROMETHEUS_PRJ</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+The <code>ocp/prometheus</code> folder of the lab source code material includes a template for Prometheus. Review the template.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+The template defines a route, a service and a deployment API object. The route allows access to the Prometheus UI web application.
+</p>
+</li>
+<li>
+<p>
+By default, the Prometheus UI web application is exposed over port 9090.
+</p>
+</li>
+<li>
+<p>
+The Prometheus image runs under the <code>prometheus</code> service account.
+</p>
+</li>
+<li>
+<p>
+The Prometheus metric data are stored on temporary storage on the pod&#8217;s node.
+</p>
+</li>
+<li>
+<p>
+The data retention time is set to 6 hours.
+</p>
+</li>
+<li>
+<p>
+The <code>prometheus</code> ConfigMap is mounted inside the Prometheus pod in the <code>etc/prometheus</code> directory.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Deploy Prometheus to the OpenShift environment:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ oc process -f ocp/prometheus/prometheus.yaml | oc create -f - -n $PROMETHEUS_PRJ</code></pre>
+</div></div>
+</li>
+</ol></div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code>route "prometheus" created
+service "prometheus" created
+deployment "prometheus" created</code></pre>
+</div></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+In a web browser, navigate to the URL of the Prometheus route. Expect to see the Prometheus home page.
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/prometheus-homepage.png" alt="images/prometheus-homepage.png" />
+</div>
+</div>
+</li>
+<li>
+<p>
+In the Prometheus UI, navigate to the <code>Status -&gt; Targets</code> tab. Note that no targets have been discovered yet, which is expected.
+</p>
+</li>
+<li>
+<p>
+To make the cart service pods discoverable by Prometheus, the cart service object needs to be annotated with <code>prometheus.io</code> annotations. This can be done with the <code>oc</code> client utility, but in order to avoid overwriting the annotations when the application is redeployed with the Fabric8 Maven plugin, it is preferable to add the annotations to the resource fragments used by the Fabric8 Maven plugin.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+In the source code of the cart service application, add a file <code>service.yml</code> to the <code>src/main/fabric8</code> directory.
+</p>
+</li>
+<li>
+<p>
+Set the contents of the file to:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>metadata:
+  annotations:
+    prometheus.io/path: /metrics
+    prometheus.io/port: '8080'
+    prometheus.io/scrape: 'true'</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Redeploy the cart service application with the Fabric8 Maven plugin.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In the <code>Targets</code> view of the Prometheus UI, the cart service Prometheus endpoint is now discovered:
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/prometheus-targets.png" alt="images/prometheus-targets.png" />
+</div>
+</div>
+</li>
+<li>
+<p>
+In the Prometheus UI, move to the home page, and click on the <code>- insert metric at cursor-</code> drop down to see the list of metrics scraped by Prometheus.
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/prometheus-metrics-dropdown.png" alt="images/prometheus-metrics-dropdown.png" />
+</div>
+</div>
+<div class="ulist"><ul>
+<li>
+<p>
+The metrics include the calculated metrics defined in the recording rules file.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Select a metric from the drop-down list, and click the <code>Execute</code> button to calculate the metric data. Click on the <code>Graph</code> tab to see a graph of the data.
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/prometheus-data-graph.png" alt="images/prometheus-data-graph.png" />
+</div>
+</div>
+</li>
+<li>
+<p>
+To create sample data, you can use tools like SoapUI or JMeter. The lab material includes a SoapUI load test project for the cart service application.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+If needed, download and install SoapUI from <a href="https://www.soapui.org">https://www.soapui.org</a>.
+</p>
+</li>
+<li>
+<p>
+Launch SoapUI, and open the project <code>Cart-Service-soapui-project.xml</code> in the <code>soapui</code> directory of the lab source material.
+</p>
+</li>
+<li>
+<p>
+In the custom properties of the SoapUI project, set the value of the <code>OpenShiftEndpoint</code> property to the route URL of the cart service application in OpenShift.
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/soapui-custom-properties.png" alt="images/soapui-custom-properties.png" />
+</div>
+</div>
+</li>
+<li>
+<p>
+In the Soapui project, navigate to the <code>LoadTest</code> load test.
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/soapui-load-test.png" alt="images/soapui-load-test.png" />
+</div>
+</div>
+</li>
+<li>
+<p>
+Open the load test, and adapt the number of threads and the duration of the test to your liking.
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/soapui-load-test-details.png" alt="images/soapui-load-test-details.png" />
+</div>
+</div>
+</li>
+<li>
+<p>
+Launch the load test.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In a web browser, navigate back to the Prometheus UI to see the graphs of the scaped metrics data.
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/prometheus-graph-load-test.png" alt="images/prometheus-graph-load-test.png" />
+</div>
+</div>
+</li>
+</ol></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deploy_grafana_on_openshift">3. Deploy Grafana on OpenShift</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The Prometheus UI capabilities to visualize metrics data are quite limited, that&#8217;s why Prometheus is often used in combination with Grafana to create dashboards.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Create the service account for the Grafana image in the same OpenShift project where you deployed Prometheus.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ oc create sa grafana -n $PROMETHEUS_PRJ</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+The <code>ocp/grafana</code> directory of the lab source material contains a Grafana configuration file named <code>defaults.ini</code>. Create a configmap from this file:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ oc create configmap grafana-config --from-file=ocp/grafana/defaults.ini -n $PROMETHEUS_PRJ</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+The <code>ocp/grafana</code> folder of the lab source material includes a template for Grafana. Review the template.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+The template defines a route, a service and a deployment API object.
+</p>
+</li>
+<li>
+<p>
+By default, the Grafana UI web application is bound to port 3000.
+</p>
+</li>
+<li>
+<p>
+The Grafana image runs under the <code>grafana</code> service account.
+</p>
+</li>
+<li>
+<p>
+The Grafana data is stored on temporary storage on the pod&#8217;s node.
+</p>
+</li>
+<li>
+<p>
+The <code>grafana-config</code> ConfigMap is mounted inside the Grafana pod in the <code>/root/go/src/github.com/grafana/grafana/conf</code> directory.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Deploy Grafana to the OpenShift environment:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ oc process -f ocp/grafana/grafana.yaml | oc create -f - -n $PROMETHEUS_PRJ</code></pre>
+</div></div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre><code>route "grafana" created
+service "grafana" created
+deployment "grafana" created</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+In a web browser, navigate to the URL of the Grafana route. Expect to see the Grafana Homepage.
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/grafana-home-page.png" alt="images/grafana-home-page.png" />
+</div>
+</div>
+</li>
+<li>
+<p>
+Click on <code>Add data source</code> to configure a data source for Prometheus. On the <code>Add data source</code> page:
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Use <code>prometheus</code> as data source name.
+</p>
+</li>
+<li>
+<p>
+Choose <code>Prometheus</code> as data source type.
+</p>
+</li>
+<li>
+<p>
+The url should correspond to the Prometheus service URL, <code>http://prometheus:9090</code>.
+</p>
+</li>
+<li>
+<p>
+Leave the other settings as is.
+</p>
+</li>
+<li>
+<p>
+Click <code>add</code>. Expect to see a message that the data source is working. If not, verify and correct your input values.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Back on the Grafana home page, click on <code>New Dashboard</code> to create a dashboard. Click on the <code>Graph</code> icon. Expect to see an empty graph.
+</p>
+</li>
+<li>
+<p>
+Click on the <code>Panel title</code> link, and then on the <code>Edit</code> link. Expect the Graph edit page to appear:
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/grafana-graph-edit.png" alt="images/grafana-graph-edit.png" />
+</div>
+</div>
+</li>
+<li>
+<p>
+On the <code>Metrics</code> tab, enter the query for the data. For example, to plot the number of requests to the cart service REST API, enter <code>cartServiceRequestCount:total_rate5m</code>. Note that Grafana auto-suggests the metric names obtained from Prometheus.
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/grafana-query-enter.png" alt="images/grafana-query-enter.png" />
+</div>
+</div>
+</li>
+<li>
+<p>
+Give a title to the graph, and close the edit section.
+</p>
+</li>
+<li>
+<p>
+Run the SoapUI load test again to generate data. The time span of the graph can be changed by clicking on the timer span indicator on the top right of the graph.
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/grafana-dashboard.png" alt="images/grafana-dashboard.png" />
+</div>
+</div>
+</li>
+<li>
+<p>
+Feel free to add other graphs to the dashboard, for example the quantiles of the cart service REST API request duration.
+</p>
+</li>
+</ol></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_instrument_catalog_service_vert_x_application">4. Instrument Catalog Service Vert.x Application</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_instrument_application_code">4.1. Instrument Application Code</h3>
+<div class="paragraph"><p>The Vert.x <code>vertx-dropwizard-metrics</code> module provides a simple way to retrieve metrics from a Vert.x application and report the metrics to the Dropwizard metrics library. Out-of-the-box Vert.x provides metrics for internal components like the HttpServer, EventBus and Vert.x itself.
+Using the Dropwizard API, application code can be instrumented to provide application specific metrics.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+If not done yet, make a fresh clone of the catalog service application code.
+</p>
+</li>
+<li>
+<p>
+In the <code>pom.xml</code> file of the project, add a dependency to the <code>vertx-dropwizard-metrics</code> module, as well as dependencies to the Prometheus libraries:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    &lt;dependency&gt;
+      &lt;groupId&gt;io.vertx&lt;/groupId&gt;
+      &lt;artifactId&gt;vertx-dropwizard-metrics&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;io.prometheus&lt;/groupId&gt;
+      &lt;artifactId&gt;simpleclient_vertx&lt;/artifactId&gt;
+      &lt;version&gt;0.20.0&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;io.prometheus&lt;/groupId&gt;
+      &lt;artifactId&gt;simpleclient_dropwizard&lt;/artifactId&gt;
+      &lt;version&gt;0.20.0&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;io.prometheus&lt;/groupId&gt;
+      &lt;artifactId&gt;simpleclient_hotspot&lt;/artifactId&gt;
+      &lt;version&gt;0.20.0&lt;/version&gt;
+    &lt;/dependency&gt;</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The Prometheus client library for Vert.x provides a Metrics Handler for Vert.x Web, responsible for exposing the metrics in Prometheus compatible format.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In the <code>ApiVerticle</code> class in the <code>com.redhat.coolstore.catalog.api</code> package, obtain a reference to the DropWizard <code>MetricsRegistry</code>, and configure the Prometheus <code>CollectorRegistry</code>, register the Prometheus exporters and finally expose the Prometheus metrics over HTTP.<br />
+Add the following code to the <code>start</code> method of the <code>ApiVerticle</code> class, just before creating the HTTP server:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>        // Metrics
+        MetricRegistry metricRegistry = SharedMetricRegistries.getOrCreate("prometheus");
+        CollectorRegistry registry = CollectorRegistry.defaultRegistry;
+        registry.register(new DropwizardExports(metricRegistry));
+        new StandardExports().register(registry);
+        new MemoryPoolsExports().register(registry);
+
+        router.get("/metrics").handler(new MetricsHandler(registry));</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The Vert.x Web HTTP server is instrumented by default (it implements the Vert.x <code>Measured</code> interface). Metrics will be generated for all requests to the HTTP server, so it is not strictly necessary to instrument the application code if you want to obtain metrics for HTTP requests.
+</p>
+</li>
+</ul></div>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_deploy_to_openshift">4.2. Deploy To OpenShift</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+In the source code of the catalog service application, add a file <code>service.yml</code> to the <code>src/main/fabric8</code> directory.<br />
+Set the contents of the file to:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>metadata:
+  annotations:
+    prometheus.io/path: /metrics
+    prometheus.io/port: '8080'
+    prometheus.io/scrape: 'true'</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+To enable the Vert.x metrics module, Vert.x requires certain startup parameters. Add the following to the container spec in the <code>deployment.yml</code> file in the <code>src/main/fabric8</code> folder:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>          env:
+            - name: JAVA_OPTIONS
+              value: "-Dvertx.metrics.options.enabled=true -Dvertx.metrics.options.registryName=prometheus"</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>vertx.metrics.options.registryName</code> configures the name of the default Dropwizard <code>MetricRegistry</code>, which will be used to collect Vert.x metrics.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Deploy the catalog service application to OpenShift with the Fabric8 Maven plugin.
+</p>
+</li>
+<li>
+<p>
+In the OpenShift Web Console, navigate to the pod running the catalog service application. Click on the <code>Terminal</code> tab to open a terminal to the pod. In the terminal, execute the following command:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ curl localhost:8080/metrics</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Note that Vert.x specific metrics are prefixed with <code>vertx_</code>, and include metrics around the EventBus (prefix <code>vertx_eventbus_</code>), worker thread pools (prefix <code>vertx-pools_worker_</code>) and the Vert.x Web HTTP server (prefix <code>vertx_http_servers_</code>).
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In the Prometheus UI, verify that the catalog service metrics are correctly discovered:
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/prometheus-discovery-catalog-service.png" alt="images/prometheus-discovery-catalog-service.png" />
+</div>
+</div>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_grafana_dashboard">4.3. Grafana Dashboard</h3>
+<div class="paragraph"><p>You can now build a Grafana dashboard for the metrics from the catalog service.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+In the grafana UI, click on the top left menu link, and select <code>Dashboards -&gt; New</code>.
+</p>
+</li>
+<li>
+<p>
+Choose <code>Graph</code> as the graph type.
+</p>
+</li>
+<li>
+<p>
+As an example, create a graph of the 50th percentile (or median) of all GET requests to the application. In this case, the definition of the metric is <code>vertx_http_servers_0_0_0_0:8080_get_requests{quantile="0.5"}</code>.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+The request duration metrics produced by the Vert.x Web HTTP server are exported as a Prometheus <em>summary</em> data type. A summary consists of a histogram of quantiles over a sliding time window, plus the total count of the observations.
+</p>
+</li>
+<li>
+<p>
+Metric data in Prometheus are labeled. When selecting metrics for querying or plotting, labels can be used to filter data. <code>{quantile="0.5"}</code> filters the data to only take into account the data in the "0.5" quantile of the summary histogram.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Optionally, add a second metric for the "0.95" quantile.
+</p>
+</li>
+<li>
+<p>
+Notice thet the initial value for the metric is not equal to zero. The reason is that the REST requests made by the health check probes, as well as the scraping requests to the Prometheus endpoint are taken into account as well.
+</p>
+</li>
+<li>
+<p>
+Feel free to add additional graphs. As an example, to display the average rate per second per time window of 5 min, you can use the metric <code>rate(vertx_http_servers_0_0_0_0:8080_get_requests_count{kubernetes_name="catalog-service"}[5m])</code>.
+</p>
+</li>
+<li>
+<p>
+To generate some load on the catalog service application, you can use the <code>Catalog-Service-soapui-project.xml</code> SoapUI project in the <code>soapui</code> folder of the lab source material.
+</p>
+</li>
+<li>
+<p>
+Example Dashboard:
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/grafana-dashboard-catalog-service.png" alt="images/grafana-dashboard-catalog-service.png" />
+</div>
+</div>
+</li>
+</ol></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_instrument_inventory_service_wildfly_swarm_application_with_microprofile_metrics">5. Instrument Inventory Service Wildfly Swarm Application with MicroProfile metrics</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_microprofile_metrics">5.1. MicroProfile Metrics</h3>
+<div class="paragraph"><p>MicroProfile Metrics was added to the MicroProfile specification v1.2. The monitoring specification defines a HTTP-based API for access by monitoring agents and a Java API that allows exporting application-specific metrics.</p></div>
+<div class="paragraph"><p>MicroProfile Metrics exposes data in two formats by default. The Prometheus text format is used if no format is requested explicitly. The specification also defines a JSON encoding, which can be requested by passing the media-type of ‘application/json’.</p></div>
+<div class="paragraph"><p>The MicroProfile Metrics Java API is modeled after DropWizard Metrics, and is tightly integrated with CDI.</p></div>
+<div class="paragraph"><p>The MicroProfile Metrics specification defines three scopes for metrics:
+* Base: those are metrics, mostly JVM statistics, that every compliant vendor has to support.
+* Vendor: optional vendor-specific metrics that are not portable.
+* Application: optional metrics from deployed applications.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+If not done yet, make a fresh clone of the inventory service application code.
+</p>
+</li>
+<li>
+<p>
+In the project POM file, add a dependency to <code>org.wildfly.swarm:microprofile-metrics</code>.
+</p>
+</li>
+<li>
+<p>
+Annotate the <code>getInventory</code> method in the <code>InventoryResource</code> class in the <code>com.redhat.coolstore.inventory.rest</code> package, with the MicroProfile Metrics <code>@Timed</code> annotation.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    @Path("/{itemId}")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Timed(name = "InventoryService_getInventory", absolute = true)
+    public Inventory getInventory(@PathParam("itemId") String itemId) {
+        Inventory inventory = inventoryService.getInventory(itemId);
+        if (inventory == null) {
+            throw new NotFoundException();
+        } else {
+            return inventory;
+        }
+    }</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+In the source code of the inventory service application, create a file <code>service.yml</code> in the <code>src/main/fabric8</code> directory.<br />
+Set the contents of the file to:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>metadata:
+  annotations:
+    prometheus.io/path: /metrics
+    prometheus.io/port: '8080'
+    prometheus.io/scrape: 'true'</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Redeploy the inventory service application to OpenShift with the Fabric8 Maven plugin.
+</p>
+</li>
+<li>
+<p>
+Verify in the inventory service pod terminal that the inventory service metrics are correctly generated. The exposed metrics should include timer metrics prefixed with <code>application:inventory_service_get_inventory</code>:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code># TYPE application:inventory_service_get_inventory_rate_per_second gauge
+application:inventory_service_get_inventory_rate_per_second 9.417209903150956E-10
+# TYPE application:inventory_service_get_inventory_one_min_rate_per_second gauge
+application:inventory_service_get_inventory_one_min_rate_per_second 1.4E-9
+# TYPE application:inventory_service_get_inventory_five_min_rate_per_second gauge
+application:inventory_service_get_inventory_five_min_rate_per_second 1.4E-9
+# TYPE application:inventory_service_get_inventory_fifteen_min_rate_per_second gauge
+application:inventory_service_get_inventory_fifteen_min_rate_per_second 1.4E-9
+# TYPE application:inventory_service_get_inventory_min_seconds gauge
+application:inventory_service_get_inventory_min_seconds 0.00172049
+# TYPE application:inventory_service_get_inventory_max_seconds gauge
+application:inventory_service_get_inventory_max_seconds 0.066629196
+# TYPE application:inventory_service_get_inventory_mean_seconds gauge
+application:inventory_service_get_inventory_mean_seconds 0.010740323103169854
+# TYPE application:inventory_service_get_inventory_stddev_seconds gauge
+application:inventory_service_get_inventory_stddev_seconds 0.022279028928687637
+# TYPE application:inventory_service_get_inventory_seconds summary
+application:inventory_service_get_inventory_seconds_count 7.0E-9
+application:inventory_service_get_inventory_seconds{quantile="0.5"} 0.001901251
+application:inventory_service_get_inventory_seconds{quantile="0.75"} 0.002043035
+application:inventory_service_get_inventory_seconds{quantile="0.95"} 0.066629196
+application:inventory_service_get_inventory_seconds{quantile="0.98"} 0.066629196
+application:inventory_service_get_inventory_seconds{quantile="0.99"} 0.066629196
+application:inventory_service_get_inventory_seconds{quantile="0.999"} 0.066629196</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+In the Grafana UI, add a new dashboard for the inventory service metrics.
+</p>
+</li>
+<li>
+<p>
+To generate load, use the <code>Inventory-Service-soapui-project.xml</code> SoapUI project in the <code>soapui</code> folder of the lab material.
+</p>
+</li>
+</ol></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_expose_prometheus_over_jmx">6. Expose Prometheus over JMX</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>In the previous labs, application metrics are obtained over a HTTP endpoint deployed on the application. An alternative method is to leverage JMX. In that case metric data are exposed as JMX MBeans. A Prometheus Java agent which is deployed together with the application scans the JMX MBeans, transforms the data they contain to Prometheus format, and exposes them on a HTTP endpoint using a built-in HTTP server on a different port than the application HTTP port (typically 9779). This allows to completely separate application traffic from monitoring traffic, and in the case of applications that are publicly accessible, to not expose the monitoring endpoints to the outside world.</p></div>
+<div class="paragraph"><p>Note that the application container image needs to expose the Prometheus port. The <code>redhat-openjdk18-openshift</code> image used by the applications in this lab exposes port 9779.</p></div>
+<div class="paragraph"><p>DropWizard Metrics comes with a <code>JMXReport</code> class, to report metrics as JMX MBeans.</p></div>
+<div class="paragraph"><p>It is recommended to use the original application code as starting point, without the modifications added by the previous labs.</p></div>
+<div class="sect2">
+<h3 id="_cart_service_spring_boot_application">6.1. Cart Service Spring Boot Application</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+If not done yet, make a fresh clone of the cart service application code.
+</p>
+</li>
+<li>
+<p>
+In the <code>pom.xml</code> file of the project, add a dependency to the Dropwizard Metrics core library:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>&lt;dependency&gt;
+  &lt;groupId&gt;io.dropwizard.metrics&lt;/groupId&gt;
+  &lt;artifactId&gt;metrics-core&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+In the <code>CartServiceConfiguration</code> class in the <code>com.redhat.coolstore.cart</code> package, inject an instance of the DropWizard <code>MetricRegistry</code> instance, and add a method annotated with <code>@PostConstruct</code> to initialize the Dropwizard JMX reporter.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    @Autowired
+    private MetricRegistry metricRegistry;
+
+    @PostConstruct
+    public void startJmxExporter() {
+        final JmxReporter reporter = JmxReporter.forRegistry(metricRegistry).build();
+        reporter.start();
+    }</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Instrument the <code>CartEndpoint</code> class in the <code>com.redhat.coolstore.cart.rest package</code> to generate metrics. Refer to the Spring Boot section earlier in this lab for instructions.
+</p>
+</li>
+<li>
+<p>
+The Prometheus JMX Java agent needs to be deployed next to the application to be monitored, and as such needs to be included in the application container image. This can be accomplished with a combination of the Maven Dependency plugin and the Fabric8 Maven plugin.<br />
+Add the following plugin definition to the <code>openshift</code> profile in the project <code>pom.xml</code> file:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>          &lt;plugin&gt;
+            &lt;artifactId&gt;maven-dependency-plugin&lt;/artifactId&gt;
+            &lt;executions&gt;
+              &lt;execution&gt;
+                &lt;phase&gt;prepare-package&lt;/phase&gt;
+                &lt;goals&gt;
+                  &lt;goal&gt;copy&lt;/goal&gt;
+                &lt;/goals&gt;
+                &lt;configuration&gt;
+                  &lt;useBaseVersion&gt;true&lt;/useBaseVersion&gt;
+                  &lt;artifactItems&gt;
+                    &lt;artifactItem&gt;
+                      &lt;groupId&gt;io.prometheus.jmx&lt;/groupId&gt;
+                      &lt;artifactId&gt;jmx_prometheus_javaagent&lt;/artifactId&gt;
+                      &lt;version&gt;0.20.0&lt;/version&gt;
+                      &lt;outputDirectory&gt;${project.build.directory}/docker/${project.artifactId}/latest/build/maven/prometheus-agent&lt;/outputDirectory&gt;
+                    &lt;/artifactItem&gt;
+                  &lt;/artifactItems&gt;
+                &lt;/configuration&gt;
+              &lt;/execution&gt;
+            &lt;/executions&gt;
+          &lt;/plugin&gt;</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+As part of the <code>prepare-package</code> maven goal, the <code>jmx_prometheus_javaagent</code> Prometheus Java agent will be copied to the directory specified in <code>&lt;outputDirectory&gt;</code>.
+</p>
+</li>
+<li>
+<p>
+As part of the Fabric8 Maven plugin <code>fabric8:build</code> goal, the dependency will be added to the application container image in the <code>/deployments/prometheus-agent</code> directory.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+In the <code>deployment.yml</code> in the <code>src/main/fabric8</code>, add the following to the container spec:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>          env:
+            - name: JAVA_OPTIONS
+              value: "-javaagent:/deployments/prometheus-agent/jmx_prometheus_javaagent-0.2.0.jar=9779:/prometheus-agent-config/config.yml"
+            - name: AB_JOLOKIA_OFF
+              value: 'true'
+          volumeMounts:
+            - name: prometheus-agent-config
+              mountPath: /prometheus-agent-config
+      volumes:
+        - configMap:
+            name: cart-service-prometheus-agent
+          name: prometheus-agent-config</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The Prometheus Java agent configuration file <code>config.yml</code> is mounted as a ConfigMap in the container image.
+</p>
+</li>
+<li>
+<p>
+The Java application process is started with the Prometheus Java agent listening to port 9779.
+</p>
+</li>
+<li>
+<p>
+The <code>AB_JOLOKIA_OFF</code> environment variable determines whether or not to enable the Jolokia Java agent.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Add a file <code>service.yml</code> in the <code>src/main/fabric8</code> folder with the following content:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>metadata:
+  annotations:
+    prometheus.io/path: /metrics
+    prometheus.io/port: '9779'
+    prometheus.io/scrape: 'true'</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+On your local file system, create a file called <code>config.yml</code> with empty contents.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+The <code>config.yml</code> files contains the configuration for the Prometheus JMX Java Agent.
+</p>
+</li>
+<li>
+<p>
+All configuration values are optional, with sensible defaults. However, a configuration file is required for the agent to start up.
+</p>
+</li>
+<li>
+<p>
+See <a href="https://github.com/prometheus/jmx_exporter">https://github.com/prometheus/jmx_exporter</a> for a list and explanation of possible configuration values.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Create a ConfigMap in the Openshift Prometheus namespace from the configuration file.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>$ export CART_PRJ=&lt;OpenShift cart service project name&gt;
+$ oc create configmap cart-service-prometheus-agent --from-file=config.yml -n $CART_PRJ</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Deploy the cart service application to OpenShift with the Fabric8 Maven plugin
+</p>
+</li>
+<li>
+<p>
+Verify in the cart service pod terminal that the cart service metrics are correctly generated on <code>localhost:9779</code>.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+The Prometheus JMX Java agent scrapes all the JMX MBeans of the application. This includes JVM MBeans, MBeans from Spring Boot components (like the embedded Tomcat server etc&#8230;). This explains why a lot more data is obtained from the Prometheus endpoint compared to the direct exposure of metrics to a HTTP endpoint..
+</p>
+</li>
+<li>
+<p>
+The Prometheus JMX Java agent configuration file can be used to filter out unwanted MBeans through the <code>whitelistObjectNames</code> and <code>blacklistObjectNames</code> configuration parameters.
+</p>
+</li>
+<li>
+<p>
+The DropWizard metrics are prefixed with <code>metrics_</code>. Rules in the Prometheus JMX Java agent configuration file can be used to rename and relabel the generated metrics.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Create a new Grafana Dashboard for the cart service (or adapt the existing one to match the new names of the metrics). You will also need to change the rules defined in the Prometheus configmap to match the metric names.
+</p>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_catalog_service_vert_x_application">6.2. Catalog Service Vert.x Application</h3>
+<div class="paragraph"><p>Most steps are identical to the previous lab section, so details won&#8217;t be repeated here.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+If not done yet, make a fresh clone of the catalog service application code.
+</p>
+</li>
+<li>
+<p>
+In the <code>pom.xml</code> file of the project, add a dependency to the <code>vertx-dropwizard-metrics</code> module.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>    &lt;dependency&gt;
+      &lt;groupId&gt;io.vertx&lt;/groupId&gt;
+      &lt;artifactId&gt;vertx-dropwizard-metrics&lt;/artifactId&gt;
+    &lt;/dependency&gt;</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Add the <code>maven-dependency-plugin</code> configuration to the <code>openshift</code> profile in the project <code>pom.xml</code> file. Refer to the previous section for instructions.
+</p>
+</li>
+<li>
+<p>
+Instrument the <code>com.redhat.coolstore.catalog.api.ApiVerticle</code> class as detailed above.
+</p>
+</li>
+<li>
+<p>
+Add a <code>service.yml</code> file with Prometheus annotations to the <code>src/main/fabric8</code> folder.
+</p>
+</li>
+<li>
+<p>
+Add the changes to <code>deployment.yml</code> in <code>src/main/fabric8</code> to load the Prometheus JMX Java agent at application startup and mount the agent configuration ConfigMap.
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>          env:
+            - name: JAVA_OPTIONS
+              value: &gt;
+                -javaagent:/deployments/prometheus-agent/jmx_prometheus_javaagent-0.2.0.jar=9779:/prometheus-agent-config/config.yml
+                -Dvertx.metrics.options.enabled=true
+                -Dvertx.metrics.options.jmxEnabled=true
+                -Dvertx.metrics.options.registryName=prometheus
+            - name: AB_JOLOKIA_OFF
+              value: 'true'
+          volumeMounts:
+            - name: prometheus-agent-config
+              mountPath: /prometheus-agent-config
+      volumes:
+        - configMap:
+            name: catalog-service-prometheus-agent
+          name: prometheus-agent-config</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The <code>vertx.metrics.options.jmxEnabled=true</code> system property enables the JMX exporter for the Dropwizard metrics.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Create a ConfigMap in the OpenShift Prometheus project for the agent configuration file.
+</p>
+</li>
+<li>
+<p>
+Deploy the catalog service application to OpenShift with the Fabric8 Maven plugin.
+</p>
+</li>
+<li>
+<p>
+Verify in the catalog service pod terminal that the catalog service metrics are correctly generated on <code>localhost:9779</code>.
+</p>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_inventory_service_wildfly_swarm_application">6.3. Inventory Service WildFly Swarm Application</h3>
+<div class="paragraph"><p>At the moment it is not possible to use the Prometheus JMX Java agent with Wildfly Swarm. The MicroProfile Metrics fraction does not provide a JMX exporter for the generated metrics.</p></div>
+<div class="paragraph"><p>Congratulations, you reached the end of the lab.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2018-10-26 04:51:08 EDT
+</div>
+</div>
+</body>
+</html>
